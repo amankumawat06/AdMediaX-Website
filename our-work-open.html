@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work — Case Studies | AdMediaX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
+
+    <style>
+        body {
+            width: auto;
+        }
+
+        /* Page-specific additions that respect the site's theme */
+        .case-hero {
+            padding: 48px 0;
+            background: #fafafa;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            margin: 50px 0px;
+        }
+
+        .case-hero .hero-inner {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .case-logo {
+            max-width: 220px;
+        }
+
+        .case-summary {
+            flex: 1 1 420px;
+            margin-left: 24px;
+        }
+
+        .case-summary h2 {
+            margin: 0 0 8px;
+            font-size: 28px;
+            color: #000;
+        }
+
+        .case-summary p {
+            margin: 0;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        /* Our Work heading */
+        .our-work-header {
+            text-align: center;
+            padding: 28px 0 10px;
+        }
+
+        .our-work-header .page-title {
+            font-size: 32px;
+            margin: 0;
+            color: #111;
+        }
+
+        /* Case studies */
+        .case-study {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .case-study header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .case-study h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .case-study p.lead {
+            margin: 8px 0 20px;
+            color: #555;
+            max-width: 70ch;
+        }
+
+        /* Responsive gallery: desktop 3, tablet 2, mobile 1 */
+        .work-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width:900px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width:600px) {
+            .work-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .work-item {
+            overflow: hidden;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.571);
+            border: 1px solid #ffffff90;
+        }
+
+        .work-item .img-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 */
+        }
+
+        .work-item .img-wrap img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .28s ease, filter .28s ease;
+        }
+
+        /* Make work sample images show pointer cursor only (no hover effects) */
+        .case-study .work-grid .work-item .img-wrap img {
+            cursor: pointer;
+        }
+
+        .work-item:hover .img-wrap img {
+            transform: scale(1.06);
+            filter: brightness(.95);
+        }
+
+        .work-meta {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Responsive 16:9 video wrapper */
+        .video-embed {
+            margin-top: 18px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe,
+        .video-wrapper video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Spacing tweaks for small screens */
+        @media (max-width:600px) {
+            .case-summary h2 {
+                font-size: 20px
+            }
+
+            .case-study {
+                padding: 24px 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (copied from site theme) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX" style="width: 100%; height: 65px;">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="work.html" class="nav-link active">Our Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item" id="admediax-ai">
+                    <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top hero: logo left, short case study text right -->
+    <section class="case-hero">
+        <div class="container">
+            <div class="hero-inner">
+                <!-- <div class="case-logo" data-aos="fade-right">
+                    <img src="/public/Logo/AdMediaX - Logo - White bg (PNG).png" alt="AdMediaX logo"
+                        style="width:100%;height:auto;">
+                </div> -->
+                <div class="case-summary" data-aos="fade-left">
+                    <h2>Case Studies — Client Outcomes</h2>
+                    <p>AdMediaX partners with growth-minded companies to design and deliver measurable digital products.
+                        We combine strategy, product design and technical execution to increase conversions and
+                        long-term value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main: multiple client case studies (semantic, responsive) -->
+    <main>
+        <div class="container">
+
+            <div class="our-work-header" data-aos="fade-up">
+                <h1 class="page-title">Our Work</h1>
+            </div>
+
+            <!-- Client list: each client is an article for semantics -->
+            <section class="client-list">
+
+                <article class="case-study" id="shriram-furniture" data-aos="fade-up">
+                    <header>
+                        <div>
+                            <h3>Case Study – Vishal Photos</h3>
+                            <p class="lead">AdMediaX partnered with Vishal Photos to manage their Instagram presence
+                                with a strong focus on reels creation and page growth.
+
+                                Our team planned and executed professionally shot, visually appealing reels that matched
+                                the brand’s creative identity. Along with regular content posting and page management,
+                                we ensured consistency, quality, and audience-focused storytelling.</p>
+                        </div>
+                        <div class="work-meta">Role: Marketing • Content Creation • Website Development</div>
+                    </header>
+
+                    <h4 class="section-subtitle">Work Examples</h4>
+                    <div class="work-grid" aria-label="Shri Ram Furniture gallery">
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/1.jpg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/2.jpg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/3.jpg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <!-- <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/4.jpeg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/5.jpg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/6.jpeg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure> -->
+                    </div>
+
+                    <!-- <div class="video-embed">
+                        <h4>Video Showcase</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shri Ram Furniture video"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div> -->
+                </article>
+
+
+                <article class="case-study" id="shriram-furniture" data-aos="fade-up">
+                    <header>
+                        <div>
+                            <h3>Case Study – Muneem Jii</h3>
+                            <p class="lead">Muneem Ji is a billing and accounting software created to simplify
+                                day-to-day operations for small shops and retailers across India. The goal was to make
+                                digital bookkeeping as easy as maintaining a register, but with the efficiency of
+                                automation.</p>
+                        </div>
+                        <div class="work-meta">Role: Product Development • SaaS • UX/UI • Automation</div>
+                    </header>
+
+                    <h4 class="section-subtitle">Work Examples</h4>
+                    <div class="work-grid" aria-label="Shri Ram Furniture gallery">
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/1.jpeg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/2.jpeg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/3.jpg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/4.jpeg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/5.jpg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/6.jpeg"
+                                    alt="Muneem Jii - AdMediaX"></div>
+                        </figure>
+                    </div>
+
+                    <!-- <div class="video-embed">
+                        <h4>Video Showcase</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shri Ram Furniture video"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div> -->
+                </article>
+
+                <article class="case-study" id="orasoft" data-aos="fade-up" data-aos-delay="80">
+                    <header>
+                        <div>
+                            <h3>Food & Spices Brand - Maniratnam foods</h3>
+                            <p class="lead">Complete brand uplift with new-age packaging, professional photography, and
+                                engaging social media creatives to boost shelf appeal and digital presence.</p>
+                        </div>
+                        <div class="work-meta">Role: Branding • Packaging • Social Media</div>
+                    </header>
+
+                    <h4 class="section-subtitle">Work Examples</h4>
+                    <div class="work-grid" aria-label="OraSoft gallery">
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="/public/Our work/MF-Work/1.jpg" alt="OraSoft 1">
+                            </div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="/public/Our work/MF-Work/2.jpg" alt="OraSoft 2">
+                            </div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="/public/Our work/MF-Work/3.jpg" alt="OraSoft 3">
+                            </div>
+                        </figure>
+                        <!-- <figure class="work-item">
+                            <div class="img-wrap"><img src="assets/images/work9.jpg" alt="OraSoft 4"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="assets/images/work10.jpg" alt="OraSoft 5"></div>
+                        </figure> -->
+                    </div>
+
+                    <!-- <div class="video-embed">
+                        <h4>Video Showcase</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="OraSoft video"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div> -->
+                </article>
+
+                <article class="case-study" id="fintech" data-aos="fade-up" data-aos-delay="160">
+                    <header>
+                        <div>
+                            <h3>Furniture - Shree Ram Furniture</h3>
+                            <p class="lead">Executed a full-scale social media revamp that increased online visibility,
+                                showcased premium furniture collections, and connected the brand with a larger audience
+                                through engaging visual storytelling.</p>
+                        </div>
+                        <div class="work-meta">Role: Branding • Social Media • Marketing</div>
+                    </header>
+
+                    <h4 class="section-subtitle">Work Examples</h4>
+                    <div class="work-grid" aria-label="FinTech gallery">
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="/public/Our work/SRF WORK/1.jpg" alt="FinTech 1"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="/public/Our work/SRF WORK/2.jpg" alt="FinTech 2"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="/public/Our work/SRF WORK/3.jpg" alt="FinTech 3"></div>
+                        </figure>
+                        <!-- <figure class="work-item">
+                            <div class="img-wrap"><img src="assets/images/work14.jpg" alt="FinTech 4"></div>
+                        </figure>
+                        <figure class="work-item">
+                            <div class="img-wrap"><img src="assets/images/work15.jpg" alt="FinTech 5"></div>
+                        </figure> -->
+                    </div>
+
+                    <!-- <div class="video-embed">
+                        <h4>Video Showcase</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="FinTech video"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </article> -->
+                    <!-- 
+                    <article class="case-study" id="healthconnect" data-aos="fade-up" data-aos-delay="240">
+                        <header>
+                            <div>
+                                <h3>Case Study – HealthConnect</h3>
+                                <p class="lead">Built a secure telemedicine platform with video consultations and
+                                    streamlined clinical workflows for providers and patients.</p>
+                            </div>
+                            <div class="work-meta">Role: Platform • Security • Video</div>
+                        </header>
+
+                        <h4 class="section-subtitle">Work Examples</h4>
+                        <div class="work-grid" aria-label="HealthConnect gallery">
+                            <figure class="work-item">
+                                <div class="img-wrap"><img src="assets/images/work16.jpg" alt="Health 1"></div>
+                            </figure>
+                            <figure class="work-item">
+                                <div class="img-wrap"><img src="assets/images/work17.jpg" alt="Health 2"></div>
+                            </figure>
+                            <figure class="work-item">
+                                <div class="img-wrap"><img src="assets/images/work18.jpg" alt="Health 3"></div>
+                            </figure>
+                            <figure class="work-item">
+                                <div class="img-wrap"><img src="assets/images/work19.jpg" alt="Health 4"></div>
+                            </figure>
+                            <figure class="work-item">
+                                <div class="img-wrap"><img src="assets/images/work20.jpg" alt="Health 5"></div>
+                            </figure>
+                        </div>
+
+                        <!-- <div class="video-embed">
+                        <h4>Video Showcase</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="HealthConnect video"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div> -->
+                    <!-- </article> -->
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want a case study like these?</h2>
+                <p>Let's talk about your product and outline a plan to reach measurable outcomes.</p>
+                <a href="contact.html" class="btn btn-primary">Schedule a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (standardized) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AdMediaX</h3>
+                    <p>Transforming businesses through innovative digital solutions and creative excellence.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61574145674026" class="social-icon"
+                            target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a> -->
+                        <a href="https://www.instagram.com/admedia_x/?hl=en" class="social-icon" target="_blank"
+                            rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com/" class="social-icon" target="_blank" rel="noopener"><i
+                                class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">App Development</a></li>
+                        <li><a href="services.html">Digital Marketing</a></li>
+                        <li><a href="services.html">Graphic Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>&#x1F4E7; admediax18@gmail.com</p>
+                    <p>&#x1F4DE; +91 9887964016</p>
+                    <p>&#x1F4CD; Naman Plaza,Joshi Marg, Kalwar Rd, Jhotwara, Jaipur, Rajasthan 302012</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox modal (scoped to Work Examples only) -->
+    <style id="amx-lightbox-styles">
+        /* Scoped lightbox styles — does not override site styles */
+        .amx-lightbox {
+            display: none; /* hidden until opened */
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            outline: none;
+        }
+
+        .amx-lightbox--visible {
+            display: block;
+        }
+
+        .amx-lightbox__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(2px);
+        }
+
+        .amx-lightbox__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: calc(100vw - 40px);
+            max-height: calc(100vh - 40px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .amx-lightbox__img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+            display: block;
+        }
+
+        .amx-lightbox__close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(255,255,255,0.95);
+            border: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 480px) {
+            .amx-lightbox__content { padding: 6px; }
+            .amx-lightbox__close { width: 32px; height: 32px; font-size: 18px; }
+        }
+    </style>
+
+    <div class="amx-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="amx-lightbox__overlay"></div>
+        <div class="amx-lightbox__content" role="document">
+            <button class="amx-lightbox__close" aria-label="Close (Esc)">&times;</button>
+            <img class="amx-lightbox__img" src="" alt="" />
+        </div>
+    </div>
+
+    <script src="assets/js/lightbox.js"></script>
+    <script>
+        // Delegates clicks to any .case-study .work-grid .work-item .img-wrap img
+        // Opens modal, sets img src/alt, traps ESC to close, overlay & close-button close it
+        document.addEventListener('DOMContentLoaded', function () {
+          const selector = '.case-study .work-grid .work-item .img-wrap img';
+          // ... (see full file: assets/js/lightbox.js)
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 700, easing: 'ease-in-out', once: true });
+    </script>
+</body>
+
+</html>

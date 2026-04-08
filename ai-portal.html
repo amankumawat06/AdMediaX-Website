@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdMediaX AI Portal – Coming Soon</title>
+    <link rel="icon" type="image/png" href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0f172a;
+            --accent-blue: #ffffff;
+            --accent-yellow: #2ffb24;
+            --accent-green: #22c55e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── FIXED TOP-RIGHT BUTTON ── */
+        .topbar-btn {
+            position: fixed;
+            top: 20px;
+            right: 28px;
+            z-index: 1000;
+        }
+
+        .topbar-btn a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 22px;
+            background: #2ffb24;
+            color: #050905;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.18s, box-shadow 0.18s;
+            box-shadow: 0 0 0 1px rgba(47,251,36,0.3), 0 6px 24px rgba(47,251,36,0.3);
+            white-space: nowrap;
+        }
+
+        /* shimmer sweep */
+        .topbar-btn a::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -120%;
+            width: 60%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .topbar-btn:hover a {
+            transform: translateY(-2px);
+            box-shadow: 0 0 0 1px rgba(47,251,36,0.5), 0 12px 36px rgba(47,251,36,0.45);
+        }
+
+        .topbar-btn:hover a::before { left: 160%; }
+        .topbar-btn:active a { transform: translateY(0); }
+
+        /* ── HIDE the old inline button ── */
+        .notify-btn { display: none; }
+
+        /* ── REST OF ORIGINAL STYLES (unchanged) ── */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover { transform: translateY(-5px); }
+
+        .highlight {
+            font-size: 1.2rem;
+            color: var(--accent-yellow);
+            text-align: center;
+            margin: 3rem 0;
+            line-height: 1.8;
+        }
+
+        .coming-soon {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 3rem 0;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+            color: #94a3b8;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px var(--accent-blue); }
+            50% { text-shadow: 0 0 20px var(--accent-yellow), 0 0 30px var(--accent-blue); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+            .features { grid-template-columns: 1fr; }
+            .topbar-btn { top: 14px; right: 14px; }
+            .topbar-btn a { padding: 9px 16px; font-size: 13px; }
+        }
+
+        .badge {
+            margin-inline: auto;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgb(176 186 190 / 25%);
+            color: var(--accent-cyan);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .ai-port-bdge {
+            margin: auto;
+            width: 200px;
+            margin-top: 70px;
+        }
+
+        /* Preloader Styles */
+        .preloader {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader-text {
+            font-family: consolas;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .loader-text .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: slideIn 0.4s forwards;
+        }
+
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-content { opacity: 0; }
+        .page-content.visible { opacity: 1; transition: opacity 0.5s ease; }
+
+        /* ── TOP-LEFT BACK BUTTON ── */
+.back-home-btn {
+    position: fixed;
+    top: 20px;
+    left: 28px;
+    z-index: 1000;
+}
+
+.back-home-btn a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.05); /* Subtle dark background */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    transition: all 0.3s ease;
+}
+
+.back-home-btn a i {
+    color: var(--accent-yellow); /* Green color for the icon */
+    transition: transform 0.3s ease;
+}
+
+.back-home-btn:hover a {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 15px rgba(47, 251, 36, 0.2);
+}
+
+.back-home-btn:hover a i {
+    transform: translateX(-4px); /* Moves arrow slightly on hover */
+}
+
+/* ── MOBILE RESPONSIVENESS ── */
+@media (max-width: 768px) {
+    .back-home-btn {
+        top: 14px;
+        left: 14px;
+    }
+    .back-home-btn a {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-text">AdMediaX | AI </div>
+    </div>
+
+    <!-- ── FIXED TOP-RIGHT "Go with AI" BUTTON ── -->
+    <div class="topbar-btn">
+        <a href="ai-agent.html">
+            <i class="fa-solid fa-bolt"></i> Go with AI
+        </a>
+    </div>
+
+    <div class="back-home-btn">
+    <a href="../index.html">
+        <i class="fa-solid fa-arrow-left"></i> Back To Home
+    </a>
+</div>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="ai-port-bdge">
+            <span class="badge" aria-label="Product status">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.9L18.18 22 12 18.77 5.82 22 7 14.17l-5-4.9 6.91-1.01L12 2z"
+                        stroke-width="1.5" />
+                </svg>
+                AdMediaX AI Portal
+            </span>
+        </div>
+
+        <div class="container">
+            <h1>AdMediaX AI Portal – Marketing Just Got Easier!</h1>
+            <p class="subtitle">Why spend hours planning campaigns when AI can do it smarter, faster, and better?</p>
+
+            <div class="features">
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-chart-line" style="color: #22c55e;"></i>&nbsp; No more guesswork</h3>
+                    <p>Only accurate, data-driven insights</p>
+                </div>
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-sack-dollar" style="color: #22c55e;"></i>&nbsp; Smarter budget use</h3>
+                    <p>Bigger results, better ROI</p>
+                </div>
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-bolt" style="color: #22c55e;"></i>&nbsp; Real-time optimization</h3>
+                    <p>Continuous campaign improvement</p>
+                </div>
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-bullseye" style="color: #22c55e;"></i>&nbsp; Maximum reach</h3>
+                    <p>Minimum effort required</p>
+                </div>
+            </div>
+
+            <p class="highlight">Think of it as your Smart Assistant that handles planning while you focus on
+                creativity. Because for your brand, smart work > hard work.</p>
+
+            <!-- Old button kept in HTML but hidden via CSS -->
+            <button class="notify-btn">
+                <a href="https://ai-agent-three-sigma.vercel.app" style="text-decoration: none; color: #000000;">
+                    Go with AI
+                </a>
+            </button>
+        </div>
+
+        <footer>
+            © 2026 AdMediaX. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = document.querySelector('.loader-text');
+            const content = text.textContent;
+            text.textContent = '';
+
+            [...content].forEach((char, i) => {
+                const span = document.createElement('span');
+                span.textContent = char;
+                span.className = 'char';
+                span.style.animationDelay = `${i * 0.05}s`;
+                text.appendChild(span);
+            });
+
+            setTimeout(() => {
+                document.querySelector('.preloader').classList.add('fade-out');
+                document.querySelector('.page-content').classList.add('visible');
+
+                setTimeout(() => {
+                    document.querySelector('.preloader').style.display = 'none';
+                }, 500);
+            }, 2500);
+        });
+    </script>
+</body>
+
+</html>

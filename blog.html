@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdMediaX - Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
+    <style>
+      /* Blog Section Styles */
+      .blog-section {
+        padding: 100px 0;
+        background: #0a0a0a;
+        color: #ffffff;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #65ea2c;
+      }
+
+      .section-header p {
+        color: #a0a0a0;
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .blog-card {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 255, 136, 0.15);
+        border-color: rgba(101, 234, 44, 0.2);
+      }
+
+      .blog-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .blog-content {
+        padding: 25px;
+      }
+
+      .blog-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+        line-height: 1.4;
+      }
+
+      .blog-content p {
+        color: #a0a0a0;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      .read-more {
+        display: inline-block;
+        color: #65ea2c;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 3px;
+        transition: all 0.3s ease;
+      }
+
+      .read-more:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #65ea2c;
+        transition: width 0.3s ease;
+      }
+
+      .read-more:hover:after {
+        width: 100%;
+      }
+
+      .read-more i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .read-more:hover i {
+        transform: translateX(5px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .blog-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .blog-grid {
+          grid-template-columns: 1fr;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .blog-section {
+          padding: 60px 0;
+        }
+
+        .section-header h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="/public/Logo/AdMediaX - Logo (PNG).png"
+              alt="AdMediaX Logo"
+              style="width: 100%; height: 65px"
+            />
+          </a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link active">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Latest Insights</h2>
+          <p>
+            Stay updated with the latest trends, strategies, and insights in
+            digital marketing and web development
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          <!-- Blog Card 1 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="50">
+            <img
+              src="/public/Blog Post - img/blg-1.jpg"
+              alt="Mastering Social Media in 2026"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>Mastering Social Media in 2026</h3>
+              <p>
+                Why Most Indian Businesses Are Still Doing It Wrong, If your
+                social media strategy looks the same as it did two years ago,
+                you're already behind.
+              </p>
+              <a
+                href="blogs/Mastering-Social-Media-in-2026.html"
+                class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Blog Card 2 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="/public/Blog Post - img/blg-2.jpg"
+              alt="Branding Strategy"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>Web Design Best Practices</h3>
+              <p>
+                Hey there! Whether you're designing your first website or
+                improving an existing one, following proven web design best
+                practices can make the difference between users staying or
+                leaving within seconds.
+              </p>
+              <a href="/blogs/Web-Design-Best-Practices.html" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Blog Card 3 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="/public/Blog Post - img/Content-Marketing-Strategies.jpg"
+              alt="Social Media Strategy"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>Content Marketing Strategies</h3>
+              <p>
+                Content marketing isn’t about publishing blogs and hoping they
+                magically perform. It’s about building a repeatable system that
+                attracts, engages, and converts the right audience using
+                information they genuinely want.
+              </p>
+              <a
+                href="/blogs/Content-Marketing-Strategies.html"
+                class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Blog Card 4 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="/public/Blog Post - img/Email-Marketing-Strategies-That-Actually-Convert-in-India-(2026).jpg"
+              alt="Social Media Strategy"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>
+                Email Marketing Strategies That Actually Convert in India (2026)
+              </h3>
+              <p>
+                Email marketing delivers an average ROI of ₹350 for every ₹10
+                spent, outperforming social media, paid ads, and most digital
+                channels available to Indian businesses.
+              </p>
+              <a
+                href="/blogs/Email-Marketing-Strategies-That-Actually-Convert-in-India-(2026).html"
+                class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Blog Card 5 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="/public/Blog Post - img/Video-Marketing-Trends-Shaping-Brand-Success-in-2026.jpg"
+              alt="Content Marketing"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>Video Marketing Trends Shaping Brand Success in 2026</h3>
+              <p>
+                Video now accounts for over 82% of all internet traffic.
+                Platforms prioritise it because it holds attention longer,
+                builds trust faster, and converts better than any other format.
+              </p>
+              <a
+                href="/blogs/Video-Marketing-Trends-Shaping-Brand-Success-in-2026.html"
+                class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Blog Card 6 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="/public/Blog Post - img/Data-Driven-Marketing.jpg"
+              alt="SEO Strategy"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>Data-Driven Marketing</h3>
+              <p>
+                Marketing once relied on gut feeling and broad assumptions. In
+                2026, the most successful brands make decisions based on
+                data—not guesswork.
+              </p>
+              <a href="/blogs/Data-Driven-Marketing.html" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="/public/Blog Post - img/marketing-strategy.png"
+              alt="Integrated IT and Marketing Strategy"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>Integrated IT + Marketing Strategy</h3>
+              <p>
+                Most companies treat IT and marketing as two separate worlds. In
+                2026, the businesses winning are the ones that made them work
+                together.
+              </p>
+              <a href="/blogs/it-marketing-strategy.html" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="/public/Blog Post - img/digital-marketing-mistakes.png"
+              alt="10 Digital Marketing Mistakes"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>10 Digital Marketing Mistakes Costing You Leads</h3>
+              <p>
+                If leads aren't coming in or aren't converting, the problem
+                often isn't your strategy — it's the gaps in your process that
+                no one's talking about.
+              </p>
+              <a href="/blogs/digital-marketing-mistakes.html" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+                <img
+              src="/public/Blog Post - img/ai-automation-marketing.webp"
+              alt="AI and Automation Marketing ROI"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h3>How AI & Automation Are Transforming Marketing ROI</h3>
+              <p>
+                AI isn't just for big enterprises anymore. Small and mid-sized
+                businesses are now automating their marketing and outpacing
+                competitors — without a massive budget.
+              </p>
+              <a
+                href="/blogs/ai-automation-marketing.html"
+                class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Blog Card 7 -->
+          <!-- <article class="blog-card" data-aos="fade-up" data-aos-delay="50">
+                    <img src="https://source.unsplash.com/random/600x400?email-marketing" alt="Email Marketing" class="blog-image">
+                    <div class="blog-content">
+                        <h3>Email Marketing Strategies</h3>
+                        <p>Discover proven strategies to improve your email marketing campaigns and achieve higher engagement rates.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article> -->
+
+          <!-- Blog Card 8 -->
+          <!-- <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://source.unsplash.com/random/600x400?video-marketing" alt="Video Marketing" class="blog-image">
+                    <div class="blog-content">
+                        <h3>Video Marketing Trends</h3>
+                        <p>Learn how to leverage the power of video to connect with your audience and boost your marketing results.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article> -->
+
+          <!-- Blog Card 9 -->
+          <!-- <article class="blog-card" data-aos="fade-up" data-aos-delay="150">
+                    <img src="https://source.unsplash.com/random/600x400?analytics" alt="Analytics" class="blog-image">
+                    <div class="blog-content">
+                        <h3>Data-Driven Marketing</h3>
+                        <p>Unlock the power of data to make informed marketing decisions and drive better business results.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">App Development</a></li>
+              <li><a href="services.html">Digital Marketing</a></li>
+              <li><a href="services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="work.html">Our Work</a></li>
+              <!-- <li><a href="blog.html">Blog</a></li> -->
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>&#x1F4E7; admediax18@gmail.com</p>
+            <p>&#x1F4DE; +91 9887964016</p>
+            <p>
+              &#x1F4CD; Naman Plaza,Joshi Marg, Kalwar Rd, Jhotwara, Jaipur,
+              Rajasthan 302012
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+  </body>
+</html>

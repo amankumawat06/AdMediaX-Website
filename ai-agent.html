@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Recommendations</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=National+Park:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/AIAgent.css" />
+  </head>
+  <body>
+    <section class="xr">
+      <canvas id="particle-canvas"></canvas>
+      <div class="xblob xb1"></div>
+      <div class="xblob xb2"></div>
+
+      <!-- HERO -->
+      <div class="xhero">
+        <div class="xpill">
+          <div class="xdot"></div>
+          Powered by AI
+        </div>
+        <h2 class="xh1">Smart <em>Business AI</em></h2>
+        <p class="xsub">
+          Tell us your goals and budget — our AI maps the exact services to
+          accelerate your growth.
+        </p>
+      </div>
+
+      <!-- MAIN GRID -->
+      <div class="xbody">
+        <!-- LEFT: <FORM> -->
+        <div class="xcard">
+          <div class="xchead">
+            <div class="xcicon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#57ff3c"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <div>
+              <div class="xctitle">Configure Your Strategy</div>
+              <div class="xcsub">Fill in the details below</div>
+            </div>
+          </div>
+          <form id="ai-form">
+            <div class="xfields">
+              <!-- Query -->
+              <div class="xfield" id="field-query">
+                <label class="xlabel">What do you need?</label>
+                <input
+                  class="xinput"
+                  type="text"
+                  id="input-query"
+                  placeholder="e.g. I want to grow my sales..."
+                  required
+                />
+              </div>
+
+              <div class="xrow">
+                <!-- Budget -->
+                <div class="xfield" id="field-budget">
+                  <label class="xlabel">Budget</label>
+                  <div class="xiwrap">
+                    <span class="xsym">₹</span>
+                    <input
+                      class="xinput xsp"
+                      type="number"
+                      min="1000"
+                      max="100000"
+                      id="input-budget"
+                      placeholder="20,000"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Goal -->
+                <div class="xfield" id="field-goal">
+                  <label class="xlabel">Primary Goal</label>
+                  <div class="xswrap">
+                    <select class="xsel" id="input-goal" required>
+                      <option value="" disabled selected>Select Goal</option>
+                      <option>Generate Leads</option>
+                      <option>Run Paid Ads Campaign</option>
+                      <option>Get Customers</option>
+                      <option>Build Brand</option>
+                      <option>Increase Sales</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Business Type -->
+              <div class="xfield" id="field-businessType">
+                <label class="xlabel">Business Type</label>
+                <div class="xswrap">
+                  <select class="xsel" id="input-businessType" required>
+                    <option value="" disabled selected>
+                      Select Business Type
+                    </option>
+                    <option>Restaurant / Food Business</option>
+                    <option>Fashion / Lifestyle</option>
+                    <option>Startup</option>
+                    <option>Local Business</option>
+                    <option>E-commerce</option>
+                    <option>Enterprise</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Platform -->
+              <div class="xfield" id="field-platform">
+                <label class="xlabel">Platform Focus</label>
+                <div class="xswrap">
+                  <select class="xsel" id="input-platform" required>
+                    <option value="" disabled selected>Select Platform</option>
+                    <option>YouTube</option>
+                    <option>Google / SEO</option>
+                    <option>Facebook</option>
+                    <option>Instagram</option>
+                    <option>Website</option>
+                    <option>All</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="xbtn" id="ai-btn" type="submit">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+                Get AI Recommendation
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="xside">
+          <div class="xstats">
+            <div class="xstat">
+              <div class="xsn">200+</div>
+              <div class="xsl">Businesses</div>
+            </div>
+            <div class="xstat">
+              <div class="xsn">5s</div>
+              <div class="xsl">Response</div>
+            </div>
+            <div class="xstat">
+              <div class="xsn">99%</div>
+              <div class="xsl">Accuracy</div>
+            </div>
+            <div class="xstat">
+              <div class="xsn">24/7</div>
+              <div class="xsl">Available</div>
+            </div>
+          </div>
+
+          <div class="xhiw">
+            <div class="xhiwtitle">How it works</div>
+            <div class="xsteps">
+              <div class="xstep">
+                <div class="xsnum">01</div>
+                <div>
+                  <div class="xsname">Describe your need</div>
+                  <div class="xsdesc">
+                    Tell us your goal, budget and target platform in plain
+                    language.
+                  </div>
+                </div>
+              </div>
+              <div class="xstep">
+                <div class="xsnum">02</div>
+                <div>
+                  <div class="xsname">AI analyzes</div>
+                  <div class="xsdesc">
+                    Our engine scans hundreds of service combinations to find
+                    the ideal fit.
+                  </div>
+                </div>
+              </div>
+              <div class="xstep">
+                <div class="xsnum">03</div>
+                <div>
+                  <div class="xsname">Get your match</div>
+                  <div class="xsdesc">
+                    Receive curated, consultant-grade picks built for your
+                    business.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOADING -->
+        <div class="xloading" id="loading-section">
+          <div class="xbartrack">
+            <div class="xbar" id="progress-bar"></div>
+          </div>
+          <div class="xlsteps" id="loading-steps">
+            <div class="xlstep" id="lstep-0">
+              <div class="xlicon"></div>
+              Analyzing your requirements...
+            </div>
+            <div class="xlstep" id="lstep-1">
+              <div class="xlicon"></div>
+              Scanning service catalog...
+            </div>
+            <div class="xlstep" id="lstep-2">
+              <div class="xlicon"></div>
+              Running AI recommendation engine...
+            </div>
+            <div class="xlstep" id="lstep-3">
+              <div class="xlicon"></div>
+              Generating smart results...
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="xresult" id="result-section">
+          <div class="xmsg" id="result-message" style="display: none">
+            <div class="xmicon">🤖</div>
+            <p class="xmtext" id="result-text"></p>
+          </div>
+          <div id="services-section" style="display: none">
+            <div class="xreclabel">Recommended Services</div>
+            <div class="xsvcgrid" id="services-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      /* ── Particle Canvas ── */
+      (function () {
+        const canvas = document.getElementById("particle-canvas");
+        const ctx = canvas.getContext("2d");
+        function resize() {
+          canvas.width = canvas.offsetWidth;
+          canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener("resize", resize);
+
+        const particles = Array.from({ length: 60 }, () => ({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.5 + 0.3,
+          dx: (Math.random() - 0.5) * 0.3,
+          dy: (Math.random() - 0.5) * 0.3,
+          alpha: Math.random() * 0.5 + 0.1,
+        }));
+
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          particles.forEach((p) => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(87,255,60,${p.alpha})`;
+            ctx.fill();
+            p.x += p.dx;
+            p.y += p.dy;
+            if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+          });
+          requestAnimationFrame(draw);
+        }
+        draw();
+      })();
+
+      /* ── Focus highlight on labels ── */
+      ["query", "budget", "goal", "businessType", "platform"].forEach(
+        (name) => {
+          const input = document.getElementById("input-" + name);
+          const field = document.getElementById("field-" + name);
+          if (!input || !field) return;
+          input.addEventListener("focus", () => field.classList.add("xf"));
+          input.addEventListener("blur", () => field.classList.remove("xf"));
+        },
+      );
+
+      /* ── Typewriter ── */
+      function typewriter(el, text, speed = 18) {
+        el.textContent = "";
+        let i = 0;
+        const interval = setInterval(() => {
+          if (i < text.length) {
+            el.textContent = text.slice(0, ++i);
+          } else {
+            clearInterval(interval);
+          }
+        }, speed);
+      }
+
+      /* ── Loading steps ── */
+      function setStep(step) {
+        const bar = document.getElementById("progress-bar");
+        bar.style.width = (step / 4) * 100 + "%";
+        for (let i = 0; i < 4; i++) {
+          const el = document.getElementById("lstep-" + i);
+          const icon = el.querySelector(".xlicon");
+          el.classList.remove("xa", "xd");
+          if (i + 1 === step) {
+            el.classList.add("xa");
+            icon.textContent = "◌";
+          } else if (i + 1 < step) {
+            el.classList.add("xd");
+            icon.textContent = "✓";
+          } else {
+            icon.textContent = "";
+          }
+        }
+      }
+
+      /* ── Render service cards ── */
+      function renderServices(services) {
+        const grid = document.getElementById("services-grid");
+        grid.innerHTML = "";
+        services.forEach((service, index) => {
+          const card = document.createElement("div");
+          card.className = "xsvccard";
+          card.style.animationDelay = index * 0.1 + "s";
+
+          const media = service.img
+            ? `<img class="xsvcimg" src="${service.img}" alt="${service.name || ""}" />`
+            : `<div class="xsvcph">✦</div>`;
+
+          card.innerHTML = `
+        ${media}
+        <div class="xsvcbody" >
+          <a href="services.html">
+            <div class="xsvctag">Recommended</div>
+          <h3 class="xsvcname">${service.name || ""}</h3>
+          <p class="xsvcdesc">${service.desc || ""}</p>
+          <div class="xsvccta">
+            Learn More
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>  
+          </a>
+        </div>
+      `;
+          grid.appendChild(card);
+        });
+      }
+
+      /* ── Main AI call ── */
+      document
+        .getElementById("ai-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const btn = document.getElementById("ai-btn");
+          const loadingEl = document.getElementById("loading-section");
+          const resultEl = document.getElementById("result-section");
+          const msgEl = document.getElementById("result-message");
+          const textEl = document.getElementById("result-text");
+          const servicesSection = document.getElementById("services-section");
+
+          const form = {
+            query: document.getElementById("input-query").value,
+            budget: document.getElementById("input-budget").value,
+            goal: document.getElementById("input-goal").value,
+            businessType: document.getElementById("input-businessType").value,
+            platform: document.getElementById("input-platform").value,
+          };
+
+          btn.disabled = true;
+          btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:17px;height:17px;">
+        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+      Analyzing...
+    `;
+
+          resultEl.classList.remove("visible");
+          loadingEl.classList.add("visible");
+          setStep(0);
+
+          /* Simulate loading steps */
+          for (let s = 1; s <= 4; s++) {
+            await new Promise((r) => setTimeout(r, 520));
+            setStep(s);
+          }
+
+          try {
+            const res = await fetch("http://localhost:8080/api/ai/ask", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(form),
+            });
+            const data = await res.json();
+
+            loadingEl.classList.remove("visible");
+            resultEl.classList.add("visible");
+
+            if (data.message) {
+              msgEl.style.display = "flex";
+              typewriter(textEl, data.message);
+            } else {
+              msgEl.style.display = "none";
+            }
+
+            if (data.services && data.services.length > 0) {
+              servicesSection.style.display = "block";
+              renderServices(data.services);
+            } else {
+              servicesSection.style.display = "none";
+            }
+          } catch {
+            loadingEl.classList.remove("visible");
+            resultEl.classList.add("visible");
+            msgEl.style.display = "flex";
+            typewriter(
+              textEl,
+              "Unable to reach the AI server. Please ensure the backend is running.",
+            );
+            servicesSection.style.display = "none";
+          }
+
+          btn.disabled = false;
+          btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:17px;height:17px;">
+        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+      Get AI Recommendation
+    `;
+        });
+    </script>
+  </body>
+</html>
