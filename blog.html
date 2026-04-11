@@ -24,6 +24,7 @@
       type="image/png"
       href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./assets/css/hamburger.css" />
     <style>
       /* Blog Section Styles */
       .blog-section {
@@ -158,48 +159,84 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-      <div class="nav-container">
+    <div class="nav-container">
         <div class="nav-logo">
-          <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html">
-            <img
-              src="public/Logo/AdMediaX - Logo (PNG).png"
-              alt="AdMediaX Logo"
-              style="width: 100%; height: 52px" 
-            />
-          </a>
+            <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html">
+                <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width: auto; height: 44px;">
+            </a>
         </div>
+ 
+        <!-- Desktop menu (unchanged) -->
         <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="services.html" class="nav-link">Services</a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">Our Work</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="blog.html" class="nav-link active">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact Us</a>
-          </li>
-          <li class="nav-item" id="admediax-ai">
-            <a href="ai-portal.html" class="nav-link" target="_blank"
-              >AdMediaX|Ai</a
-            >
-          </li>
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item" id="admediax-ai">
+                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
+            </li>
         </ul>
-        <div class="hamburger" id="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+ 
+        <!-- Hamburger button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="ham-line ham-top"></span>
+            <span class="ham-line ham-mid"></span>
+            <span class="ham-line ham-bot"></span>
+        </button>
+    </div>
+ 
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+            <!-- Top row: logo + close -->
+            <div class="drawer-header">
+                <span class="drawer-brand">AdMediaX</span>
+                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+ 
+            <!-- Nav links -->
+            <ul class="drawer-nav">
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="services.html" class="drawer-link">Services</a></li>
+                <li><a href="work.html" class="drawer-link">Our Work</a></li>
+                <li><a href="about.html" class="drawer-link">About Us</a></li>
+                <li><a href="blog.html" class="drawer-link">Blog</a></li>
+                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+            </ul>
+ 
+            <!-- CTA inside drawer -->
+            <div class="drawer-cta">
+                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
+                <a href="contact.html" class="drawer-start-btn">Get Started</a>
+            </div>
+ 
+            <!-- Footer strip -->
+            <div class="drawer-footer">
+                <p>© 2026 AdMediaX</p>
+                <div class="drawer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
+    </div>
+ 
+    <!-- Backdrop -->
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+</nav>
 
     <!-- Blog Section -->
     <section class="blog-section">
@@ -461,6 +498,110 @@
     </div>
 </article>
 
+<article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+    <img
+        src="public/Blog_Post-img/ai-integration-2026.jpeg"
+        alt="Why AI Integration Is No Longer Optional for Your Business in 2026"
+        class="blog-image"
+    />
+    <div class="blog-content">
+        <h3>Why AI Integration Is No Longer Optional for Your Business in 2026</h3>
+        <p>
+            AI is no longer the future - it is the present. Businesses adopting it now are pulling ahead. Those that wait are already behind. Here's what AI integration actually means for your business.
+        </p>
+        <a href="blogs/ai-integration-business.html" class="read-more">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+    <img
+        src="public/Blog_Post-img/brand.jpeg"
+        alt="Your Brand Voice Is Your Biggest Asset in 2026"
+        class="blog-image"
+    />
+    <div class="blog-content">
+        <h3>Your Brand Voice Is Your Biggest Asset in 2026 - Here's How to Build One People Actually Trust</h3>
+        <p>
+            The internet is flooded with AI-generated content and copycat brands. The businesses that stand out have one thing in common - a clear, consistent, and human brand voice.
+        </p>
+        <a href="blogs/why-brand-voice-matters-2026.html" class="read-more">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+    <img
+        src="public/Blog_Post-img/social-commerce.jpeg"
+        alt="Short-Form Video and Social Commerce - The Most Powerful Growth Formula in 2026"
+        class="blog-image"
+    />
+    <div class="blog-content">
+        <h3>Short-Form Video + Social Commerce: The Most Powerful Growth Formula for Businesses in 2026</h3>
+        <p>
+            Reels, Shorts, and shoppable videos are not just for entertainment anymore - they are direct sales tools. Here's how businesses are turning scrollers into paying customers.
+        </p>
+        <a href="blogs/short-form-video-social-commerce-growth-2026.html" class="read-more">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+    <img
+        src="public/Blog_Post-img/influence-marketing.jpeg"
+        alt="UGC and Influencer Marketing in 2026"
+        class="blog-image"
+    />
+    <div class="blog-content">
+        <h3>UGC and Influencer Marketing in 2026 - Why Real People Sell Better Than Any Ad You Will Ever Run</h3>
+        <p>
+            People do not trust brands - they trust people. The businesses quietly leaving competitors behind have figured out how to turn real voices into their most powerful marketing channel.
+        </p>
+        <a href="blogs/ugc-influencer-marketing-2026.html" class="read-more">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+    <img
+        src="public/Blog_Post-img/website-loading-customers.jpeg"
+        alt="Why Your Business Website Is Silently Losing You Customers"
+        class="blog-image"
+    />
+    <div class="blog-content">
+        <h3>Why Your Business Website Is Silently Losing You Customers Every Single Day - And How to Fix It</h3>
+        <p>
+            You are spending on ads and social media, but a slow, outdated website is sending every visitor straight to your competitor. Here's the honest truth most agencies won't tell you.
+        </p>
+        <a href="blogs/why-website-losing-customers-2026.html" class="read-more">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+    <img
+        src="public/Blog_Post-img/whatsapp-marketing.jpeg"
+        alt="WhatsApp Marketing - The Most Underused Growth Channel for Businesses in 2026"
+        class="blog-image"
+    />
+    <div class="blog-content">
+        <h3>WhatsApp Marketing - The Most Underused Growth Channel for Businesses in 2026</h3>
+        <p>
+            Every business is running Instagram ads and Google campaigns.
+            Meanwhile, a channel with 98% open rates sits completely unused.
+            Here's why WhatsApp is the smartest marketing move you're not making.
+        </p>
+        <a href="blogs/whatsapp-marketing-growth-2026.html" class="read-more">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
           <!-- Blog Card 7 -->
           <!-- <article class="blog-card" data-aos="fade-up" data-aos-delay="50">
                     <img src="https://source.unsplash.com/random/600x400?email-marketing" alt="Email Marketing" class="blog-image">
@@ -570,5 +711,6 @@
         once: true,
       });
     </script>
+    <script src="./assets/js/hamburger.js"></script>
   </body>
 </html>

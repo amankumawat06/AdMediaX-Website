@@ -16,6 +16,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="icon" type="image/png" href="/AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="/assets/css/hamburger.css" />
 
     <style>
         .blog-post {
@@ -436,27 +437,80 @@
     <div class="nav-container">
         <div class="nav-logo">
             <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html">
-                <img src="../public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX Logo"
-                    style="width: 100%; height: 52px;">
+                <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width: auto; height: 44px;">
             </a>
         </div>
+ 
+        <!-- Desktop menu (unchanged) -->
         <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="../services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="../work.html" class="nav-link">Our Work</a></li>
-            <li class="nav-item"><a href="../about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="../blog.html" class="nav-link active">Blog</a></li>
-            <li class="nav-item"><a href="../contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
             <li class="nav-item" id="admediax-ai">
-                <a href="../ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
+                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
             </li>
         </ul>
-        <div class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+ 
+        <!-- Hamburger button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="ham-line ham-top"></span>
+            <span class="ham-line ham-mid"></span>
+            <span class="ham-line ham-bot"></span>
+        </button>
+    </div>
+ 
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+            <!-- Top row: logo + close -->
+            <div class="drawer-header">
+                <span class="drawer-brand">AdMediaX</span>
+                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+ 
+            <!-- Nav links -->
+            <ul class="drawer-nav">
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="services.html" class="drawer-link">Services</a></li>
+                <li><a href="work.html" class="drawer-link">Our Work</a></li>
+                <li><a href="about.html" class="drawer-link">About Us</a></li>
+                <li><a href="blog.html" class="drawer-link">Blog</a></li>
+                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+            </ul>
+ 
+            <!-- CTA inside drawer -->
+            <div class="drawer-cta">
+                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
+                <a href="contact.html" class="drawer-start-btn">Get Started</a>
+            </div>
+ 
+            <!-- Footer strip -->
+            <div class="drawer-footer">
+                <p>© 2026 AdMediaX</p>
+                <div class="drawer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+ 
+    <!-- Backdrop -->
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
 </nav>
 
 <article class="blog-post" data-aos="fade-up">
@@ -776,6 +830,7 @@
         }
     });
 </script>
+<script src="/assets/js/hamburger.js" />
 
 </body>
 </html>
