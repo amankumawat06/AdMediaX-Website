@@ -11,8 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=National+Park:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="./assets/css/AIAgent.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
   </head>
   <body>
     <section class="xr">
@@ -20,11 +25,8 @@
       <div class="xblob xb1"></div>
       <div class="xblob xb2"></div>
 
-      <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html" class="xbackToHome">
-        ← Back to Home
-      </a>
+      <a href="/index.html" class="xbackToHome"> ← Back to Home </a>
 
-      <!-- HERO -->
       <div class="xhero">
         <div class="xpill">
           <div class="xdot"></div>
@@ -37,9 +39,7 @@
         </p>
       </div>
 
-      <!-- MAIN GRID -->
       <div class="xbody">
-        <!-- LEFT: <FORM> -->
         <div class="xcard">
           <div class="xchead">
             <div class="xcicon">
@@ -76,7 +76,6 @@
               </div>
 
               <div class="xrow">
-                <!-- Budget -->
                 <div class="xfield" id="field-budget">
                   <label class="xlabel">Budget</label>
                   <div class="xiwrap">
@@ -93,7 +92,6 @@
                   </div>
                 </div>
 
-                <!-- Goal -->
                 <div class="xfield" id="field-goal">
                   <label class="xlabel">Primary Goal</label>
                   <div class="xswrap">
@@ -109,7 +107,6 @@
                 </div>
               </div>
 
-              <!-- Business Type -->
               <div class="xfield" id="field-businessType">
                 <label class="xlabel">Business Type</label>
                 <div class="xswrap">
@@ -127,7 +124,6 @@
                 </div>
               </div>
 
-              <!-- Platform -->
               <div class="xfield" id="field-platform">
                 <label class="xlabel">Platform Focus</label>
                 <div class="xswrap">
@@ -160,7 +156,6 @@
           </form>
         </div>
 
-        <!-- RIGHT: SIDEBAR -->
         <div class="xside">
           <div class="xstats">
             <div class="xstat">
@@ -404,6 +399,11 @@
           loadingEl.classList.add("visible");
           setStep(0);
 
+          loadingEl.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
           /* Simulate loading steps */
           for (let s = 1; s <= 4; s++) {
             await new Promise((r) => setTimeout(r, 520));
@@ -411,11 +411,14 @@
           }
 
           try {
-            const res = await fetch("https://admediax-backend.vercel.app/api/ai/ask", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(form),
-            });
+            const res = await fetch(
+              "https://admediax-backend.vercel.app/api/ai/ask",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+              },
+            );
             const data = await res.json();
 
             loadingEl.classList.remove("visible");

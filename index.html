@@ -1,359 +1,1062 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdMediaX - Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/png" href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="./assets/css/hamburger.css" />
-</head>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+  </head>
 
-<body style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif">
-    <!-- Navigation -->
+  <body
+    style="
+      font-family:
+        &quot;Inter&quot;,
+        -apple-system,
+        BlinkMacSystemFont,
+        &quot;Segoe UI&quot;,
+        Roboto,
+        &quot;Helvetica Neue&quot;,
+        Helvetica,
+        Arial,
+        sans-serif;
+    "
+  >
     <nav class="navbar" id="navbar">
-    <div class="nav-container">
+      <div class="nav-container">
         <div class="nav-logo">
-            <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html">
-                <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width: auto; height: 44px;">
-            </a>
+          <a href="/index.html">
+            <img
+              src="public/Logo/AdMediaX - Logo (PNG).png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
         </div>
- 
-        <!-- Desktop menu (unchanged) -->
+
+        <!-- Desktop menu -->
         <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-            <li class="nav-item" id="admediax-ai">
-                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
-            </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
         </ul>
- 
-        <!-- Hamburger button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span class="ham-line ham-top"></span>
-            <span class="ham-line ham-mid"></span>
-            <span class="ham-line ham-bot"></span>
+
+        <!-- Hamburger -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
         </button>
-    </div>
- 
-    <!-- Mobile drawer -->
-    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
         <div class="drawer-inner">
-            <!-- Top row: logo + close -->
-            <div class="drawer-header">
-                <span class="drawer-brand">AdMediaX</span>
-                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="public/Logo/AdMediaX - Logo (PNG).png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul class="drawer-nav">
+            <li><a href="index.html" class="drawer-link">Home</a></li>
+            <li><a href="services.html" class="drawer-link">Services</a></li>
+            <li><a href="work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="about.html" class="drawer-link">About Us</a></li>
+            <li><a href="blog.html" class="drawer-link">Blog</a></li>
+            <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+          <div class="drawer-cta">
+            <a href="ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
             </div>
- 
-            <!-- Nav links -->
-            <ul class="drawer-nav">
-                <li><a href="index.html" class="drawer-link">Home</a></li>
-                <li><a href="services.html" class="drawer-link">Services</a></li>
-                <li><a href="work.html" class="drawer-link">Our Work</a></li>
-                <li><a href="about.html" class="drawer-link">About Us</a></li>
-                <li><a href="blog.html" class="drawer-link">Blog</a></li>
-                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
-            </ul>
- 
-            <!-- CTA inside drawer -->
-            <div class="drawer-cta">
-                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
-                <a href="contact.html" class="drawer-start-btn">Get Started</a>
-            </div>
- 
-            <!-- Footer strip -->
-            <div class="drawer-footer">
-                <p>© 2026 AdMediaX</p>
-                <div class="drawer-socials">
-                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest">
-                        <i class="fab fa-pinterest-p"></i>
-                    </a>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
- 
-    <!-- Backdrop -->
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-</nav>
+      </div>
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
 
-    <!-- Hero Section -->
+
+    <!-- Hero section -->
+
     <section class="hero" id="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Turning ideas into impact, complexity into clarity</h1>
-                    <p class="hero-subtitle">AdMediaX turns ideas into impact and complexity into clarity—where
-                        creativity meets measurable business outcomes.</p>
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary">Get Started</a>
-                        <a href="work.html" class="btn btn-secondary">View Our Work</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="public/Homepage-grpc.gif" alt="Digital Agency Illustration">
-                </div>
+      <img
+        class="hero-bg-photo"
+        src="./public/homeHero.avif"
+        alt="Digital marketing team collaborating on strategy"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      <div class="hero-overlay"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-eyebrow">
+              Digital Marketing &amp; Brand Storytelling
             </div>
+            <h1 class="hero-title">
+              Scaling Brands with
+              <span class="accent">Digital Marketing</span>
+              &amp; Brand Storytelling
+              <span class="accent">Excellence.</span>
+            </h1>
+            <p class="hero-subtitle">
+              AdMediaX is a data-driven agency transforming complex brand ideas
+              into measurable growth and AI-optimized impact.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="contact.html" class="btn btn-primary">
+                Get Started
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="#000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="work.html" class="btn btn-secondary">
+                View Our Work
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="hero-particles" id="particles"></div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll-hint">
+        <span>Scroll to Explore</span>
+        <div class="scroll-mouse-icon"></div>
+      </div>
+      <div class="hero-particles" id="particles"></div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Our Impact in Numbers</h2>
-                <p>Delivering excellence and driving success for our clients worldwide</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-award stat-icon"></i>
-                    <span class="stat-number" data-target="4">0</span>
-                    <p class="stat-label">Years Experience</p>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-smile stat-icon"></i>
-                    <span class="stat-number" data-target="50">0+</span>
-                    <p class="stat-label">Happy Clients</p>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-briefcase stat-icon"></i>
-                    <span class="stat-number" data-target="100">0+</span>
-                    <p class="stat-label">Projects Completed</p>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-users stat-icon"></i>
-                    <span class="stat-number" data-target="10">0+</span>
-                    <p class="stat-label">Team Members</p>
-                </div>
-            </div>
+    <section class="impact-section">
+      <div class="impact-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Our Impact in Numbers</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <div class="impact-inner">
+        <div class="impact-heading">
+          <h2 class="impact-title">
+            Numbers that<br /><span class="impact-accent">speak louder</span>
+            than words
+          </h2>
+          <p class="impact-sub">
+            Delivering excellence and driving measurable success for brands
+            worldwide.
+          </p>
         </div>
+
+        <!-- Stats grid -->
+        <div class="impact-stats">
+          <div class="istat-card" data-target="4" data-suffix="+">
+            <div class="istat-top">
+              <div class="istat-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path
+                    d="M11 2L13.5 8H20L14.5 12L16.5 18L11 14.5L5.5 18L7.5 12L2 8H8.5L11 2Z"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div class="istat-bar-wrap">
+                <div class="istat-bar" style="--bar-h: 60%"></div>
+                <div class="istat-bar" style="--bar-h: 80%"></div>
+                <div class="istat-bar hi" style="--bar-h: 100%"></div>
+                <div class="istat-bar" style="--bar-h: 75%"></div>
+              </div>
+            </div>
+            <div class="istat-number-wrap">
+              <span class="istat-num" data-target="4" data-suffix="">0</span>
+              <span class="istat-suffix">+</span>
+            </div>
+            <p class="istat-label">Years Experience</p>
+            <div class="istat-glow"></div>
+          </div>
+
+          <div class="istat-card featured" data-target="50" data-suffix="+">
+            <div class="istat-top">
+              <div class="istat-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="9"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                  />
+                  <path
+                    d="M7 11.5C7.5 13.5 9 15 11 15s3.5-1.5 4-3.5"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="8.5" cy="9" r="1" fill="#65ea2c" />
+                  <circle cx="13.5" cy="9" r="1" fill="#65ea2c" />
+                </svg>
+              </div>
+              <div class="istat-tag">Most proud of</div>
+            </div>
+            <div class="istat-number-wrap">
+              <span class="istat-num" data-target="50" data-suffix="">0</span>
+              <span class="istat-suffix">+</span>
+            </div>
+            <p class="istat-label">Happy Clients</p>
+            <div class="istat-glow"></div>
+          </div>
+
+          <div class="istat-card" data-target="100" data-suffix="+">
+            <div class="istat-top">
+              <div class="istat-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <rect
+                    x="3"
+                    y="6"
+                    width="16"
+                    height="12"
+                    rx="2"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                  />
+                  <path
+                    d="M7 6V5a4 4 0 018 0v1"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7 11h8M7 14h5"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    opacity="0.5"
+                  />
+                </svg>
+              </div>
+              <div class="istat-progress-wrap">
+                <div class="istat-progress-track">
+                  <div class="istat-progress-fill" style="--fill-w: 100%"></div>
+                </div>
+                <span class="istat-progress-label">Completed</span>
+              </div>
+            </div>
+            <div class="istat-number-wrap">
+              <span class="istat-num" data-target="100" data-suffix="">0</span>
+              <span class="istat-suffix">+</span>
+            </div>
+            <p class="istat-label">Projects Completed</p>
+            <div class="istat-glow"></div>
+          </div>
+
+          <div class="istat-card" data-target="10" data-suffix="">
+            <div class="istat-top">
+              <div class="istat-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle
+                    cx="11"
+                    cy="7"
+                    r="3"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                  />
+                  <circle
+                    cx="5"
+                    cy="8"
+                    r="2.2"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    opacity="0.5"
+                  />
+                  <circle
+                    cx="17"
+                    cy="8"
+                    r="2.2"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    opacity="0.5"
+                  />
+                  <path
+                    d="M5 16c0-2.2 2.7-4 6-4s6 1.8 6 4"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M1 17c0-1.5 1.5-2.5 4-2.5M21 17c0-1.5-1.5-2.5-4-2.5"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    opacity="0.5"
+                  />
+                </svg>
+              </div>
+              <div class="istat-dots">
+                <span></span><span></span><span></span> <span></span
+                ><span></span><span></span> <span></span><span></span
+                ><span></span><span></span>
+              </div>
+            </div>
+            <div class="istat-number-wrap">
+              <span class="istat-num" data-target="10" data-suffix="">0</span>
+              <span class="istat-suffix"> Experts</span>
+            </div>
+            <p class="istat-label">Team Members</p>
+            <div class="istat-glow"></div>
+          </div>
+        </div>
+
+        <!-- trust bar -->
+        <div class="trust-bar">
+          <div class="trust-item">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M7 1l1.5 4H13l-3.5 2.5L11 12 7 9.5 3 12l1.5-4.5L1 5h4.5L7 1z"
+                fill="#65ea2c"
+              />
+            </svg>
+            <span>Trusted by 50+ brands</span>
+          </div>
+          <div class="trust-sep"></div>
+          <div class="trust-item">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="7" r="6" stroke="#65ea2c" stroke-width="1.2" />
+              <path
+                d="M4.5 7l2 2 3-3.5"
+                stroke="#65ea2c"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>100% project delivery rate</span>
+          </div>
+          <div class="trust-sep"></div>
+          <div class="trust-item">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M7 2v5l3 1.5"
+                stroke="#65ea2c"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+              <circle
+                cx="7"
+                cy="7"
+                r="5.5"
+                stroke="#65ea2c"
+                stroke-width="1.2"
+              />
+            </svg>
+            <span>4 years of proven results</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- How We Work Section -->
-    <section class="how-we-work">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>How We Work</h2>
-                <p>Our proven process ensures we deliver exceptional results every time</p>
-            </div>
-            <div class="process-grid">
-                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="process-icon">
-                        <i class="fas fa-lightbulb"></i>
-                        <div class="pulse-effect"></div>
-                    </div>
-                    <h3>Discover</h3>
-                    <p>We start by understanding your business goals, target audience, and challenges to create a
-                        tailored strategy.</p>
-                </div>
-                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="process-icon">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="pulse-effect"></div>
-                    </div>
-                    <h3>Design</h3>
-                    <p>Our creative team crafts stunning designs that align with your brand and engage your audience.
-                    </p>
-                </div>
-                <div class="process-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="process-icon">
-                        <i class="fas fa-rocket"></i>
-                        <div class="pulse-effect"></div>
-                    </div>
-                    <h3>Deliver</h3>
-                    <p>We bring everything together and launch your project with precision and attention to detail.</p>
-                </div>
-            </div>
+    <!-- How we work -->
+
+    <section class="hww-section">
+      <div class="hww-eyebrow">
+        <span class="hww-eyebrow-line"></span>
+        <span class="hww-eyebrow-text">Our Process</span>
+        <span class="hww-eyebrow-line"></span>
+      </div>
+
+      <div class="hww-inner">
+        <div class="hww-heading">
+          <div class="hww-heading-left">
+            <h2 class="hww-title">
+              How We <span class="hww-accent">Work</span>
+            </h2>
+            <p class="hww-sub">
+              A battle-tested process that turns your vision into measurable
+              results - every single time.
+            </p>
+          </div>
+          <a href="contact.html" class="hww-cta">
+            Start a Project
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7h10M8 3l4 4-4 4"
+                stroke="#080808"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
+        <div class="hww-steps">
+          <div class="hww-connector">
+            <div class="hww-connector-fill"></div>
+          </div>
+
+          <!-- Step 1 - Discover -->
+          <div class="hww-step" data-step="1">
+            <div class="hww-step-card">
+              <div class="hww-step-top">
+                <div class="hww-icon-ring">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="7"
+                      stroke="#65ea2c"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M16.5 16.5L21 21"
+                      stroke="#65ea2c"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M8 11h6M11 8v6"
+                      stroke="#65ea2c"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      opacity="0.6"
+                    />
+                  </svg>
+                  <div class="hww-icon-pulse"></div>
+                </div>
+                <div class="hww-step-badge">Week 1-2</div>
+              </div>
+              <h3 class="hww-step-title">Discover</h3>
+              <p class="hww-step-desc">
+                We deep-dive into your business goals, audience, and competitors
+                - building a data-backed strategy unique to your brand.
+              </p>
+              <div class="hww-step-tags">
+                <span>Brand Audit</span>
+                <span>Market Research</span>
+                <span>Strategy</span>
+              </div>
+              <div class="hww-card-glow"></div>
+            </div>
+            <div class="hww-node">
+              <div class="hww-node-inner"></div>
+              <div class="hww-node-ring"></div>
+            </div>
+          </div>
+
+          <!-- Step 2 - Design -->
+          <div class="hww-step" data-step="2">
+            <div class="hww-step-card featured">
+              <div class="hww-step-top">
+                <div class="hww-icon-ring">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9"
+                      stroke="#65ea2c"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M17 3l4 4-8 8-4-1-1-4 9-7z"
+                      stroke="#65ea2c"
+                      stroke-width="1.3"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="hww-icon-pulse"></div>
+                </div>
+                <div class="hww-step-badge featured-badge">Core Phase</div>
+              </div>
+              <h3 class="hww-step-title">Design</h3>
+              <p class="hww-step-desc">
+                Our creative team crafts stunning visuals and copy that align
+                perfectly with your brand identity and convert your audience.
+              </p>
+              <div class="hww-step-tags">
+                <span>UI/UX</span>
+                <span>Copywriting</span>
+                <span>Creatives</span>
+              </div>
+              <div class="hww-design-preview">
+                <div class="dp-bar" style="width: 85%">
+                  <span>Brand Identity</span><span>85%</span>
+                </div>
+                <div class="dp-track">
+                  <div class="dp-fill" style="--w: 85%"></div>
+                </div>
+                <div class="dp-bar" style="width: 72%">
+                  <span>Campaign Design</span><span>72%</span>
+                </div>
+                <div class="dp-track">
+                  <div class="dp-fill" style="--w: 72%"></div>
+                </div>
+              </div>
+              <div class="hww-card-glow"></div>
+            </div>
+            <div class="hww-node">
+              <div class="hww-node-inner featured-node"></div>
+              <div class="hww-node-ring"></div>
+            </div>
+          </div>
+
+          <!-- Step 3 - Deliver -->
+          <div class="hww-step" data-step="3">
+            <div class="hww-step-card">
+              <div class="hww-step-top">
+                <div class="hww-icon-ring">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 12l7 7L21 5"
+                      stroke="#65ea2c"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      opacity="0.5"
+                    />
+                    <path
+                      d="M5 3l14 9-14 9V3z"
+                      stroke="#65ea2c"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="hww-icon-pulse"></div>
+                </div>
+                <div class="hww-step-badge">Launch</div>
+              </div>
+              <h3 class="hww-step-title">Deliver</h3>
+              <p class="hww-step-desc">
+                We execute, launch, and monitor your campaign - optimising in
+                real-time with AI tools to maximise ROI and impact.
+              </p>
+              <div class="hww-step-tags">
+                <span>Launch</span>
+                <span>Optimise</span>
+                <span>Report</span>
+              </div>
+              <!-- Metric pill -->
+              <div class="hww-deliver-metric">
+                <div class="hww-metric-dot"></div>
+                <span class="hww-metric-label">Avg. ROAS improvement</span>
+                <span class="hww-metric-val">+3.2×</span>
+              </div>
+              <div class="hww-card-glow"></div>
+            </div>
+            <div class="hww-node">
+              <div class="hww-node-inner"></div>
+              <div class="hww-node-ring"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom guarantee strip -->
+        <div class="hww-guarantee">
+          <div class="hww-g-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M9 2L3 5v5c0 3.5 2.5 6.5 6 7.5 3.5-1 6-4 6-7.5V5L9 2z"
+                stroke="#65ea2c"
+                stroke-width="1.3"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 9l2 2 4-4"
+                stroke="#65ea2c"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p>
+            Every project is backed by our <strong>results guarantee</strong> -
+            if we don't hit agreed KPIs, we work for free until we do.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- About Preview -->
     <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Leading Digital Innovation</h2>
-                    <p>At AdMediaX, we combine creative excellence with technical expertise to deliver digital solutions
-                        that exceed expectations. Our team of passionate professionals is dedicated to helping
-                        businesses thrive in the digital landscape.</p>
-                    <p>From cutting-edge web development to strategic digital marketing, we provide comprehensive
-                        services that drive growth and success.</p>
-                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
-                </div>
-                <div class="about-image">
-                    <img src="public/Homepage-grpc-2.gif" alt="About AdMediaX">
-                </div>
+      <div class="about-bg-glow"></div>
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-tag">
+              <span class="tag-dot"></span>
+              About AdMediaX
             </div>
+
+            <h2 class="about-heading">
+              Scaling Brands with Data-Driven Marketing & Storytelling.
+            </h2>
+
+            <p class="about-body">
+              AdMediaX is a premier digital marketing agency in Jaipur,
+              specialized in turning complex brand ideas into measurable
+              business impact. From FMCG growth to high-end jewelry branding, we
+              build digital authority that delivers ROI.
+            </p>
+
+            <div class="about-divider"></div>
+
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num">100+</span>
+                <span class="stat-label">Projects Done</span>
+              </div>
+              <div class="stat-sep"></div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Satisfaction</span>
+              </div>
+              <div class="stat-sep"></div>
+              <div class="stat-item">
+                <span class="stat-num">5★</span>
+                <span class="stat-label">Client Rating</span>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn-primary-preview">
+              Learn More About Us
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+          <div class="about-image">
+            <div class="image-frame">
+              <span class="corner-dot dot-tl"></span>
+              <span class="corner-dot dot-tr"></span>
+              <img src="public/Homepage-grpc-2.gif" alt="About AdMediaX" />
+              <div class="image-overlay-bar">
+                <span class="overlay-dot"></span>
+                Digital Solutions
+              </div>
+            </div>
+
+            <div class="float-card float-card--bottom">
+              <div class="float-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="float-info">
+                <span class="float-label">Avg. Growth</span>
+                <span class="float-value">+240% ROI</span>
+              </div>
+            </div>
+
+            <div class="float-card float-card--top">
+              <div class="float-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="float-info">
+                <span class="float-label">Delivery</span>
+                <span class="float-value">Always On Time</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Client Logos -->
     <section class="clients">
-        <div class="container">
-            <h2 class="section-title">Trusted by Industry Leaders</h2>
-            <div class="clients-carousel">
-                <div class="client-logo">
-                    <img src="public/Client_Logo/OraSoft.png" alt="Client 1">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/1.png" alt="Client 2" id="grych">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/2.png" alt="Client 3">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/3.png" alt="Client 4">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/4.png" alt="Client 5">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/5.png" alt="Client 6">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/vishal-photos.png" alt="Client 6">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/The-Design-gallery.png" alt="Client 6">
-                </div>
-                <div class="client-logo">
-                    <img src="public/Client_Logo/shwad-wala.png" alt="Client 6">
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Trusted by Industry Leaders</h2>
+        <div class="clients-carousel">
+          <div class="client-logo">
+            <img src="public/Client_Logo/OraSoft.png" alt="Client 1" />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/1.png" alt="Client 2" id="grych" />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/2.png" alt="Client 3" />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/3.png" alt="Client 4" />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/4.png" alt="Client 5" />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/5.png" alt="Client 6" />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/vishal-photos.png" alt="Client 6" />
+          </div>
+          <div class="client-logo">
+            <img
+              src="public/Client_Logo/The-Design-gallery.png"
+              alt="Client 6"
+            />
+          </div>
+          <div class="client-logo">
+            <img src="public/Client_Logo/shwad-wala.png" alt="Client 6" />
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Blog Preview -->
-    <section class="blog-preview">
-        <div class="container">
-            <h2 class="section-title">Latest Insights</h2>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="./public/Blog_Post-img/blg-1.jpg" alt="Mastering Social Media in 2026"
-                            class="blog-image">
-                    </div>
-                    <div class="blog-content">
-                        <h3>Mastering Social Media in 2026</h3>
-                        <p>Why Most Indian Businesses Are Still Doing It Wrong, If your social media strategy looks the
-                            same as it did two years ago, you're already behind.</p>
-                        <a href="./blogs//Mastering-Social-Media-in-2026.html" class="blog-link">Read More</a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="./public/Blog_Post-img/blg-2.jpg" alt="Branding Strategy" class="blog-image">
-                    </div>
-                    <div class="blog-content">
-                        <h3>Web Design Best Practices</h3>
-                        <p>Hey there! Whether you're designing your first website or improving an existing one,
-                            following proven web design best practices can make the difference between users staying or
-                            leaving within seconds.</p>
-                        <a href="./blogs/Web-Design-Best-Practices.html" class="blog-link">Read More</a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="./public/Blog_Post-img/Content-Marketing-Strategies.jpg" alt="Social Media Strategy"
-                            class="blog-image">
-                    </div>
-                    <div class="blog-content">
-                        <h3>Content Marketing Strategies</h3>
-                        <p>Content marketing isn't about publishing blogs and hoping they magically perform. It’s about
-                            building a repeatable system that attracts, engages, and converts the right audience using
-                            information they genuinely want.</p>
-                        <a href="./blogs/Content-Marketing-Strategies.html" class="blog-link">Read More</a>
-                    </div>
-                </article>
+    <!-- Blogs or Insights -->
+
+    <section class="insights-section">
+      <div class="insights-container">
+        <h2 class="insights-title">Latest Insights</h2>
+
+        <div class="insights-grid">
+          <article class="insight-card">
+            <div class="insight-img-box">
+              <img
+                src="./public/Blog_Post-img/pintrest-vs-instagram.jpeg"
+                alt="Mastering Social Media in 2026"
+              />
             </div>
+            <div class="insight-content">
+              <h3> Pinterest vs Instagram: The Real Strategy for Jewellery Brands</h3>
+              <p>
+                Discover how Instagram builds desire while Pinterest captures
+                buyers ready to purchase - and why using both is the smartest
+                strategy for jewellery brands in 2026.
+              </p>
+              <a
+                href="./blogs/instagram-vs-pinterest-luxury-jewellery-branding-2026.html"
+                class="insight-link"
+                >Read More</a
+              >
+            </div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-img-box">
+              <img
+                src="./public/Blog_Post-img/jewllery-digital-marketing-gukdence.jpeg"
+                alt="Branding Strategy"
+              />
+            </div>
+            <div class="insight-content">
+              <h3>The 2026 Digital Marketing Guide for Jaipur Jewellers</h3>
+              <p>
+                AI search, short-form video, and social commerce are changing
+                how jewellery is discovered. Learn how Jaipur brands can stay
+                ahead in 2026.
+              </p>
+              <a
+                href="./blogs/digital-marketing-guide-jaipur-jewellers-2026.html"
+                class="insight-link"
+                >Read More</a
+              >
+            </div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-img-box">
+              <img
+                src="./public/Blog_Post-img/seo-jewlerry-website.jpeg"
+                alt="Social Media Strategy"
+              />
+            </div>
+            <div class="insight-content">
+              <h3>Why Jewellery Websites Need Speed, Not Just Design</h3>
+              <p>
+                A beautiful website means nothing if it's slow. Learn how speed,
+                performance, and technical SEO directly impact jewellery sales
+                in 2026.
+              </p>
+              <a
+                href="./blogs/why-jewellery-websites-need-fast-performance-2026.html"
+                class="insight-link"
+                >Read More</a
+              >
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AdMediaX</h3>
-                    <p>Transforming businesses through innovative digital solutions and creative excellence.</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank"
-                            class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
-                        <a href="https://www.instagram.com/admedia_x/?hl=en" target="_blank" class="social-icon"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://in.pinterest.com/admediax/" class="social-icon" target="_blank"
-                            rel="noopener"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Web Development</a></li>
-                        <li><a href="services.html">App Development</a></li>
-                        <li><a href="services.html">Digital Marketing</a></li>
-                        <li><a href="services.html">Graphic Design</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="work.html">Our Work</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fa fa-envelope"></i> &nbsp; admediax18@gmail.com</p>
-                    <p><i class="fa fa-phone"></i> &nbsp; +91 9887964016</p>
-                    <p><i class="fa-solid fa-location-dot"></i> &nbsp; F - 42 3th Floor Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur, Rajasthan 302034</p>
-                </div>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AdMediaX. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">App Development</a></li>
+              <li><a href="services.html">Digital Marketing</a></li>
+              <li><a href="services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="work.html">Our Work</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="ai-portal.html">AdMediaX AI</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fa fa-envelope"></i> &nbsp; admediax18@gmail.com</p>
+            <p><i class="fa fa-phone"></i> &nbsp; +91 9887964016</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> &nbsp; F - 42 3th Floor
+              Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura,
+              Jaipur, Rajasthan 302034
+            </p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
     </script>
     <script src="./assets/js/hamburger.js"></script>
-</body>
+    <script>
+      (function () {
+        var navbar = document.getElementById("navbar");
+        if (!navbar) return;
 
+        function handleScroll() {
+          if (window.scrollY > 50) {
+            navbar.classList.add("nav-scrolled");
+          } else {
+            navbar.classList.remove("nav-scrolled");
+          }
+        }
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        // Run once on load in case user refreshed mid-page
+        handleScroll();
+      })();
+
+      (function () {
+        // ── Counter animation with IntersectionObserver ──
+        function animateCounter(el) {
+          const target = parseInt(el.getAttribute("data-target"), 10);
+          const duration = 1800;
+          const start = performance.now();
+          function step(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+          }
+          requestAnimationFrame(step);
+        }
+
+        // ── Progress bar fill ──
+        function fillProgress() {
+          document.querySelectorAll(".istat-progress-fill").forEach((el) => {
+            el.style.width = el.style.getPropertyValue("--fill-w") || "100%";
+          });
+        }
+
+        const observed = new Set();
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !observed.has(entry.target)) {
+                observed.add(entry.target);
+                // Animate all counters in this section
+                entry.target
+                  .querySelectorAll(".istat-num[data-target]")
+                  .forEach(animateCounter);
+                fillProgress();
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+
+        const section = document.querySelector(".impact-section");
+        if (section) observer.observe(section);
+      })();
+
+      // how we work
+      (function () {
+        const section = document.querySelector(".hww-section");
+        if (!section) return;
+
+        let triggered = false;
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (entries[0].isIntersecting && !triggered) {
+              triggered = true;
+
+              // Animate connector line
+              const fill = section.querySelector(".hww-connector-fill");
+              if (fill) fill.classList.add("animated");
+
+              // Animate design progress bars
+              section.querySelectorAll(".dp-fill").forEach((el) => {
+                el.classList.add("animated");
+              });
+
+              // Stagger-reveal cards
+              section.querySelectorAll(".hww-step").forEach((step, i) => {
+                step.style.opacity = "0";
+                step.style.transform = "translateY(24px)";
+                step.style.transition = `opacity 0.6s ${i * 0.15}s ease, transform 0.6s ${i * 0.15}s ease`;
+                requestAnimationFrame(() => {
+                  step.style.opacity = "1";
+                  step.style.transform = "translateY(0)";
+                });
+              });
+            }
+          },
+          { threshold: 0.2 },
+        );
+
+        observer.observe(section);
+      })();
+    </script>
+  </body>
 </html>

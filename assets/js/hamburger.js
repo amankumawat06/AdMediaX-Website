@@ -11,6 +11,7 @@
         btn.setAttribute('aria-expanded', 'true');
         drawer.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        document.body.classList.add("drawer-open");
     }
  
     function closeDrawer() {
@@ -20,6 +21,7 @@
         btn.setAttribute('aria-expanded', 'false');
         drawer.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        document.body.classList.remove("drawer-open");
     }
  
     btn.addEventListener('click', () =>

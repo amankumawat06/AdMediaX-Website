@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Why Your Jewellery Website Needs High-Performance Code (Not Just Design) |
+      AdMediaX
+    </title>
+    <meta
+      name="description"
+      content="Your jewellery website might be beautiful. But if it loads in 5 seconds, you've already lost the sale. Here's what high-performance code actually means for Jaipur jewellers in 2026."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+
+    <style>
+      .blog-post {
+        padding: 120px 0 80px;
+        background: #0a0a0a;
+        color: #ffffff;
+      }
+      .blog-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .blog-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .blog-header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: #65ea2c;
+        line-height: 1.3;
+      }
+      .blog-meta {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        color: #a0a0a0;
+        margin-bottom: 30px;
+        font-size: 0.95rem;
+      }
+      .blog-meta span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .blog-meta i {
+        color: #65ea2c;
+      }
+
+      /* SVG Hero Image Container */
+      .blog-hero-svg {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        overflow: hidden;
+        background: #111;
+      }
+
+      .blog-content {
+        line-height: 1.8;
+        font-size: 1.1rem;
+        color: #e0e0e0;
+      }
+      .blog-content h2 {
+        color: #65ea2c;
+        margin: 40px 0 20px;
+        font-size: 1.8rem;
+      }
+      .blog-content p {
+        margin-bottom: 25px;
+      }
+      .blog-content ul {
+        padding-left: 20px;
+        margin-bottom: 25px;
+      }
+      .blog-content li {
+        margin-bottom: 12px;
+      }
+      .highlight-box {
+        border-left: 4px solid #65ea2c;
+        background: rgba(101, 234, 44, 0.05);
+        padding: 20px 25px;
+        border-radius: 0 8px 8px 0;
+        margin-bottom: 30px;
+        color: #c8c8c8;
+      }
+      .highlight-box strong {
+        display: block;
+        color: #65ea2c;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .tip-box {
+        border: 1px solid rgba(101, 234, 44, 0.3);
+        background: rgba(101, 234, 44, 0.04);
+        padding: 25px 30px;
+        border-radius: 10px;
+        margin: 35px 0;
+        color: #d0d0d0;
+      }
+      .tip-box .tip-label {
+        display: inline-block;
+        background: #65ea2c;
+        color: #0a0a0a;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 14px;
+      }
+      .tip-box p {
+        margin-bottom: 0;
+        font-style: italic;
+      }
+      .cta-block {
+        text-align: center;
+        background: rgba(101, 234, 44, 0.06);
+        border: 1px solid rgba(101, 234, 44, 0.2);
+        border-radius: 12px;
+        padding: 40px 30px;
+        margin-top: 50px;
+      }
+      .cta-block h2 {
+        margin-top: 0;
+        font-size: 1.6rem;
+      }
+      .cta-block p {
+        color: #b0b0b0;
+        margin-bottom: 25px;
+      }
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #65ea2c;
+        color: #0a0a0a;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 14px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+      .cta-btn:hover {
+        opacity: 0.88;
+      }
+
+      /* Performance Issue Blocks */
+      .perf-issue {
+        border: 1px solid rgba(101, 234, 44, 0.2);
+        background: rgba(101, 234, 44, 0.03);
+        border-radius: 12px;
+        padding: 28px 30px;
+        margin: 32px 0;
+        position: relative;
+      }
+      .perf-issue-label {
+        display: inline-block;
+        background: rgba(101, 234, 44, 0.12);
+        color: #65ea2c;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 14px;
+        border: 1px solid rgba(101, 234, 44, 0.25);
+      }
+      .perf-issue h3 {
+        color: #ffffff;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 0 0 14px;
+      }
+      .perf-issue p {
+        color: #c8c8c8;
+        margin-bottom: 14px;
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+      .perf-issue p:last-child {
+        margin-bottom: 0;
+      }
+      .perf-issue .fix-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.05);
+        color: #a0a0a0;
+        font-size: 0.78rem;
+        padding: 3px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-right: 6px;
+        margin-top: 4px;
+      }
+
+      /* Revenue Impact Stats */
+      .revenue-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 30px 0;
+      }
+      .revenue-card {
+        background: rgba(101, 234, 44, 0.05);
+        border: 1px solid rgba(101, 234, 44, 0.2);
+        border-radius: 12px;
+        padding: 24px 20px;
+        text-align: center;
+      }
+      .revenue-card .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #65ea2c;
+        line-height: 1.1;
+        margin-bottom: 6px;
+      }
+      .revenue-card .stat-label {
+        font-size: 0.9rem;
+        color: #c0c0c0;
+        margin-bottom: 4px;
+      }
+      .revenue-card .stat-sub {
+        font-size: 0.78rem;
+        color: #606060;
+      }
+
+      /* Schema table */
+      .schema-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0 30px;
+        font-size: 0.97rem;
+      }
+      .schema-table th {
+        background: rgba(101, 234, 44, 0.1);
+        color: #65ea2c;
+        font-size: 0.75rem;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid rgba(101, 234, 44, 0.2);
+      }
+      .schema-table td {
+        padding: 12px 16px;
+        color: #c8c8c8;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        vertical-align: top;
+      }
+      .schema-table tr:last-child td {
+        border-bottom: none;
+      }
+      .schema-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .schema-pill {
+        display: inline-block;
+        background: rgba(101, 234, 44, 0.08);
+        color: #65ea2c;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 4px;
+        border: 1px solid rgba(101, 234, 44, 0.2);
+      }
+
+      /* Opening quote */
+      .opening-quote {
+        border-left: 3px solid #65ea2c;
+        padding: 16px 24px;
+        margin: 0 0 32px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0 8px 8px 0;
+      }
+      .opening-quote p {
+        color: #b8b8b8;
+        font-style: italic;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+      }
+
+      /* Warning box */
+      .warning-box {
+        border: 1px solid rgba(255, 160, 50, 0.3);
+        background: rgba(255, 140, 30, 0.04);
+        border-radius: 10px;
+        padding: 20px 26px;
+        margin: 28px 0;
+        color: #d0d0d0;
+      }
+      .warning-box .warning-label {
+        display: inline-block;
+        background: rgba(255, 140, 30, 0.15);
+        color: #ffab50;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(255, 140, 30, 0.3);
+      }
+      .warning-box p {
+        margin-bottom: 0;
+        font-size: 0.97rem;
+      }
+
+      @media (max-width: 768px) {
+        .blog-header h1 {
+          font-size: 2rem;
+        }
+        .blog-meta {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+        .revenue-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        .revenue-grid {
+          grid-template-columns: 1fr;
+        }
+        .schema-table {
+          font-size: 0.88rem;
+        }
+        .schema-table th,
+        .schema-table td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="../public/Logo/AdMediaX - Logo (PNG).png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link active">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger button -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
+        </button>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="../public/Logo/AdMediaX - Logo (PNG).png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <ul class="drawer-nav">
+            <li><a href="index.html" class="drawer-link">Home</a></li>
+            <li><a href="services.html" class="drawer-link">Services</a></li>
+            <li><a href="work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="about.html" class="drawer-link">About Us</a></li>
+            <li><a href="blog.html" class="drawer-link">Blog</a></li>
+            <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+
+          <div class="drawer-cta">
+            <a href="ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <article class="blog-post" data-aos="fade-up">
+      <div class="blog-container">
+        <header class="blog-header">
+          <h1>
+            Why Your Jewellery Website Needs High-Performance Code (Not Just
+            Design)
+          </h1>
+          <div class="blog-meta">
+            <span><i class="far fa-calendar"></i> April 2026</span>
+            <span><i class="far fa-clock"></i> 10 min read</span>
+            <span
+              ><i class="far fa-folder"></i> Technical SEO · Web Performance ·
+              Conversion</span
+            >
+          </div>
+
+          <!-- SVG Hero Illustration -->
+          <div class="blog-hero-svg">
+            <svg
+              viewBox="0 0 900 420"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 100%; display: block"
+            >
+              <defs>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color: #0d0d0d" />
+                  <stop offset="100%" style="stop-color: #111a0d" />
+                </linearGradient>
+                <linearGradient id="barGood" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color: #65ea2c" />
+                  <stop offset="100%" style="stop-color: #3fa818" />
+                </linearGradient>
+                <linearGradient id="barBad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color: #ff4d4d" />
+                  <stop offset="100%" style="stop-color: #c03030" />
+                </linearGradient>
+                <linearGradient
+                  id="gemGrad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" style="stop-color: #a0f060" />
+                  <stop offset="60%" style="stop-color: #65ea2c" />
+                  <stop offset="100%" style="stop-color: #2a8000" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <filter id="softglow">
+                  <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Background -->
+              <rect width="900" height="420" fill="url(#bgGrad)" />
+
+              <!-- Subtle grid lines -->
+              <g stroke="rgba(101,234,44,0.05)" stroke-width="1">
+                <line x1="0" y1="70" x2="900" y2="70" />
+                <line x1="0" y1="140" x2="900" y2="140" />
+                <line x1="0" y1="210" x2="900" y2="210" />
+                <line x1="0" y1="280" x2="900" y2="280" />
+                <line x1="0" y1="350" x2="900" y2="350" />
+                <line x1="150" y1="0" x2="150" y2="420" />
+                <line x1="300" y1="0" x2="300" y2="420" />
+                <line x1="450" y1="0" x2="450" y2="420" />
+                <line x1="600" y1="0" x2="600" y2="420" />
+                <line x1="750" y1="0" x2="750" y2="420" />
+              </g>
+
+              <!-- Left: Jewellery gem illustration -->
+              <g transform="translate(110, 210)">
+                <!-- Gem shape (diamond/marquise style) -->
+                <polygon
+                  points="0,-80 55,-20 55,30 0,75 -55,30 -55,-20"
+                  fill="url(#gemGrad)"
+                  opacity="0.9"
+                  filter="url(#softglow)"
+                />
+                <!-- Gem facets -->
+                <polygon
+                  points="0,-80 55,-20 0,-10"
+                  fill="rgba(255,255,255,0.15)"
+                />
+                <polygon
+                  points="0,-80 -55,-20 0,-10"
+                  fill="rgba(255,255,255,0.08)"
+                />
+                <polygon points="55,-20 55,30 0,-10" fill="rgba(0,0,0,0.2)" />
+                <polygon points="-55,-20 -55,30 0,-10" fill="rgba(0,0,0,0.1)" />
+                <polygon points="55,30 0,75 0,-10" fill="rgba(0,0,0,0.25)" />
+                <polygon points="-55,30 0,75 0,-10" fill="rgba(0,0,0,0.15)" />
+                <!-- Gem outline -->
+                <polygon
+                  points="0,-80 55,-20 55,30 0,75 -55,30 -55,-20"
+                  fill="none"
+                  stroke="rgba(101,234,44,0.6)"
+                  stroke-width="1.5"
+                />
+                <!-- Sparkle dots -->
+                <circle
+                  cx="-30"
+                  cy="-50"
+                  r="2.5"
+                  fill="#fff"
+                  opacity="0.8"
+                  filter="url(#glow)"
+                />
+                <circle cx="20" cy="-65" r="1.5" fill="#fff" opacity="0.6" />
+                <circle
+                  cx="45"
+                  cy="-5"
+                  r="2"
+                  fill="#65ea2c"
+                  opacity="0.9"
+                  filter="url(#glow)"
+                />
+              </g>
+
+              <!-- Center: Load time comparison bars -->
+              <g transform="translate(290, 40)">
+                <text
+                  x="160"
+                  y="22"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="13"
+                  font-weight="700"
+                  letter-spacing="2"
+                  opacity="0.9"
+                >
+                  PAGE LOAD TIME COMPARISON
+                </text>
+
+                <!-- Bar chart area -->
+                <g transform="translate(0, 40)">
+                  <!-- Y axis labels -->
+                  <text
+                    x="-10"
+                    y="0"
+                    text-anchor="end"
+                    fill="#555"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    0s
+                  </text>
+                  <text
+                    x="-10"
+                    y="-50"
+                    text-anchor="end"
+                    fill="#555"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    2s
+                  </text>
+                  <text
+                    x="-10"
+                    y="-100"
+                    text-anchor="end"
+                    fill="#555"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    4s
+                  </text>
+                  <text
+                    x="-10"
+                    y="-150"
+                    text-anchor="end"
+                    fill="#555"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    6s
+                  </text>
+                  <text
+                    x="-10"
+                    y="-200"
+                    text-anchor="end"
+                    fill="#555"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    8s
+                  </text>
+                  <text
+                    x="-10"
+                    y="-250"
+                    text-anchor="end"
+                    fill="#555"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    10s
+                  </text>
+
+                  <!-- Horizontal guide lines -->
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="320"
+                    y2="0"
+                    stroke="rgba(255,255,255,0.07)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="0"
+                    y1="-50"
+                    x2="320"
+                    y2="-50"
+                    stroke="rgba(255,255,255,0.07)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="0"
+                    y1="-100"
+                    x2="320"
+                    y2="-100"
+                    stroke="rgba(255,255,255,0.07)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="0"
+                    y1="-150"
+                    x2="320"
+                    y2="-150"
+                    stroke="rgba(255,255,255,0.07)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="0"
+                    y1="-200"
+                    x2="320"
+                    y2="-200"
+                    stroke="rgba(255,255,255,0.07)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="0"
+                    y1="-250"
+                    x2="320"
+                    y2="-250"
+                    stroke="rgba(255,255,255,0.07)"
+                    stroke-width="1"
+                  />
+
+                  <!-- Good threshold line -->
+                  <line
+                    x1="0"
+                    y1="-62"
+                    x2="320"
+                    y2="-62"
+                    stroke="rgba(101,234,44,0.4)"
+                    stroke-width="1"
+                    stroke-dasharray="6,4"
+                  />
+                  <text
+                    x="324"
+                    y="-58"
+                    fill="#65ea2c"
+                    font-family="Inter,sans-serif"
+                    font-size="9"
+                    font-weight="600"
+                  >
+                    GOOD
+                  </text>
+
+                  <!-- Bar: Unoptimised (8.2s) -->
+                  <rect
+                    x="20"
+                    y="-205"
+                    width="60"
+                    height="205"
+                    fill="url(#barBad)"
+                    rx="4"
+                  />
+                  <text
+                    x="50"
+                    y="-212"
+                    text-anchor="middle"
+                    fill="#ff6b6b"
+                    font-family="Inter,sans-serif"
+                    font-size="12"
+                    font-weight="700"
+                  >
+                    8.2s
+                  </text>
+                  <text
+                    x="50"
+                    y="16"
+                    text-anchor="middle"
+                    fill="#888"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    Unoptimised
+                  </text>
+
+                  <!-- Bar: Typical slow (5s) -->
+                  <rect
+                    x="110"
+                    y="-125"
+                    width="60"
+                    height="125"
+                    fill="url(#barBad)"
+                    rx="4"
+                    opacity="0.7"
+                  />
+                  <text
+                    x="140"
+                    y="-132"
+                    text-anchor="middle"
+                    fill="#ff8c8c"
+                    font-family="Inter,sans-serif"
+                    font-size="12"
+                    font-weight="700"
+                  >
+                    5.0s
+                  </text>
+                  <text
+                    x="140"
+                    y="16"
+                    text-anchor="middle"
+                    fill="#888"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    Typical
+                  </text>
+
+                  <!-- Bar: Good (2.5s) -->
+                  <rect
+                    x="200"
+                    y="-62"
+                    width="60"
+                    height="62"
+                    fill="url(#barGood)"
+                    rx="4"
+                  />
+                  <text
+                    x="230"
+                    y="-69"
+                    text-anchor="middle"
+                    fill="#65ea2c"
+                    font-family="Inter,sans-serif"
+                    font-size="12"
+                    font-weight="700"
+                  >
+                    2.5s
+                  </text>
+                  <text
+                    x="230"
+                    y="16"
+                    text-anchor="middle"
+                    fill="#888"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                  >
+                    Good
+                  </text>
+
+                  <!-- Bar: Optimised (1.2s) -->
+                  <rect
+                    x="290"
+                    y="-30"
+                    width="60"
+                    height="30"
+                    fill="url(#barGood)"
+                    rx="4"
+                    filter="url(#glow)"
+                  />
+                  <text
+                    x="320"
+                    y="-37"
+                    text-anchor="middle"
+                    fill="#a0ff60"
+                    font-family="Inter,sans-serif"
+                    font-size="12"
+                    font-weight="700"
+                  >
+                    1.2s
+                  </text>
+                  <text
+                    x="320"
+                    y="16"
+                    text-anchor="middle"
+                    fill="#65ea2c"
+                    font-family="Inter,sans-serif"
+                    font-size="10"
+                    font-weight="600"
+                  >
+                    Optimised
+                  </text>
+                </g>
+              </g>
+
+              <!-- Right: Key metrics pills -->
+              <g transform="translate(690, 60)">
+                <text
+                  x="0"
+                  y="0"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="12"
+                  font-weight="700"
+                  letter-spacing="2"
+                >
+                  KEY METRICS
+                </text>
+
+                <!-- Metric 1 -->
+                <rect
+                  x="0"
+                  y="18"
+                  width="170"
+                  height="52"
+                  rx="8"
+                  fill="rgba(101,234,44,0.07)"
+                  stroke="rgba(101,234,44,0.25)"
+                  stroke-width="1"
+                />
+                <text
+                  x="12"
+                  y="39"
+                  fill="#fff"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  LCP Target
+                </text>
+                <text
+                  x="12"
+                  y="58"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="700"
+                >
+                  Under 2.5s
+                </text>
+
+                <!-- Metric 2 -->
+                <rect
+                  x="0"
+                  y="84"
+                  width="170"
+                  height="52"
+                  rx="8"
+                  fill="rgba(101,234,44,0.07)"
+                  stroke="rgba(101,234,44,0.25)"
+                  stroke-width="1"
+                />
+                <text
+                  x="12"
+                  y="105"
+                  fill="#fff"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Image Size (Optimised)
+                </text>
+                <text
+                  x="12"
+                  y="124"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="700"
+                >
+                  180KB vs 12MB
+                </text>
+
+                <!-- Metric 3 -->
+                <rect
+                  x="0"
+                  y="150"
+                  width="170"
+                  height="52"
+                  rx="8"
+                  fill="rgba(101,234,44,0.07)"
+                  stroke="rgba(101,234,44,0.25)"
+                  stroke-width="1"
+                />
+                <text
+                  x="12"
+                  y="171"
+                  fill="#fff"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Mobile Traffic Share
+                </text>
+                <text
+                  x="12"
+                  y="190"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="700"
+                >
+                  78% in India
+                </text>
+
+                <!-- Metric 4 -->
+                <rect
+                  x="0"
+                  y="216"
+                  width="170"
+                  height="52"
+                  rx="8"
+                  fill="rgba(255,77,77,0.07)"
+                  stroke="rgba(255,77,77,0.25)"
+                  stroke-width="1"
+                />
+                <text
+                  x="12"
+                  y="237"
+                  fill="#fff"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Avg. Buyer Wait Time
+                </text>
+                <text
+                  x="12"
+                  y="256"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="700"
+                >
+                  2.5 seconds
+                </text>
+
+                <!-- Metric 5 -->
+                <rect
+                  x="0"
+                  y="282"
+                  width="170"
+                  height="52"
+                  rx="8"
+                  fill="rgba(101,234,44,0.07)"
+                  stroke="rgba(101,234,44,0.25)"
+                  stroke-width="1"
+                />
+                <text
+                  x="12"
+                  y="303"
+                  fill="#fff"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Conversion Lift (1s→5s)
+                </text>
+                <text
+                  x="12"
+                  y="322"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="700"
+                >
+                  Up to +70%
+                </text>
+              </g>
+
+              <!-- Bottom label strip -->
+              <rect
+                x="0"
+                y="390"
+                width="900"
+                height="30"
+                fill="rgba(101,234,44,0.06)"
+              />
+              <text
+                x="450"
+                y="410"
+                text-anchor="middle"
+                fill="rgba(101,234,44,0.6)"
+                font-family="Inter,sans-serif"
+                font-size="11"
+                letter-spacing="3"
+                font-weight="600"
+              >
+                DIGITAL MARKETING · JAIPUR JEWELLERY · 2026 EDITION
+              </text>
+            </svg>
+          </div>
+        </header>
+
+        <div class="blog-content">
+          <div class="opening-quote">
+            <p>
+              "We spent ₹3 lakhs on a beautiful website. It looks incredible." -
+              A jeweller in Johari Bazaar told me this in early 2026. His
+              website has hand-shot photography, a custom typeface, and a
+              homepage video that plays automatically. It also takes 8.2 seconds
+              to load on a mobile connection. His bounce rate is 74%.
+            </p>
+          </div>
+
+          <p>
+            The design is flawless. The code underneath it is costing him lakhs.
+          </p>
+          <p>
+            Here's the uncomfortable truth that most web designers won't tell
+            you: in 2026, Google doesn't rank beautiful websites. It ranks fast,
+            technically clean ones. And buyers - especially NRI buyers on
+            overseas connections, or a bride in Delhi opening your site during
+            her lunch break - will not wait. The average jewellery buyer in 2026
+            gives a mobile website 2.5 seconds before they go back and click the
+            next result.
+          </p>
+          <p>
+            Your craftsmanship took decades to perfect. Your website should be
+            held to the same standard.
+          </p>
+
+          <h2>What "High-Performance Code" Actually Means</h2>
+          <p>
+            This is not about hiring a more expensive developer. It is about
+            your developer - or whoever built your website - understanding that
+            speed is a design decision, not an afterthought.
+          </p>
+          <p>
+            High-performance code means: your images are compressed and served
+            in modern formats (WebP, AVIF - not 4MB JPEGs uploaded straight from
+            a camera). Your fonts load asynchronously, not blocking the page.
+            Your homepage doesn't load 47 JavaScript plugins when the buyer only
+            needs to see three products. Your server responds in under 200
+            milliseconds. None of this is visible to the naked eye. All of it is
+            visible to Google - and to the buyer staring at a white screen.
+          </p>
+
+          <h2>The Four Performance Issues Killing Jewellery Websites</h2>
+
+          <!-- Performance Issue 01 -->
+          <div class="perf-issue">
+            <span class="perf-issue-label">Performance Issue 01</span>
+            <h3>
+              Image Weight - The Single Biggest Problem on Jewellery Websites
+            </h3>
+            <p>
+              Jewellery photography is inherently high-resolution. A 6000px ×
+              4000px RAW export from a professional camera is a gorgeous,
+              technically flawless image - and it is also a 12MB file that will
+              load in 9 seconds on a 4G connection in Jaipur and 14 seconds in
+              Sydney. Most jewellery websites are doing exactly this.
+            </p>
+            <p>
+              The fix is not to compromise image quality. It is to serve the
+              right image at the right size, in the right format, to the right
+              device. A 1200px × 1200px WebP version of that same product image
+              looks indistinguishable on any phone screen - and it weighs 180KB
+              instead of 12MB. That is a 98% reduction in file size with no
+              visible quality loss. Shopify does this automatically if you use
+              its native image CDN. WordPress requires a plugin like ShortPixel
+              or Imagify. Custom-built sites require explicit developer
+              instruction. Whichever platform you're on: check your image file
+              sizes today. If any product image on your homepage is over 300KB,
+              it needs to be recompressed.
+            </p>
+            <div class="warning-box" style="margin-top: 16px; margin-bottom: 0">
+              <span class="warning-label">Why This Matters Right Now</span>
+              <p>
+                Google's AI Overview and Google Shopping both crawl your product
+                images. Slow-loading images are indexed less frequently and
+                ranked lower. The same image that is costing you load speed is
+                also costing you visibility in AI search results.
+              </p>
+            </div>
+          </div>
+
+          <!-- Performance Issue 02 -->
+          <div class="perf-issue">
+            <span class="perf-issue-label">Performance Issue 02</span>
+            <h3>
+              Core Web Vitals - Google's 2026 Ranking Factors, Explained Plainly
+            </h3>
+            <p>
+              In 2026, Google ranks websites using a set of technical metrics
+              called Core Web Vitals. These measure three things: how fast your
+              page's largest element loads (LCP - Largest Contentful Paint), how
+              stable your page is as it loads (CLS - Cumulative Layout Shift),
+              and how quickly your page responds to the first user interaction
+              (INP - Interaction to Next Paint). These are not abstract
+              developer concerns. They are the difference between ranking on
+              page one and ranking on page three.
+            </p>
+            <p>
+              For a jewellery website, LCP is almost always the problem. Your
+              hero image - that full-width photograph of a bridal set - is
+              typically the "largest contentful element" on the page. If it
+              takes 4 seconds to load, your LCP score is 4 seconds. Google's
+              threshold for a "good" LCP is under 2.5 seconds.
+            </p>
+            <p>
+              The fix: use
+              <code
+                style="
+                  background: rgba(101, 234, 44, 0.1);
+                  color: #65ea2c;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+                >loading="eager"</code
+              >
+              and
+              <code
+                style="
+                  background: rgba(101, 234, 44, 0.1);
+                  color: #65ea2c;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+                >fetchpriority="high"</code
+              >
+              attributes on your hero image specifically. Tell the browser: this
+              image matters most, load it first. For everything below the fold,
+              use
+              <code
+                style="
+                  background: rgba(101, 234, 44, 0.1);
+                  color: #65ea2c;
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                  font-size: 0.9em;
+                "
+                >loading="lazy"</code
+              >
+              - only load images when the buyer is about to scroll to them. This
+              one change, implemented correctly, can cut LCP in half on most
+              jewellery websites.
+            </p>
+          </div>
+
+          <!-- Performance Issue 03 -->
+          <div class="perf-issue">
+            <span class="perf-issue-label">Performance Issue 03</span>
+            <h3>
+              Mobile-First Is No Longer Optional - It's the Only Version That
+              Matters
+            </h3>
+            <p>
+              In 2026, over 78% of jewellery website traffic in India comes from
+              mobile devices. Google has been indexing the mobile version of
+              websites as the primary version since 2023. This means: if your
+              mobile website is slow, broken, or has tiny tap targets - that is
+              the website Google is evaluating you on. The desktop version is
+              irrelevant for ranking purposes.
+            </p>
+            <p>
+              Most jewellery websites were designed on a laptop, tested on a
+              laptop, and approved on a laptop. The mobile experience was an
+              afterthought - a "responsive" version that technically works but
+              feels nothing like it was built for a phone. Buttons that are too
+              small to tap with a thumb. Product images that don't zoom on
+              touch. Checkout flows that require 11 steps on a 6-inch screen.
+            </p>
+            <div
+              class="highlight-box"
+              style="margin-top: 16px; margin-bottom: 0"
+            >
+              <strong>Test Your Website Right Now</strong>
+              Open Google PageSpeed Insights (pagespeed.web.dev), enter your
+              URL, and switch to the Mobile tab. A score below 50 is a critical
+              problem. A score below 70 is costing you ranking and conversions.
+              A score above 90 means your technical foundation is solid - now
+              focus on content and marketing.
+            </div>
+          </div>
+
+          <!-- Performance Issue 04 -->
+          <div class="perf-issue">
+            <span class="perf-issue-label">Performance Issue 04</span>
+            <h3>
+              Structured Data - The Bridge Between Your Website and AI Search
+            </h3>
+            <p>
+              In 2026, Google's AI Overview, ChatGPT's browsing mode, and
+              Perplexity all pull product information from websites using a
+              technical layer called structured data (or schema markup). This is
+              code added to your website - invisible to buyers, but readable by
+              AI - that tells search engines: "This is a product. It costs
+              ₹45,000. It is made of 22k gold. It has 47 five-star reviews."
+            </p>
+            <p>
+              Without structured data, an AI search result might mention that
+              Jaipur has kundan jewellers - but it cannot name your specific
+              brand, link to your specific product, or cite your specific price.
+              With structured data, it can.
+            </p>
+            <p>
+              For jewellery websites, the four schemas that matter most are:
+            </p>
+            <table class="schema-table">
+              <thead>
+                <tr>
+                  <th>Schema Type</th>
+                  <th>What It Tells AI Search</th>
+                  <th>Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="schema-pill">Product</span></td>
+                  <td>Name, price, availability, images of your jewellery</td>
+                  <td style="color: #65ea2c; font-weight: 600">Essential</td>
+                </tr>
+                <tr>
+                  <td><span class="schema-pill">Review / Rating</span></td>
+                  <td>Your Google reviews, aggregated star rating</td>
+                  <td style="color: #65ea2c; font-weight: 600">Essential</td>
+                </tr>
+                <tr>
+                  <td><span class="schema-pill">BreadcrumbList</span></td>
+                  <td>Your site navigation structure</td>
+                  <td style="color: #a0a0a0">Recommended</td>
+                </tr>
+                <tr>
+                  <td><span class="schema-pill">LocalBusiness</span></td>
+                  <td>Your showroom address, hours, contact</td>
+                  <td style="color: #65ea2c; font-weight: 600">Essential</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-bottom: 0">
+              None of these are visible to buyers. All of them are read by every
+              AI search tool currently in use.
+            </p>
+          </div>
+
+          <h2>The Real Cost of a Slow Website</h2>
+          <p>
+            Let's make this concrete. If your website gets 1,000 visitors a
+            month and your current conversion rate is 1.2% - that's 12 buyers.
+            Research from Google's own studies shows that improving page load
+            time from 5 seconds to 1 second can increase conversions by up to
+            70% for e-commerce. Even a conservative 30% improvement on your
+            1,000 visitors means 3–4 additional sales per month. On an average
+            order value of ₹35,000, that's:
+          </p>
+
+          <div class="revenue-grid">
+            <div class="revenue-card">
+              <div class="stat-number">3–4</div>
+              <div class="stat-label">Additional sales per month</div>
+              <div class="stat-sub">At 30% conversion lift</div>
+            </div>
+            <div class="revenue-card">
+              <div class="stat-number">₹35K</div>
+              <div class="stat-label">Average order value</div>
+              <div class="stat-sub">Typical jewellery purchase</div>
+            </div>
+            <div class="revenue-card">
+              <div class="stat-number">₹1.4L</div>
+              <div class="stat-label">Additional monthly revenue</div>
+              <div class="stat-sub">Every single month</div>
+            </div>
+          </div>
+
+          <p>
+            From a one-time technical investment that might cost ₹15,000–25,000
+            to implement properly. Your design brought buyers to the door. Your
+            code determines whether they walk in.
+          </p>
+
+          <div class="tip-box">
+            <span class="tip-label">The Bottom Line</span>
+            <p>
+              "In 2026, the most dangerous thing for a jewellery brand is a
+              beautiful website that performs poorly. It signals craft at the
+              surface and carelessness underneath - exactly the opposite of what
+              a ₹2 lakh bridal buyer needs to feel."
+            </p>
+          </div>
+
+          <div class="cta-block">
+            <h2>Is Your Jewellery Website Costing You Sales?</h2>
+            <p>
+              AdMediaX audits jewellery websites across Jaipur and Rajasthan for
+              speed, Core Web Vitals, mobile performance, and structured data
+              gaps. We'll show you exactly what's holding your site back - and
+              what it would take to fix it.
+            </p>
+            <a href="../contact.html" class="cta-btn">
+              <i class="fas fa-tachometer-alt"></i> Get a Free Website Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="../services.html">Web Development</a></li>
+              <li><a href="../services.html">App Development</a></li>
+              <li><a href="../services.html">Digital Marketing</a></li>
+              <li><a href="../services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../work.html">Our Work</a></li>
+              <li><a href="../blog.html">Blog</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9887964016</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Naman Plaza, Joshi Marg,
+              Kalwar Rd, Jhotwara, Jaipur, Rajasthan 302012
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>

@@ -1,1 +1,94 @@
- 
+/* ===== CONTACT HERO ===== */
+.page-hero {
+  padding: 120px 8%;
+  background:
+    radial-gradient(circle at top, rgba(57, 255, 20, 0.08), transparent 60%),
+    #050505;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+/* container layout FIX */
+.page-hero .hero-content {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* heading */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #39ff14;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+/* subtitle */
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* BIG FADED TEXT */
+
+.hero-title {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFade 0.8s ease forwards;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFade 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .page-hero::before {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-wrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 441px) {
+  .hero-title {
+    font-size: 44px !important;
+    line-height: 50px;
+  }
+  .page-hero{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container{
+    padding: 0 5px;
+  }
+}

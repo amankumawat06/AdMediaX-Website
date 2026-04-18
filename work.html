@@ -1,398 +1,664 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Work - AdMediaX</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
     <link rel="stylesheet" href="./assets/css/hamburger.css" />
-</head>
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/work.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-    <div class="nav-container">
+      <div class="nav-container">
         <div class="nav-logo">
-            <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html">
-                <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width: auto; height: 44px;">
-            </a>
+          <a href="/index.html">
+            <img
+              src="public/Logo/AdMediaX - Logo (PNG).png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
         </div>
- 
-        <!-- Desktop menu (unchanged) -->
+
+        <!-- Desktop menu -->
         <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-            <li class="nav-item" id="admediax-ai">
-                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
-            </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link active">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
         </ul>
- 
+
         <!-- Hamburger button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span class="ham-line ham-top"></span>
-            <span class="ham-line ham-mid"></span>
-            <span class="ham-line ham-bot"></span>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
         </button>
-    </div>
- 
-    <!-- Mobile drawer -->
-    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
         <div class="drawer-inner">
-            <!-- Top row: logo + close -->
-            <div class="drawer-header">
-                <span class="drawer-brand">AdMediaX</span>
-                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
- 
-            <!-- Nav links -->
-            <ul class="drawer-nav">
-                <li><a href="index.html" class="drawer-link">Home</a></li>
-                <li><a href="services.html" class="drawer-link">Services</a></li>
-                <li><a href="work.html" class="drawer-link">Our Work</a></li>
-                <li><a href="about.html" class="drawer-link">About Us</a></li>
-                <li><a href="blog.html" class="drawer-link">Blog</a></li>
-                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
-            </ul>
- 
-            <!-- CTA inside drawer -->
-            <div class="drawer-cta">
-                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
-                <a href="contact.html" class="drawer-start-btn">Get Started</a>
-            </div>
- 
-            <!-- Footer strip -->
-            <div class="drawer-footer">
-                <p>© 2026 AdMediaX</p>
-                <div class="drawer-socials">
-                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest">
-                        <i class="fab fa-pinterest-p"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <!-- Backdrop -->
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-</nav>
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="public/Logo/AdMediaX - Logo (PNG).png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
 
-    <!-- Hero Section -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-content">
-                <h1 class="page-title">Our Work</h1>
-                <p class="page-subtitle">Discover our portfolio of successful projects and digital transformations</p>
+          <!-- Nav links -->
+          <ul class="drawer-nav">
+            <li><a href="index.html" class="drawer-link">Home</a></li>
+            <li><a href="services.html" class="drawer-link">Services</a></li>
+            <li><a href="work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="about.html" class="drawer-link">About Us</a></li>
+            <li><a href="blog.html" class="drawer-link">Blog</a></li>
+            <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+
+          <!-- CTA inside drawer -->
+          <div class="drawer-cta">
+            <a href="ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+
+          <!-- Footer strip -->
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Backdrop -->
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <section class="work-hero">
+      <div class="wh-orb wh-orb-tl"></div>
+      <div class="wh-orb wh-orb-br"></div>
+
+      <!-- Scanline texture -->
+      <div class="wh-scanlines"></div>
+
+      <!-- Floating number accents -->
+      <div class="wh-float-nums">
+        <span class="wfn" style="--x: 5%; --y: 18%; --s: 96px; --d: 0s"
+          >100</span
+        >
+        <span class="wfn" style="--x: 82%; --y: 12%; --s: 72px; --d: 0.6s"
+          >50</span
+        >
+        <span class="wfn" style="--x: 90%; --y: 68%; --s: 60px; --d: 1.2s"
+          >4</span
+        >
+      </div>
+
+      <!-- marquess top text -->
+      <div class="wh-ticker">
+        <div class="wh-ticker-track">
+          <span>Brand Strategy</span><span class="wh-tick-dot">✦</span>
+          <span>Paid Advertising</span><span class="wh-tick-dot">✦</span>
+          <span>SEO & Growth</span><span class="wh-tick-dot">✦</span>
+          <span>Creative Design</span><span class="wh-tick-dot">✦</span>
+          <span>AI Campaigns</span><span class="wh-tick-dot">✦</span>
+          <span>Social Media</span><span class="wh-tick-dot">✦</span>
+          <span>Web Development</span><span class="wh-tick-dot">✦</span>
+          <span>Analytics</span><span class="wh-tick-dot">✦</span>
+          <!-- duplicate for seamless loop -->
+          <span>Brand Strategy</span><span class="wh-tick-dot">✦</span>
+          <span>Paid Advertising</span><span class="wh-tick-dot">✦</span>
+          <span>SEO & Growth</span><span class="wh-tick-dot">✦</span>
+          <span>Creative Design</span><span class="wh-tick-dot">✦</span>
+          <span>AI Campaigns</span><span class="wh-tick-dot">✦</span>
+          <span>Social Media</span><span class="wh-tick-dot">✦</span>
+          <span>Web Development</span><span class="wh-tick-dot">✦</span>
+          <span>Analytics</span><span class="wh-tick-dot">✦</span>
+        </div>
+      </div>
+
+      <div class="wh-inner">
+        <div class="wh-left">
+          <div class="wh-badge">
+            <div class="wh-badge-dot"></div>
+            Our Portfolio
+          </div>
+
+          <h1 class="wh-title">
+            Work that<br />
+            <span class="wh-title-outline">speaks</span><br />
+            for itself<span class="wh-title-dot">.</span>
+          </h1>
+
+          <p class="wh-sub">
+            Every project is a story of strategy, creativity, and measurable
+            results. Browse our portfolio of 50+ successful brand
+            transformations.
+          </p>
+
+          <div class="wh-actions">
+            <a href="#featured" class="wh-btn-primary">
+              View Projects
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M7 2l5 5-5 5M2 7h10"
+                  stroke="#080808"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a href="contact.html" class="wh-btn-ghost">Start a Project</a>
+          </div>
+        </div>
+
+        <div class="wh-right">
+          <!-- Big stat card 1 -->
+          <div class="wh-stat-card wh-sc-main">
+            <div class="wh-sc-top">
+              <div class="wh-sc-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect
+                    x="2"
+                    y="5"
+                    width="16"
+                    height="11"
+                    rx="2"
+                    stroke="#65ea2c"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M6 5V4a4 4 0 018 0v1"
+                    stroke="#65ea2c"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 10h8M6 13h5"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    opacity="0.5"
+                  />
+                </svg>
+              </div>
+              <span class="wh-sc-change">↑ Growing</span>
+            </div>
+            <div class="wh-sc-num">100<span>+</span></div>
+            <div class="wh-sc-label">Projects Delivered</div>
+            <!-- sparkline -->
+            <div class="wh-sparkline">
+              <svg viewBox="0 0 120 36" fill="none" preserveAspectRatio="none">
+                <polyline
+                  points="0,30 20,22 40,25 60,14 80,18 100,8 120,4"
+                  stroke="#65ea2c"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  opacity="0.7"
+                />
+                <polyline
+                  points="0,30 20,22 40,25 60,14 80,18 100,8 120,4 120,36 0,36"
+                  fill="rgba(101,234,44,0.07)"
+                  stroke="none"
+                />
+              </svg>
+            </div>
+            <div class="wh-sc-glow"></div>
+          </div>
+
+          <!-- Smaller stat cards row -->
+          <div class="wh-sc-row">
+            <div class="wh-stat-card wh-sc-sm">
+              <div class="wh-sc-icon sm-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle
+                    cx="8"
+                    cy="8"
+                    r="6"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M5 8.5c.5 1.5 1.5 2.5 3 2.5s2.5-1 3-2.5"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="6" cy="6.5" r="0.8" fill="#65ea2c" />
+                  <circle cx="10" cy="6.5" r="0.8" fill="#65ea2c" />
+                </svg>
+              </div>
+              <div class="wh-sc-num sm-num">50<span>+</span></div>
+              <div class="wh-sc-label">Happy Clients</div>
+              <div class="wh-sc-bar-wrap">
+                <div class="wh-sc-bar" style="--bw: 75%"></div>
+              </div>
+              <div class="wh-sc-glow"></div>
+            </div>
+
+            <div class="wh-stat-card wh-sc-sm featured-sm">
+              <div class="wh-sc-icon sm-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M8 2l1.5 4H14l-3.5 2.5L12 13 8 10.5 4 13l1.5-4.5L2 6h4.5L8 2z"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="wh-sc-num sm-num accent-num">4<span>+</span></div>
+              <div class="wh-sc-label">Year Experience</div>
+              <div class="wh-sc-dots">
+                <i></i><i></i><i></i><i></i><i class="dim"></i>
+              </div>
+              <div class="wh-sc-glow"></div>
+            </div>
+          </div>
+
+          <!-- Latest project mini card -->
+          <div class="wh-latest-card">
+            <div class="wh-latest-left">
+              <div class="wh-latest-thumb">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <rect
+                    x="3"
+                    y="3"
+                    width="22"
+                    height="22"
+                    rx="6"
+                    stroke="#65ea2c"
+                    stroke-width="1.2"
+                    fill="rgba(101,234,44,0.06)"
+                  />
+                  <path
+                    d="M8 14l4 4 8-8"
+                    stroke="#65ea2c"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="wh-latest-name">Latest Project</div>
+                <div class="wh-latest-cat">Brand Identity + Paid Ads</div>
+              </div>
+            </div>
+            <div class="wh-latest-roas">
+              <span>ROAS</span>
+              <strong>4.1x</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquess bottom text -->
+      <div class="wh-ticker wh-ticker-bottom" id="wh-ticker-bottom-r" style="position: relative; bottom: 100px;">
+        <div class="wh-ticker-track wh-ticker-rev">
+          <span>Results-Driven</span><span class="wh-tick-dot">✦</span>
+          <span>Data-Backed</span><span class="wh-tick-dot">✦</span>
+          <span>Creative Excellence</span><span class="wh-tick-dot">✦</span>
+          <span>AI-Optimised</span><span class="wh-tick-dot">✦</span>
+          <span>Measurable Impact</span><span class="wh-tick-dot">✦</span>
+          <span>Proven ROI</span><span class="wh-tick-dot">✦</span>
+          <span>Results-Driven</span><span class="wh-tick-dot">✦</span>
+          <span>Data-Backed</span><span class="wh-tick-dot">✦</span>
+          <span>Creative Excellence</span><span class="wh-tick-dot">✦</span>
+          <span>AI-Optimised</span><span class="wh-tick-dot">✦</span>
+          <span>Measurable Impact</span><span class="wh-tick-dot">✦</span>
+          <span>Proven ROI</span><span class="wh-tick-dot">✦</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
     <section class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card" data-project="ecommerce">
-                    <div class="portfolio-image">
-                        <img src="public/Our work/Vishal-Photos/1.jpg" alt="Muneemjii - ERP-CRM SOFTWARE">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn"><a href="our-work-open.html" class="work-btn">View
-                                    Project</a></button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Vishal Photos - photography</h3>
-                        <p>AdMediaX handled reel shoots, content strategy, and Instagram management for Vishal Photos.
-                            After implementing our creative reels and consistent page handling, the account saw better
-                            reach, higher views, and strong engagement growth.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Social Media Marketing</span>
-                            <span class="tag">Content Creation</span>
-                            <span class="tag">Reel Shoot</span>
-                            <span class="tag">Website Development</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="portfolio-card" data-project="ecommerce">
-                    <div class="portfolio-image">
-                        <img src="public/Our work/Muneem jii thumbnail - blur home.jpg"
-                            alt="Muneemjii - ERP-CRM SOFTWARE">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn"><a href="our-work-open.html" class="work-btn">View
-                                    Project</a></button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>MuneemJii - FinTech</h3>
-                        <p>Built a complete billing and accounting software tailored for Indian shopkeepers, designed to
-                            make invoicing, stock management, and payments fully digital in a simple and familiar way.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Web Development</span>
-                            <span class="tag">UI/UX Design</span>
-                            <span class="tag">Billing Software</span>
-                            <span class="tag">Software Design</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-project="fintech">
-                    <div class="portfolio-image">
-                        <img src="public/Our work/MF thumbnail - blur home.jpg" alt="Graphic Design And Photo Shoot">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn"><a href="our-work-open.html" class="work-btn">View
-                                    Project</a></button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Food & Spices Brand - Maniratnam foods</h3>
-                        <p>Authentic Indian flavors crafted into ready-to-use powders and blends.
-                            Focused on purity, hygiene, and convenience with modern, export-ready packaging.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Packaging Design</span>
-                            <span class="tag">Product Photoshoot</span>
-                            <span class="tag">Social Media Branding</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-project="healthcare">
-                    <div class="portfolio-image">
-                        <img src="public/Our work/SRF thumbnail - blur home.jpg" alt="Healthcare Platform">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn"><a href="our-work-open.html" class="work-btn">View
-                                    Project</a></button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Furniture - Shree Ram Furniture</h3>
-                        <p>Crafting timeless wooden furniture with a blend of tradition and modern aesthetics.Engaging
-                            social media strategy with reels, creative posts, and ad campaigns to boost brand visibility
-                            and drive sales.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Social Media Marketing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="portfolio-card" data-project="startup">
-                    <div class="portfolio-image">
-                        <img src="/placeholder.svg?height=300&width=400" alt="Startup Landing">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn">View Project</button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Tech Startup Landing</h3>
-                        <p>High-converting landing page for a SaaS startup with integrated marketing automation.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Landing Page</span>
-                            <span class="tag">Marketing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-project="restaurant">
-                    <div class="portfolio-image">
-                        <img src="/placeholder.svg?height=300&width=400" alt="Restaurant App">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn">View Project</button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Restaurant Booking App</h3>
-                        <p>Complete dining experience app with reservations, ordering, and loyalty program integration.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Mobile App</span>
-                            <span class="tag">Integration</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-project="education">
-                    <div class="portfolio-image">
-                        <img src="/placeholder.svg?height=300&width=400" alt="Education Platform">
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn">View Project</button>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Online Learning Platform</h3>
-                        <p>Interactive e-learning platform with video streaming, progress tracking, and certification.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Web Platform</span>
-                            <span class="tag">Video Streaming</span>
-                        </div>
-                    </div>
-                </div> -->
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card" data-project="ecommerce">
+            <div class="portfolio-image">
+              <img
+                src="public/Our work/Vishal-Photos/1.jpg"
+                alt="Muneemjii - ERP-CRM SOFTWARE"
+              />
+              <div class="portfolio-overlay">
+                <button class="portfolio-btn">
+                  <a href="our-work-open.html" class="work-btn">View Project</a>
+                </button>
+              </div>
             </div>
+            <div class="portfolio-content">
+              <h3>Vishal Photos - photography</h3>
+              <p>
+                AdMediaX handled reel shoots, content strategy, and Instagram
+                management for Vishal Photos. After implementing our creative
+                reels and consistent page handling, the account saw better
+                reach, higher views, and strong engagement growth.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">SocialMediaMarketing</span>
+                <span class="tag">ContentCreation</span>
+                <span class="tag">ReelShoot</span>
+                <span class="tag">WebsiteDevelopment</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-project="ecommerce">
+            <div class="portfolio-image">
+              <img
+                src="public/Our work/Muneem jii thumbnail - blur home.jpg"
+                alt="Muneemjii - ERP-CRM SOFTWARE"
+              />
+              <div class="portfolio-overlay">
+                <button class="portfolio-btn">
+                  <a href="our-work-open.html" class="work-btn">View Project</a>
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3>MuneemJii - FinTech</h3>
+              <p>
+                Built a complete billing and accounting software tailored for
+                Indian shopkeepers, designed to make invoicing, stock
+                management, and payments fully digital in a simple and familiar
+                way.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">WebDevelopment</span>
+                <span class="tag">UI/UXDesign</span>
+                <span class="tag">BillingSoftware</span>
+                <span class="tag">SoftwareDesign</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-project="fintech">
+            <div class="portfolio-image">
+              <img
+                src="public/Our work/MF thumbnail - blur home.jpg"
+                alt="Graphic Design And Photo Shoot"
+              />
+              <div class="portfolio-overlay">
+                <button class="portfolio-btn">
+                  <a href="our-work-open.html" class="work-btn">View Project</a>
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Food & Spices Brand - Maniratnam foods</h3>
+              <p>
+                Authentic Indian flavors crafted into ready-to-use powders and
+                blends. Focused on purity, hygiene, and convenience with modern,
+                export-ready packaging.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">PackagingDesign</span>
+                <span class="tag">ProductPhotoshoot</span>
+                <span class="tag">SocialMediaBranding</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-project="healthcare">
+            <div class="portfolio-image">
+              <img
+                src="public/Our work/SRF thumbnail - blur home.jpg"
+                alt="Healthcare Platform"
+              />
+              <div class="portfolio-overlay">
+                <button class="portfolio-btn">
+                  <a href="our-work-open.html" class="work-btn">View Project</a>
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3>Furniture - Shree Ram Furniture</h3>
+              <p>
+                Crafting timeless wooden furniture with a blend of tradition and
+                modern aesthetics. Engaging social media strategy with reels,
+                creative posts, and ad campaigns to boost brand visibility and
+                drive sales.
+              </p>
+              <div class="portfolio-tags">
+                <span class="tag">Branding</span>
+                <span class="tag">SocialMediaMarketing</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Video Showcase Section -->
-    <!-- <section class="video-showcase">
-        <div class="container">
-            <h2 class="section-title">Project Showcases</h2>
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-                    <h3>E-commerce Success Story</h3>
-                    <p>See how we transformed a traditional retail business into a digital powerhouse.</p>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Behind the scenes of creating award-winning mobile applications.</p>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-                    <h3>Brand Transformation</h3>
-                    <p>Complete digital makeover that increased client revenue by 300%.</p>
-                </div>
-
-                <!-- <div class="video-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                            allowfullscreen></iframe>
-                    </div>
-                    <h3>Innovation Showcase</h3>
-                    <p>Cutting-edge solutions using AI and machine learning technologies.</p>
-                </div> -->
-    </div>
-    </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Let's create something amazing together. Get in touch to discuss your next digital transformation.
-                </p>
-                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
-            </div>
+    <section class="cta-work">
+      <div class="cta-work-container">
+        <div class="cta-glow"></div>
+        <div class="cta-content">
+          <h2>Ready to Start Your Project?</h2>
+          <p>
+            Let's create something amazing together. Get in touch to discuss
+            your next digital transformation.
+          </p>
+          <div class="cta-actions">
+            <a href="contact.html" class="cta-main-btn">
+              Start Your Project
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AdMediaX</h3>
-                    <p>Transforming businesses through innovative digital solutions and creative excellence.</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank"
-                            class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
-                        <a href="https://www.instagram.com/admedia_x/?hl=en" target="_blank" class="social-icon"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://in.pinterest.com/admediax/" class="social-icon" target="_blank"
-                            rel="noopener"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Web Development</a></li>
-                        <li><a href="services.html">App Development</a></li>
-                        <li><a href="services.html">Digital Marketing</a></li>
-                        <li><a href="services.html">Graphic Design</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="work.html">Our Work</a></li>
-                        <!-- <li><a href="blog.html">Blog</a></li> -->
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fa fa-envelope"></i> &nbsp; admediax18@gmail.com</p>
-                    <p><i class="fa fa-phone"></i> &nbsp; +91 9887964016</p>
-                    <p><i class="fa-solid fa-location-dot"></i> &nbsp; F - 42 3th Floor Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur, Rajasthan 302034</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AdMediaX. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">App Development</a></li>
+              <li><a href="services.html">Digital Marketing</a></li>
+              <li><a href="services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="work.html">Our Work</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="ai-portal.html">AdMediaX AI</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fa fa-envelope"></i> &nbsp; admediax18@gmail.com</p>
+            <p><i class="fa fa-phone"></i> &nbsp; +91 9887964016</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> &nbsp; F - 42 3th Floor
+              Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura,
+              Jaipur, Rajasthan 302034
+            </p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Project Modal -->
     <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <img id="modalImage" src="/placeholder.svg" alt="Project Image">
-                <div class="modal-info">
-                    <h3 id="modalTitle"></h3>
-                    <p id="modalDescription"></p>
-                    <a href="#" id="modalLink" class="btn btn-primary" target="_blank">Visit Project</a>
-                </div>
-            </div>
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+          <img id="modalImage" src="/placeholder.svg" alt="Project Image" />
+          <div class="modal-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <a href="#" id="modalLink" class="btn btn-primary" target="_blank"
+              >Visit Project</a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/your-kit-id.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/work.js"></script>
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS (Animate On Scroll)
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        </script>
-        <script src="./assets/js/hamburger.js"></script>
-</body>
-
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+    <script src="./assets/js/hamburger.js"></script>
+    <script>
+      (function () {
+        const section = document.querySelector(".work-hero");
+        if (!section) return;
+        const obs = new IntersectionObserver(
+          ([e]) => {
+            if (e.isIntersecting) {
+              section
+                .querySelectorAll(".wh-sc-bar")
+                .forEach((b) => b.classList.add("animated"));
+              obs.disconnect();
+            }
+          },
+          { threshold: 0.3 },
+        );
+        obs.observe(section);
+      })();
+    </script>
+  </body>
 </html>

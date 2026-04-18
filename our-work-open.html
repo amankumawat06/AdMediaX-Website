@@ -4,127 +4,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Work — Case Studies | AdMediaX</title>
+    <title>Our Work - Case Studies | AdMediaX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
     <link rel="stylesheet" href="./assets/css/hamburger.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
 
     <style>
+        :root {
+            --green: #65ea2c;
+            --green-dim: rgba(101, 234, 44, 0.12);
+            --green-border: rgba(101, 234, 44, 0.25);
+            --bg: #0a0a0a;
+            --bg-card: #111111;
+            --bg-card-hover: #161616;
+            --border: rgba(255,255,255,0.07);
+            --text: #f0f0f0;
+            --muted: #888;
+            --radius: 14px;
+            --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
             width: auto;
         }
 
-        /* Page-specific additions that respect the site's theme */
         .case-hero {
-            padding: 48px 0;
-            background: #fafafa;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-            margin: 50px 0px;
+            padding: 120px 0 72px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
         }
 
-        .case-hero .hero-inner {
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: -120px; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 500px;
+            background: radial-gradient(ellipse, rgba(101,234,44,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
             display: flex;
-            gap: 24px;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            text-align: center;
+            gap: 20px;
         }
 
-        .case-logo {
-            max-width: 220px;
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            color: var(--green);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 30px;
         }
 
-        .case-summary {
-            flex: 1 1 420px;
-            margin-left: 24px;
+        .hero-eyebrow .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            animation: blink 1.8s ease-in-out infinite;
         }
 
-        .case-summary h2 {
-            margin: 0 0 8px;
-            font-size: 28px;
-            color: #000;
+        @keyframes blink {
+            0%,100% { opacity:1; } 50% { opacity:0.3; }
         }
 
-        .case-summary p {
-            margin: 0;
-            color: #444;
-            line-height: 1.5;
+        .hero-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            color: #fff;
         }
 
-        /* Our Work heading */
+        .hero-title span {
+            color: var(--green);
+            position: relative;
+        }
+
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: 4px;
+            width: 100%; height: 3px;
+            background: var(--green);
+            border-radius: 2px;
+            opacity: 0.5;
+        }
+
+        .hero-desc {
+            max-width: 580px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
         .our-work-header {
             text-align: center;
-            padding: 28px 0 10px;
+            padding: 64px 0 0;
         }
 
-        .our-work-header .page-title {
-            font-size: 32px;
-            margin: 0;
-            color: #111;
+        .page-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            color: #fff;
+            letter-spacing: -0.02em;
+            position: relative;
+            display: inline-block;
         }
 
-        /* Case studies */
+        .page-title::after {
+            content: '';
+            display: block;
+            width: 48px; height: 3px;
+            background: var(--green);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        .client-list {
+            padding-bottom: 80px;
+        }
+
         .case-study {
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            margin-top: 56px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px 40px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+
+        .case-study::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--green), transparent);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .case-study:hover {
+            border-color: var(--green-border);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(101,234,44,0.08);
         }
 
         .case-study header {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 16px;
+            gap: 20px;
             flex-wrap: wrap;
+            margin-bottom: 28px;
         }
 
         .case-study h3 {
-            margin: 0;
-            font-size: 20px;
+            font-family: 'Syne', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.01em;
+            margin-bottom: 10px;
         }
 
         .case-study p.lead {
-            margin: 8px 0 20px;
-            color: #555;
-            max-width: 70ch;
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            max-width: 68ch;
+            margin: 0;
         }
 
-        /* Responsive gallery: desktop 3, tablet 2, mobile 1 */
+        .work-meta {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .work-meta-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .meta-tag {
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            color: var(--green);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .section-subtitle {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-subtitle::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
         .work-grid {
             display: grid;
-            gap: 12px;
+            gap: 10px;
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @media (max-width:900px) {
-            .work-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        @media (max-width: 900px) {
+            .work-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
-        @media (max-width:600px) {
-            .work-grid {
-                grid-template-columns: repeat(1, 1fr);
-            }
+        @media (max-width: 600px) {
+            .work-grid { grid-template-columns: 1fr; }
+            .case-study { padding: 24px 20px; }
+            .case-study header { flex-direction: column; }
         }
 
         .work-item {
             overflow: hidden;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.571);
-            border: 1px solid #ffffff90;
+            border-radius: 10px;
+            background: #1a1a1a;
+            border: 1px solid var(--border);
+            transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+            cursor: pointer;
+        }
+
+        .work-item:hover {
+            border-color: rgba(101,234,44,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
         }
 
         .work-item .img-wrap {
             position: relative;
             width: 100%;
             padding-top: 56.25%;
-            /* 16:9 */
         }
 
         .work-item .img-wrap img {
@@ -134,35 +291,45 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform .28s ease, filter .28s ease;
-        }
-
-        /* Make work sample images show pointer cursor only (no hover effects) */
-        .case-study .work-grid .work-item .img-wrap img {
+            transition: transform 0.45s var(--transition), filter 0.35s ease;
+            filter: brightness(0.9) saturate(0.85);
             cursor: pointer;
         }
 
         .work-item:hover .img-wrap img {
             transform: scale(1.06);
-            filter: brightness(.95);
+            filter: brightness(0.75) saturate(0.7);
         }
 
-        .work-meta {
-            font-size: 13px;
-            color: #666;
+        .work-item .img-wrap::after {
+            content: '\f00e';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
         }
 
-        /* Responsive 16:9 video wrapper */
-        .video-embed {
-            margin-top: 18px;
+        .work-item:hover .img-wrap::after {
+            opacity: 0.8;
         }
+
+        .video-embed { margin-top: 20px; }
 
         .video-wrapper {
             position: relative;
             width: 100%;
             padding-top: 56.25%;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
+            border: 1px solid var(--border);
         }
 
         .video-wrapper iframe,
@@ -174,120 +341,226 @@
             border: 0;
         }
 
-        /* Spacing tweaks for small screens */
-        @media (max-width:600px) {
-            .case-summary h2 {
-                font-size: 20px
-            }
+        .cta-section {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-            .case-study {
-                padding: 24px 0
-            }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(101,234,44,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--green-border);
+            border-radius: 20px;
+            padding: 56px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-content p {
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green);
+            color: #0a0a0a;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 34px;
+            border-radius: 8px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(101,234,44,0.35);
+        }
+
+        .amx-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            outline: none;
+        }
+
+        .amx-lightbox--visible { display: block; }
+
+        .amx-lightbox__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(6px);
+        }
+
+        .amx-lightbox__content {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 95vw;
+            max-height: 95vh;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .amx-lightbox__img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.8);
+        }
+
+        .amx-lightbox__close {
+            position: absolute;
+            top: 12px; right: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+            transition: background 0.2s ease;
+        }
+
+        .amx-lightbox__close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 480px) {
+            .amx-lightbox__content { padding: 6px; }
+            .amx-lightbox__close { width: 34px; height: 34px; font-size: 16px; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
 
 <body>
-    <!-- Navigation (copied from site theme) -->
+
+    <!-- - Navigation - -->
     <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <a href="https://amankumawat06.github.io/AdMediaX-Website/index.html">
-                <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width: auto; height: 44px;">
-            </a>
-        </div>
- 
-        <!-- Desktop menu (unchanged) -->
-        <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-            <li class="nav-item" id="admediax-ai">
-                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
-            </li>
-        </ul>
- 
-        <!-- Hamburger button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span class="ham-line ham-top"></span>
-            <span class="ham-line ham-mid"></span>
-            <span class="ham-line ham-bot"></span>
-        </button>
-    </div>
- 
-    <!-- Mobile drawer -->
-    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
-        <div class="drawer-inner">
-            <!-- Top row: logo + close -->
-            <div class="drawer-header">
-                <span class="drawer-brand">AdMediaX</span>
-                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width:auto;height:44px;">
+                </a>
             </div>
- 
-            <!-- Nav links -->
-            <ul class="drawer-nav">
-                <li><a href="index.html" class="drawer-link">Home</a></li>
-                <li><a href="services.html" class="drawer-link">Services</a></li>
-                <li><a href="work.html" class="drawer-link">Our Work</a></li>
-                <li><a href="about.html" class="drawer-link">About Us</a></li>
-                <li><a href="blog.html" class="drawer-link">Blog</a></li>
-                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="work.html" class="nav-link active">Our Work</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-item" id="admediax-ai">
+                    <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
+                </li>
             </ul>
- 
-            <!-- CTA inside drawer -->
-            <div class="drawer-cta">
-                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
-                <a href="contact.html" class="drawer-start-btn">Get Started</a>
-            </div>
- 
-            <!-- Footer strip -->
-            <div class="drawer-footer">
-                <p>© 2026 AdMediaX</p>
-                <div class="drawer-socials">
-                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest">
-                        <i class="fab fa-pinterest-p"></i>
-                    </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+            <div class="drawer-inner">
+                <div class="drawer-header">
+                    <span class="drawer-brand">
+                        <img src="public/Logo/AdMediaX - Logo (PNG).png" alt="AdMediaX logo" style="width:auto;height:44px;" />
+                    </span>
+                    <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="drawer-nav">
+                    <li><a href="index.html" class="drawer-link">Home</a></li>
+                    <li><a href="services.html" class="drawer-link">Services</a></li>
+                    <li><a href="work.html" class="drawer-link">Our Work</a></li>
+                    <li><a href="about.html" class="drawer-link">About Us</a></li>
+                    <li><a href="blog.html" class="drawer-link">Blog</a></li>
+                    <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+                </ul>
+                <div class="drawer-cta">
+                    <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
+                    <a href="contact.html" class="drawer-start-btn">Get Started</a>
+                </div>
+                <div class="drawer-footer">
+                    <p>© 2026 AdMediaX</p>
+                    <div class="drawer-socials">
+                        <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
- 
-    <!-- Backdrop -->
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-</nav>
+        <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
 
-    <!-- Top hero: logo left, short case study text right -->
+    <!-- - Hero - -->
     <section class="case-hero">
         <div class="container">
-            <div class="hero-inner">
-                <!-- <div class="case-logo" data-aos="fade-right">
-                    <img src="/public/Logo/AdMediaX - Logo - White bg (PNG).png" alt="AdMediaX logo"
-                        style="width:100%;height:auto;">
-                </div> -->
-                <div class="case-summary" data-aos="fade-left">
-                    <h2>Case Studies — Client Outcomes</h2>
-                    <p>AdMediaX partners with growth-minded companies to design and deliver measurable digital products.
-                        We combine strategy, product design and technical execution to increase conversions and
-                        long-term value.</p>
+            <div class="hero-inner" data-aos="fade-up">
+                <div class="hero-eyebrow">
+                    <span class="dot"></span>
+                    Client Outcomes
                 </div>
+                <h1 class="hero-title">Case Studies</h1>
+                <p class="hero-desc">AdMediaX partners with growth-minded companies to design and deliver measurable digital products. We combine strategy, product design and technical execution to increase conversions and long-term value.</p>
             </div>
         </div>
     </section>
 
-    <!-- Main: multiple client case studies (semantic, responsive) -->
     <main>
         <div class="container">
 
@@ -295,62 +568,44 @@
                 <h1 class="page-title">Our Work</h1>
             </div>
 
-            <!-- Client list: each client is an article for semantics -->
             <section class="client-list">
 
-                <article class="case-study" id="shriram-furniture" data-aos="fade-up">
+                <!-- - Case Study: Vishal Photos - -->
+                <article class="case-study" id="vishal-photos" data-aos="fade-up">
                     <header>
                         <div>
                             <h3>Case Study – Vishal Photos</h3>
                             <p class="lead">AdMediaX partnered with Vishal Photos to manage their Instagram presence
                                 with a strong focus on reels creation and page growth.
-
                                 Our team planned and executed professionally shot, visually appealing reels that matched
-                                the brand’s creative identity. Along with regular content posting and page management,
+                                the brand's creative identity. Along with regular content posting and page management,
                                 we ensured consistency, quality, and audience-focused storytelling.</p>
                         </div>
-                        <div class="work-meta">Role: Marketing • Content Creation • Website Development</div>
+                        <div class="work-meta">
+                            <div class="work-meta-inner">
+                                <span class="meta-tag">#Marketing</span>
+                                <span class="meta-tag">#ContentCreation</span>
+                                <span class="meta-tag">#WebsiteDevelopment</span>
+                            </div>
+                        </div>
                     </header>
 
                     <h4 class="section-subtitle">Work Examples</h4>
-                    <div class="work-grid" aria-label="Shri Ram Furniture gallery">
+                    <div class="work-grid" aria-label="Vishal Photos gallery">
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/1.jpg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/1.jpg" alt="Vishal Photos – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/2.jpg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/2.jpg" alt="Vishal Photos – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/3.jpg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/Vishal-Photos/3.jpg" alt="Vishal Photos – AdMediaX"></div>
                         </figure>
-                        <!-- <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/4.jpeg"
-                                    alt="Muneem Jii - AdMediaX"></div>
-                        </figure>
-                        <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/5.jpg"
-                                    alt="Muneem Jii - AdMediaX"></div>
-                        </figure>
-                        <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/6.jpeg"
-                                    alt="Muneem Jii - AdMediaX"></div>
-                        </figure> -->
                     </div>
-
-                    <!-- <div class="video-embed">
-                        <h4>Video Showcase</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shri Ram Furniture video"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div> -->
                 </article>
 
-
-                <article class="case-study" id="shriram-furniture" data-aos="fade-up">
+                <!-- - Case Study: Muneem Jii - -->
+                <article class="case-study" id="muneem-jii" data-aos="fade-up">
                     <header>
                         <div>
                             <h3>Case Study – Muneem Jii</h3>
@@ -359,88 +614,72 @@
                                 digital bookkeeping as easy as maintaining a register, but with the efficiency of
                                 automation.</p>
                         </div>
-                        <div class="work-meta">Role: Product Development • SaaS • UX/UI • Automation</div>
+                        <div class="work-meta">
+                            <div class="work-meta-inner">
+                                <span class="meta-tag">#ProductDevelopment</span>
+                                <span class="meta-tag">#SaaS</span>
+                                <span class="meta-tag">#UX/UI</span>
+                                <span class="meta-tag">#Automation</span>
+                            </div>
+                        </div>
                     </header>
 
                     <h4 class="section-subtitle">Work Examples</h4>
-                    <div class="work-grid" aria-label="Shri Ram Furniture gallery">
+                    <div class="work-grid" aria-label="Muneem Jii gallery">
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/1.jpeg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/1.jpeg" alt="Muneem Jii – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/2.jpeg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/2.jpeg" alt="Muneem Jii – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/3.jpg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/3.jpg" alt="Muneem Jii – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/4.jpeg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/4.jpeg" alt="Muneem Jii – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/5.jpg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/5.jpg" alt="Muneem Jii – AdMediaX"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/6.jpeg"
-                                    alt="Muneem Jii - AdMediaX"></div>
+                            <div class="img-wrap"><img src="public/Our work/MuneemJIi Work/6.jpeg" alt="Muneem Jii – AdMediaX"></div>
                         </figure>
                     </div>
-
-                    <!-- <div class="video-embed">
-                        <h4>Video Showcase</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shri Ram Furniture video"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div> -->
                 </article>
 
-                <article class="case-study" id="orasoft" data-aos="fade-up" data-aos-delay="80">
+                <!-- - Case Study: Maniratnam Foods - -->
+                <article class="case-study" id="maniratnam-foods" data-aos="fade-up" data-aos-delay="80">
                     <header>
                         <div>
-                            <h3>Food & Spices Brand - Maniratnam foods</h3>
+                            <h3>Food & Spices Brand - Maniratnam Foods</h3>
                             <p class="lead">Complete brand uplift with new-age packaging, professional photography, and
                                 engaging social media creatives to boost shelf appeal and digital presence.</p>
                         </div>
-                        <div class="work-meta">Role: Branding • Packaging • Social Media</div>
+                        <div class="work-meta">
+                            <div class="work-meta-inner">
+                                <span class="meta-tag">#Branding</span>
+                                <span class="meta-tag">#Packaging</span>
+                                <span class="meta-tag">#SocialMedia</span>
+                            </div>
+                        </div>
                     </header>
 
                     <h4 class="section-subtitle">Work Examples</h4>
-                    <div class="work-grid" aria-label="OraSoft gallery">
+                    <div class="work-grid" aria-label="Maniratnam Foods gallery">
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MF-Work/1.jpg" alt="OraSoft 1">
-                            </div>
+                            <div class="img-wrap"><img src="public/Our work/MF-Work/1.jpg" alt="Maniratnam Foods 1"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MF-Work/2.jpg" alt="OraSoft 2">
-                            </div>
+                            <div class="img-wrap"><img src="public/Our work/MF-Work/2.jpg" alt="Maniratnam Foods 2"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/MF-Work/3.jpg" alt="OraSoft 3">
-                            </div>
+                            <div class="img-wrap"><img src="public/Our work/MF-Work/3.jpg" alt="Maniratnam Foods 3"></div>
                         </figure>
-                        <!-- <figure class="work-item">
-                            <div class="img-wrap"><img src="assets/images/work9.jpg" alt="OraSoft 4"></div>
-                        </figure>
-                        <figure class="work-item">
-                            <div class="img-wrap"><img src="assets/images/work10.jpg" alt="OraSoft 5"></div>
-                        </figure> -->
                     </div>
-
-                    <!-- <div class="video-embed">
-                        <h4>Video Showcase</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="OraSoft video"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div> -->
                 </article>
 
-                <article class="case-study" id="fintech" data-aos="fade-up" data-aos-delay="160">
+                <!-- - Case Study: Shree Ram Furniture - -->
+                <article class="case-study" id="shreeram-furniture" data-aos="fade-up" data-aos-delay="160">
                     <header>
                         <div>
                             <h3>Furniture - Shree Ram Furniture</h3>
@@ -448,92 +687,45 @@
                                 showcased premium furniture collections, and connected the brand with a larger audience
                                 through engaging visual storytelling.</p>
                         </div>
-                        <div class="work-meta">Role: Branding • Social Media • Marketing</div>
+                        <div class="work-meta">
+                            <div class="work-meta-inner">
+                                <span class="meta-tag">#Branding</span>
+                                <span class="meta-tag">#SocialMedia</span>
+                                <span class="meta-tag">#Marketing</span>
+                            </div>
+                        </div>
                     </header>
 
                     <h4 class="section-subtitle">Work Examples</h4>
-                    <div class="work-grid" aria-label="FinTech gallery">
+                    <div class="work-grid" aria-label="Shree Ram Furniture gallery">
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/SRF WORK/1.jpg" alt="FinTech 1"></div>
+                            <div class="img-wrap"><img src="public/Our work/SRF WORK/1.jpg" alt="Shree Ram Furniture 1"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/SRF WORK/2.jpg" alt="FinTech 2"></div>
+                            <div class="img-wrap"><img src="public/Our work/SRF WORK/2.jpg" alt="Shree Ram Furniture 2"></div>
                         </figure>
                         <figure class="work-item">
-                            <div class="img-wrap"><img src="public/Our work/SRF WORK/3.jpg" alt="FinTech 3"></div>
+                            <div class="img-wrap"><img src="public/Our work/SRF WORK/3.jpg" alt="Shree Ram Furniture 3"></div>
                         </figure>
-                        <!-- <figure class="work-item">
-                            <div class="img-wrap"><img src="assets/images/work14.jpg" alt="FinTech 4"></div>
-                        </figure>
-                        <figure class="work-item">
-                            <div class="img-wrap"><img src="assets/images/work15.jpg" alt="FinTech 5"></div>
-                        </figure> -->
                     </div>
-
-                    <!-- <div class="video-embed">
-                        <h4>Video Showcase</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="FinTech video"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </article> -->
-                    <!-- 
-                    <article class="case-study" id="healthconnect" data-aos="fade-up" data-aos-delay="240">
-                        <header>
-                            <div>
-                                <h3>Case Study – HealthConnect</h3>
-                                <p class="lead">Built a secure telemedicine platform with video consultations and
-                                    streamlined clinical workflows for providers and patients.</p>
-                            </div>
-                            <div class="work-meta">Role: Platform • Security • Video</div>
-                        </header>
-
-                        <h4 class="section-subtitle">Work Examples</h4>
-                        <div class="work-grid" aria-label="HealthConnect gallery">
-                            <figure class="work-item">
-                                <div class="img-wrap"><img src="assets/images/work16.jpg" alt="Health 1"></div>
-                            </figure>
-                            <figure class="work-item">
-                                <div class="img-wrap"><img src="assets/images/work17.jpg" alt="Health 2"></div>
-                            </figure>
-                            <figure class="work-item">
-                                <div class="img-wrap"><img src="assets/images/work18.jpg" alt="Health 3"></div>
-                            </figure>
-                            <figure class="work-item">
-                                <div class="img-wrap"><img src="assets/images/work19.jpg" alt="Health 4"></div>
-                            </figure>
-                            <figure class="work-item">
-                                <div class="img-wrap"><img src="assets/images/work20.jpg" alt="Health 5"></div>
-                            </figure>
-                        </div>
-
-                        <!-- <div class="video-embed">
-                        <h4>Video Showcase</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="HealthConnect video"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div> -->
-                    <!-- </article> -->
+                </article>
 
             </section>
-
         </div>
     </main>
 
-    <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content" data-aos="fade-up">
                 <h2>Want a case study like these?</h2>
                 <p>Let's talk about your product and outline a plan to reach measurable outcomes.</p>
-                <a href="contact.html" class="btn btn-primary">Schedule a Call</a>
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Schedule a Call
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer (standardized) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -541,14 +733,9 @@
                     <h3>AdMediaX</h3>
                     <p>Transforming businesses through innovative digital solutions and creative excellence.</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61574145674026" class="social-icon"
-                            target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                        <!-- <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a> -->
-                        <a href="https://www.instagram.com/admedia_x/?hl=en" class="social-icon" target="_blank"
-                            rel="noopener"><i class="fab fa-instagram"></i></a>
-                        <a href="https://pinterest.com/" class="social-icon" target="_blank" rel="noopener"><i
-                                class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61574145674026" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/admedia_x/?hl=en" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -569,7 +756,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                     <h4>Contact Info</h4>
+                    <h4>Contact Info</h4>
                     <p><i class="fa fa-envelope"></i> &nbsp; admediax18@gmail.com</p>
                     <p><i class="fa fa-phone"></i> &nbsp; +91 9887964016</p>
                     <p><i class="fa-solid fa-location-dot"></i> &nbsp; F - 42 3th Floor Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur, Rajasthan 302034</p>
@@ -581,76 +768,7 @@
         </div>
     </footer>
 
-    <!-- Lightbox modal (scoped to Work Examples only) -->
-    <style id="amx-lightbox-styles">
-        /* Scoped lightbox styles — does not override site styles */
-        .amx-lightbox {
-            display: none; /* hidden until opened */
-            position: fixed;
-            inset: 0;
-            z-index: 10000;
-            outline: none;
-        }
-
-        .amx-lightbox--visible {
-            display: block;
-        }
-
-        .amx-lightbox__overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(2px);
-        }
-
-        .amx-lightbox__content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: calc(100vw - 40px);
-            max-height: calc(100vh - 40px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-        }
-
-        .amx-lightbox__img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-            object-fit: contain;
-            display: block;
-        }
-
-        .amx-lightbox__close {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: rgba(255,255,255,0.95);
-            border: 0;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-size: 20px;
-            line-height: 1;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
-
-        @media (max-width: 480px) {
-            .amx-lightbox__content { padding: 6px; }
-            .amx-lightbox__close { width: 32px; height: 32px; font-size: 18px; }
-        }
-    </style>
-
+    <!-- Lightbox -->
     <div class="amx-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="amx-lightbox__overlay"></div>
         <div class="amx-lightbox__content" role="document">
@@ -659,21 +777,46 @@
         </div>
     </div>
 
+    <!-- Scripts  -->
     <script src="assets/js/lightbox.js"></script>
-    <script>
-        // Delegates clicks to any .case-study .work-grid .work-item .img-wrap img
-        // Opens modal, sets img src/alt, traps ESC to close, overlay & close-button close it
-        document.addEventListener('DOMContentLoaded', function () {
-          const selector = '.case-study .work-grid .work-item .img-wrap img';
-          // ... (see full file: assets/js/lightbox.js)
-        });
-    </script>
-
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 700, easing: 'ease-in-out', once: true });
+
+        /* Lightbox */
+        (function () {
+            const lb      = document.querySelector('.amx-lightbox');
+            const lbImg   = lb.querySelector('.amx-lightbox__img');
+            const lbClose = lb.querySelector('.amx-lightbox__close');
+            const overlay = lb.querySelector('.amx-lightbox__overlay');
+
+            function open(src, alt) {
+                lbImg.src = src;
+                lbImg.alt = alt || '';
+                lb.classList.add('amx-lightbox--visible');
+                lb.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function close() {
+                lb.classList.remove('amx-lightbox--visible');
+                lb.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                lbImg.src = '';
+            }
+
+            document.addEventListener('click', function (e) {
+                const img = e.target.closest('.case-study .work-grid .work-item .img-wrap img');
+                if (img) { e.preventDefault(); open(img.src, img.alt); }
+            });
+
+            lbClose.addEventListener('click', close);
+            overlay.addEventListener('click', close);
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') close();
+            });
+        })();
     </script>
     <script src="./assets/js/hamburger.js"></script>
 </body>
