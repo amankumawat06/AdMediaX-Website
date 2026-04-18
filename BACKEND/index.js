@@ -5,13 +5,19 @@ const cors = require("cors");
 
 const port = process.env.PORT || 8080;
 
+app.use("/assets", express.static("assets"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://admediax.in","https://amankumawat06.github.io"]
+    origin: [
+      "http://127.0.0.1:5501",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
   }),
 );
+// app.use(cors("*"))
 
 const aiRoutes = require("./routes/aiRoute");
 
