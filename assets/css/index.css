@@ -1537,8 +1537,8 @@ body {
     max-width: 100%;
     max-height: 50px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7;
+    filter: grayscale(0%);
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
@@ -1552,8 +1552,8 @@ body {
 }
 
 .client-logo:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+    filter: grayscale(30%);
+    opacity: 0.5;
 }
 
 /* ===== SPECIAL FIX (your grey logo issue) ===== */
