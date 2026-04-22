@@ -32,7 +32,6 @@ const getAIResponse = async (prompt) => {
           content: prompt,
         },
       ],
-      // Llama 3.3 70B is powerful and free on Groq
       model: "llama-3.3-70b-versatile",
       temperature: 0.7,
       max_tokens: 1024,
@@ -43,8 +42,6 @@ const getAIResponse = async (prompt) => {
   } catch (error) {
     console.error("Groq API Error:", error.message);
     
-    // If Groq also hits a limit, you can still keep your 
-    // retry logic or fallback to another service here.
     throw new Error("AI Service Error");
   }
 };
