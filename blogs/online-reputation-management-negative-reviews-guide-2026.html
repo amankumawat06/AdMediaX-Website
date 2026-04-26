@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Reputation Management: 1 Negative Review se Business Kaise Bachayein | AdMediaX</title>
+    <meta name="description" content="One negative review can silently kill a Jaipur business. Here's a data-driven ORM framework - covering Google, Justdial, and social media - to monitor, respond, and protect your digital reputation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" type="image/png" href="/AdMediaX - Ai Portal/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+
+    <style>
+        :root {
+            --green: #65ea2c;
+            --green-dim: rgba(101, 234, 44, 0.08);
+            --green-border: rgba(101, 234, 44, 0.22);
+            --red: #ff6b6b;
+            --red-dim: rgba(255, 107, 107, 0.06);
+            --red-border: rgba(255, 107, 107, 0.25);
+            --bg: #0a0a0a;
+            --surface: rgba(255,255,255,0.03);
+            --border: rgba(255,255,255,0.07);
+            --text: #e0e0e0;
+            --muted: #a0a0a0;
+            --faint: #606060;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        .blog-post {
+            padding: 120px 0 90px;
+            background: var(--bg);
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .blog-container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Header ── */
+        .blog-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .blog-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            color: var(--green);
+            font-family: 'Syne', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+        }
+
+        .blog-header h1 {
+            /* font-family: 'Syne', sans-serif; */
+            font-size: clamp(1.9rem, 4vw, 2.9rem);
+            font-weight: 800;
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 22px;
+            letter-spacing: -0.5px;
+        }
+
+        .blog-header h1 span {
+            color: var(--green);
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 36px;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-meta i { color: var(--green); }
+
+        .blog-featured-image {
+            width: 100%;
+            max-height: 460px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        /* ── Content ── */
+        .blog-content {
+            line-height: 1.85;
+            font-size: 1.08rem;
+            color: var(--text);
+        }
+
+        .blog-content h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--green);
+            margin: 52px 0 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .blog-content p { margin-bottom: 22px; }
+
+        /* ── Intro pull quote ── */
+        .intro-pull {
+            border-left: 3px solid var(--green);
+            padding: 18px 26px;
+            margin: 32px 0 36px;
+            background: var(--green-dim);
+            border-radius: 0 10px 10px 0;
+            font-size: 1.15rem;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+
+        /* ── Big Stat Banner ── */
+        .stat-banner {
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            border-radius: 14px;
+            padding: 36px 32px;
+            text-align: center;
+            margin: 36px 0;
+        }
+
+        .stat-banner .big-num {
+            /* font-family: 'Syne', sans-serif; */
+            font-size: clamp(3.5rem, 8vw, 5.5rem);
+            font-weight: 800;
+            color: var(--green);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-banner .big-label {
+            font-size: 1rem;
+            color: var(--muted);
+            max-width: 420px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .stat-banner .source {
+            font-size: 0.75rem;
+            color: var(--faint);
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        /* ── Stats Grid ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--green);
+            border-radius: 3px 0 0 3px;
+        }
+
+        .stat-card .pct {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--green);
+            margin-bottom: 6px;
+        }
+
+        .stat-card .desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* ── Severity Levels ── */
+        .severity-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .severity-item {
+            border-radius: 12px;
+            padding: 22px 24px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            border: 1px solid;
+        }
+
+        .severity-item.low {
+            background: rgba(101, 234, 44, 0.04);
+            border-color: rgba(101, 234, 44, 0.18);
+        }
+        .severity-item.medium {
+            background: rgba(255, 180, 50, 0.04);
+            border-color: rgba(255, 180, 50, 0.22);
+        }
+        .severity-item.high {
+            background: rgba(255, 107, 107, 0.04);
+            border-color: rgba(255, 107, 107, 0.22);
+        }
+
+        .severity-badge {
+            flex-shrink: 0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: 'Syne', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-top: 2px;
+        }
+
+        .low .severity-badge { background: rgba(101,234,44,0.15); color: var(--green); border: 1px solid rgba(101,234,44,0.3); }
+        .medium .severity-badge { background: rgba(255,180,50,0.15); color: #ffb432; border: 1px solid rgba(255,180,50,0.3); }
+        .high .severity-badge { background: rgba(255,107,107,0.15); color: var(--red); border: 1px solid rgba(255,107,107,0.3); }
+
+        .severity-body h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: #fff;
+        }
+
+        .severity-body p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        /* ── CLEAR Method ── */
+        .clear-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 28px 0;
+            border: 1px solid var(--green-border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .clear-row {
+            display: flex;
+            align-items: stretch;
+            border-bottom: 1px solid var(--green-border);
+        }
+
+        .clear-row:last-child { border-bottom: none; }
+
+        .clear-letter {
+            flex-shrink: 0;
+            width: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--green-dim);
+            font-family: sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--green);
+        }
+
+        .clear-content {
+            flex: 1;
+            padding: 18px 22px;
+        }
+
+        .clear-content h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .clear-content p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        /* ── Strategy cards (proactive) ── */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 28px 0;
+        }
+
+        .strategy-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px 20px;
+        }
+
+        .strategy-card .s-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green);
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+
+        .strategy-card h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .strategy-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ── Monitoring list ── */
+        .monitor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .monitor-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 20px;
+        }
+
+        .monitor-item .m-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green);
+            font-size: 0.95rem;
+        }
+
+        .monitor-item .m-text strong {
+            display: block;
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .monitor-item .m-text span {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        /* ── Search suppression list ── */
+        .suppress-list {
+            margin: 24px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .suppress-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .suppress-item:last-child { border-bottom: none; }
+
+        .suppress-item .s-num {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            color: var(--green);
+            font-family: 'Syne', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .suppress-item p {
+            font-size: 0.97rem;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        /* ── Platform-specific callouts ── */
+        .platform-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 28px 0;
+        }
+
+        .platform-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 22px;
+        }
+
+        .platform-card .p-icon {
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            margin-top: 2px;
+        }
+
+        .platform-card h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .platform-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ── FAQ ── */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 28px 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-q {
+            padding: 18px 22px;
+            background: var(--surface);
+            font-family: 'Syne', sans-serif;
+            font-size: 0.97rem;
+            /* font-weight: 700; */
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .faq-q:hover { background: rgba(255,255,255,0.05); }
+
+        .faq-q .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 22px;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 300px;
+            padding: 16px 22px 20px;
+        }
+
+        /* ── Warning box ── */
+        .warn-box {
+            border: 1px solid var(--red-border);
+            background: var(--red-dim);
+            border-radius: 12px;
+            padding: 22px 26px;
+            margin: 32px 0;
+        }
+
+        .warn-box .warn-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,107,107,0.12);
+            color: var(--red);
+            font-family: 'Syne', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--red-border);
+            margin-bottom: 14px;
+        }
+
+        .warn-box p {
+            font-size: 0.95rem;
+            color: #d0d0d0;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* ── Highlight box ── */
+        .highlight-box {
+            border-left: 4px solid var(--green);
+            background: var(--green-dim);
+            padding: 22px 26px;
+            border-radius: 0 10px 10px 0;
+            margin: 36px 0;
+            color: #c8c8c8;
+        }
+
+        .highlight-box strong {
+            display: block;
+            color: var(--green);
+            font-family: 'Syne', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* ── CTA block ── */
+        .cta-block {
+            text-align: center;
+            background: var(--green-dim);
+            border: 1px solid var(--green-border);
+            border-radius: 16px;
+            padding: 48px 32px;
+            margin-top: 60px;
+        }
+
+        .cta-block h2 {
+            font-family: sans-serif;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .cta-block p {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 520px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green);
+            color: #0a0a0a;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 15px 34px;
+            border-radius: 10px;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+        /* ── Responsive ── */
+        @media (max-width: 680px) {
+            .stats-grid, .strategy-grid { grid-template-columns: 1fr; }
+            .blog-meta { flex-direction: column; align-items: center; gap: 10px; }
+            .severity-item { flex-direction: column; gap: 10px; }
+            .clear-letter { width: 52px; font-size: 1.4rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="/index.html">
+                <img src="../public/Logo/AdMediaX-logo.png" alt="AdMediaX logo" style="width: auto; height: 44px;">
+            </a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item" id="admediax-ai">
+                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="ham-line ham-top"></span>
+            <span class="ham-line ham-mid"></span>
+            <span class="ham-line ham-bot"></span>
+        </button>
+    </div>
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+            <div class="drawer-header">
+                <span class="drawer-brand">
+                    <img src="../public/Logo/AdMediaX-logo.png" alt="AdMediaX logo" style="width: auto; height: 44px;" />
+                </span>
+                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="drawer-nav">
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="services.html" class="drawer-link">Services</a></li>
+                <li><a href="work.html" class="drawer-link">Our Work</a></li>
+                <li><a href="about.html" class="drawer-link">About Us</a></li>
+                <li><a href="blog.html" class="drawer-link">Blog</a></li>
+                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+            </ul>
+            <div class="drawer-cta">
+                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
+                <a href="contact.html" class="drawer-start-btn">Get Started</a>
+            </div>
+            <div class="drawer-footer">
+                <p>© 2026 AdMediaX</p>
+                <div class="drawer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+</nav>
+
+<!-- ═══════════════════════════════ ARTICLE ═══════════════════════════════ -->
+<article class="blog-post" data-aos="fade-up">
+<div class="blog-container">
+
+    <!-- Header -->
+    <header class="blog-header">
+        <div class="blog-eyebrow"><i class="fas fa-shield-alt"></i> Reputation Management</div>
+        <h1>Online Reputation Management: <br><span>How to Handle Negative Reviews Without Losing Customers (2026 Guide)</span></h1>
+        <div class="blog-meta">
+            <span><i class="far fa-calendar"></i> 2026</span>
+            <span><i class="far fa-clock"></i> 10 min read</span>
+            <span><i class="far fa-folder"></i> Strategy Guide</span>
+            <span><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</span>
+        </div>
+        <img src="../public/Blog_Post-img/online-reputation-managemant.jpeg"
+             alt="Online Reputation Management for Jaipur Businesses"
+             class="blog-featured-image">
+    </header>
+
+    <!-- Content -->
+    <div class="blog-content">
+
+        <div class="intro-pull">
+            One negative review - unanswered, unaddressed - can reduce click-through rates to your business by up to 22%. For 91% of Indian consumers under 45, online reviews are the decisive factor in every purchase decision.
+        </div>
+
+        <p>
+            This guide provides a data-driven framework for <strong>Online Reputation Management (ORM)</strong> - the discipline of monitoring, managing, and improving your business's digital reputation - with specific strategies for Indian local businesses navigating Google, Justdial, and social media reviews.
+        </p>
+
+        <!-- ── Big Stat ── -->
+        <div class="stat-banner" data-aos="fade-up">
+            <div class="big-num">93%</div>
+            <div class="big-label">of consumers read reviews before visiting a local business</div>
+            <div class="source">BrightLocal Local Consumer Review Survey India 2025</div>
+        </div>
+
+        <h2>The Business Impact of Online Reviews: Indian Data</h2>
+
+        <div class="stats-grid" data-aos="fade-up">
+            <div class="stat-card">
+                <div class="pct">28%</div>
+                <div class="desc">More revenue for a 4.0-star business compared to an equivalent 3.5-star business</div>
+            </div>
+            <div class="stat-card">
+                <div class="pct">+0.12★</div>
+                <div class="desc">Average increase in future review scores simply from responding to negative reviews</div>
+            </div>
+            <div class="stat-card">
+                <div class="pct">85%</div>
+                <div class="desc">Consumers more likely to trust a business that responds professionally to negative reviews</div>
+            </div>
+            <div class="stat-card">
+                <div class="pct">15–22%</div>
+                <div class="desc">Reduction in website traffic caused by a single unanswered negative review at top of search</div>
+            </div>
+        </div>
+
+        <p>For Indian local businesses specifically, <strong>Justdial and Google Reviews</strong> carry the highest conversion influence - followed by social media comments. Ignoring either is not a neutral act; it is an active loss of revenue.</p>
+
+        <!-- ── Severity Levels ── -->
+        <h2>The Anatomy of a Reputation Crisis</h2>
+
+        <p>Not all negative reviews carry equal weight. Understanding the severity spectrum helps you prioritise - and avoid wasting resources on low-priority issues while genuine crises fester.</p>
+
+        <div class="severity-stack" data-aos="fade-up">
+            <div class="severity-item low">
+                <span class="severity-badge">Level 1 · Low</span>
+                <div class="severity-body">
+                    <h3>The Isolated Complaint</h3>
+                    <p>A single negative review among many positives has minimal impact when handled professionally. Most consumers understand imperfection - and actively distrust businesses with only 5-star reviews. Requires a professional, empathetic response within 48 hours, but no emergency action.</p>
+                </div>
+            </div>
+            <div class="severity-item medium">
+                <span class="severity-badge">Level 2 · Medium</span>
+                <div class="severity-body">
+                    <h3>The Pattern of Complaints</h3>
+                    <p>Three or more reviews making similar complaints signal a genuine operational problem. Reviews repeatedly citing "slow service", "unhelpful staff", or "quality issues" must be addressed operationally - not just communicatively. Responding without fixing the root cause accelerates reputation damage.</p>
+                </div>
+            </div>
+            <div class="severity-item high">
+                <span class="severity-badge">Level 3 · High</span>
+                <div class="severity-body">
+                    <h3>The Viral Negative Post</h3>
+                    <p>A social media post, video complaint, or news coverage that goes beyond review platforms requires immediate, structured ORM response. This involves not just review management, but search result suppression, media relations, and potentially legal considerations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── CLEAR Method ── -->
+        <h2>The Professional Review Response Framework</h2>
+        <p>Use the <strong>CLEAR Response Method</strong> for every negative review. This structure ensures your reply is empathetic, specific, and action-oriented - all of which are signals that Google's local algorithm rewards.</p>
+
+        <div class="clear-grid" data-aos="fade-up">
+            <div class="clear-row">
+                <div class="clear-letter">C</div>
+                <div class="clear-content">
+                    <h4>Confirm</h4>
+                    <p>Acknowledge the customer's experience without immediately defending your business. <em>"We understand you had a disappointing experience during your visit."</em></p>
+                </div>
+            </div>
+            <div class="clear-row">
+                <div class="clear-letter">L</div>
+                <div class="clear-content">
+                    <h4>Listen</h4>
+                    <p>Show you have read and understood the specific complaint. Reference their actual issue: <em>"The delay in processing your order is not our standard service level."</em></p>
+                </div>
+            </div>
+            <div class="clear-row">
+                <div class="clear-letter">E</div>
+                <div class="clear-content">
+                    <h4>Empathize</h4>
+                    <p>Express genuine understanding - not deflection. Not <em>"I'm sorry if you felt..."</em> but direct empathy: <em>"We completely understand how frustrating this must have been."</em></p>
+                </div>
+            </div>
+            <div class="clear-row">
+                <div class="clear-letter">A</div>
+                <div class="clear-content">
+                    <h4>Act</h4>
+                    <p>Describe what you have done or are doing. <em>"We have reviewed this incident with our team and identified the root cause."</em></p>
+                </div>
+            </div>
+            <div class="clear-row">
+                <div class="clear-letter">R</div>
+                <div class="clear-content">
+                    <h4>Resolve</h4>
+                    <p>Offer a concrete resolution and move offline. <em>"Please contact us directly at [number] so we can make this right."</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="warn-box" data-aos="fade-up">
+            <span class="warn-label"><i class="fas fa-exclamation-triangle"></i> Critical Rules</span>
+            <p>Never argue with a reviewer. Never offer refunds publicly - take it offline. Never copy-paste the same response to multiple reviews. Identical responses signal inauthenticity to both customers and AI search engines, and can actively lower your local ranking.</p>
+        </div>
+
+        <!-- ── Proactive ── -->
+        <h2>Proactive Reputation Building: Prevention Over Cure</h2>
+
+        <p>The most effective protection against a negative review is a large volume of authentic positive ones. A business with 200 reviews at 4.4★ is far more resilient to a single 1-star attack than a business with 15 reviews at 4.8★. Build your <strong>review moat</strong> proactively.</p>
+
+        <div class="strategy-grid" data-aos="fade-up">
+            <div class="strategy-card">
+                <div class="s-icon"><i class="fab fa-whatsapp"></i></div>
+                <h4>Post-Service SMS / WhatsApp Flow</h4>
+                <p>Send a direct review link via WhatsApp after service completion. Warm, timed requests convert significantly better than passive "leave us a review" signs.</p>
+            </div>
+            <div class="strategy-card">
+                <div class="s-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h4>Train Front-Line Staff</h4>
+                <p>Equip your team to mention reviews naturally in service closure conversations - not as a script, but as a genuine request for feedback.</p>
+            </div>
+            <div class="strategy-card">
+                <div class="s-icon"><i class="fas fa-qrcode"></i></div>
+                <h4>QR Codes at Payment Points</h4>
+                <p>Place QR codes at billing counters linked directly to your Google review page. Capture intent at the moment satisfaction is highest.</p>
+            </div>
+            <div class="strategy-card">
+                <div class="s-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <h4>B2B Email Sequences</h4>
+                <p>For B2B businesses: automated email review requests 2 weeks after project completion, when the client has had time to experience the full value delivered.</p>
+            </div>
+        </div>
+
+        <!-- ── Monitoring ── -->
+        <h2>Monitoring Your Digital Reputation</h2>
+
+        <p>You cannot manage what you do not monitor. Set up a systematic monitoring stack across all major channels - not just Google.</p>
+
+        <div class="monitor-list" data-aos="fade-up">
+            <div class="monitor-item">
+                <div class="m-icon"><i class="fab fa-google"></i></div>
+                <div class="m-text">
+                    <strong>Google Alerts (Free)</strong>
+                    <span>Monitors news, blogs, and web mentions of your business name in real time.</span>
+                </div>
+            </div>
+            <div class="monitor-item">
+                <div class="m-icon"><i class="fas fa-store"></i></div>
+                <div class="m-text">
+                    <strong>Google Business Profile Notifications</strong>
+                    <span>Enable instant email alerts for every new review - respond within the first 24 hours.</span>
+                </div>
+            </div>
+            <div class="monitor-item">
+                <div class="m-icon"><i class="fas fa-hashtag"></i></div>
+                <div class="m-text">
+                    <strong>Social Media Mention Monitoring</strong>
+                    <span>Use free tools like Mention or Brand24 for social listening across Instagram, Facebook, and X.</span>
+                </div>
+            </div>
+            <div class="monitor-item">
+                <div class="m-icon"><i class="fas fa-search"></i></div>
+                <div class="m-text">
+                    <strong>Monthly Manual Audits</strong>
+                    <span>Search "[Business Name] reviews" and "[Business Name] complaint" monthly - including image search results.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Search Suppression ── -->
+        <h2>Advanced ORM: Search Result Management</h2>
+
+        <p>When a negative article, forum post, or social content appears prominently in Google results for your business name, the goal is to <strong>displace it - not delete it</strong> (which is usually impossible). Outrank negative content with authoritative positive content.</p>
+
+        <div class="suppress-list" data-aos="fade-up">
+            <div class="suppress-item">
+                <span class="s-num">1</span>
+                <p><strong>Optimise all social profiles actively.</strong> Facebook, Instagram, LinkedIn, YouTube, and X all rank for brand name searches. A dormant profile is a wasted ranking slot.</p>
+            </div>
+            <div class="suppress-item">
+                <span class="s-num">2</span>
+                <p><strong>Publish regular blog content</strong> with your business name in titles and headings - exactly like this article. Fresh, indexed content pushes older negative results down.</p>
+            </div>
+            <div class="suppress-item">
+                <span class="s-num">3</span>
+                <p><strong>Get featured in Jaipur-based news and business publications.</strong> Local press articles rank highly for local business name searches and carry significant domain authority.</p>
+            </div>
+            <div class="suppress-item">
+                <span class="s-num">4</span>
+                <p><strong>Create a YouTube channel with business overview videos.</strong> YouTube videos frequently appear on page 1 for business name searches - and YouTube is the world's second-largest search engine.</p>
+            </div>
+        </div>
+
+        <!-- ── Platform Specific ── -->
+        <h2>The Justdial &amp; Platform-Specific Strategy</h2>
+
+        <div class="platform-cards" data-aos="fade-up">
+            <div class="platform-card">
+                <div class="p-icon">📋</div>
+                <div>
+                    <h4>Justdial</h4>
+                    <p>Complaints marked "resolved" by the business owner receive a visual trust indicator in Justdial listing pages - a small but meaningful conversion signal. Unlike Google, Justdial also offers paid reputation management tools for businesses willing to invest commercially.</p>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="p-icon">🏭</div>
+                <div>
+                    <h4>IndiaMart &amp; TradeIndia</h4>
+                    <p>Critical for B2B manufacturer reputation in Rajasthan's industrial sectors. Reviews on these platforms carry disproportionate weight for buyer decisions in manufacturing, wholesale, and industrial supply categories.</p>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="p-icon">📘</div>
+                <div>
+                    <h4>Facebook Recommendations</h4>
+                    <p>Facebook recommendations (distinct from star ratings) are increasingly appearing directly in Google search results for local businesses - making your Facebook presence a de facto part of your Google reputation stack.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── FAQ ── -->
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-list" data-aos="fade-up">
+            <div class="faq-item">
+                <div class="faq-q">Can negative Google reviews be deleted?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-a">Only reviews that violate Google's policies - fake reviews, spam, off-topic content, hate speech - can be removed by flagging. Google decides whether to remove them. Genuine negative reviews, even unfair ones, cannot be deleted. The only effective long-term strategy is professional response and volume of authentic positive reviews.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How quickly should I respond to a negative review?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-a">Within 24–48 hours for standard negative reviews. Within 4–6 hours for reviews mentioning a serious incident - safety issues, legal matters, or discriminatory behaviour. Speed of response signals to both customers and Google that your business is actively managed.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Should I offer a refund in the public review response?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-a">Never publicly. Always invite the reviewer to contact you directly to "resolve this to your satisfaction." Public refund offers invite fraudulent negative reviews from competitors or opportunistic customers who learn that a 1-star review triggers a payout.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is review gating and why should I avoid it?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-a">Review gating is pre-screening customers before asking for reviews - only asking satisfied customers. Google explicitly prohibits this. If detected, it can result in Google Business Profile suspension. Always ask all customers for honest feedback.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How do I handle a fake negative review from a competitor?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-a">Flag it in Google as "Conflicts of interest." Document evidence wherever possible. Respond professionally - not accusatorially - in your public reply. Report to Google My Business support with evidence. If the pattern is systematic, consult a legal professional about available remedies.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Does responding to all reviews improve Google Maps rankings?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-a">Yes. Active review engagement is a positive signal in Google's local algorithm. Businesses that respond to all reviews rank higher on average than those that don't - independent of the review scores themselves.</div>
+            </div>
+        </div>
+
+        <!-- ── Closing ── -->
+        <div class="highlight-box" data-aos="fade-up">
+            <strong>The Bottom Line</strong>
+            In 2026's review-driven consumer economy, your online reputation is your most valuable business asset - and your most fragile. The businesses that win are not those with zero negative reviews (which signals inauthenticity), but those with the highest volume of authentic positive experiences and the most professional, empathetic engagement with every customer voice.
+        </div>
+
+        <!-- ── CTA ── -->
+        <div class="cta-block" data-aos="fade-up">
+            <h2>Need Help Managing Your Business's Online Reputation?</h2>
+            <p>AdMediaX helps Jaipur businesses build review moats, monitor their digital presence, and respond to negative reviews with strategies that actually protect revenue. Let's talk.</p>
+            <a href="../contact.html" class="cta-btn">
+                <i class="fas fa-shield-alt"></i> Get a Free ORM Consultation
+            </a>
+        </div>
+
+    </div><!-- /.blog-content -->
+</div><!-- /.blog-container -->
+</article>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AdMediaX</h3>
+                <p>Transforming businesses through innovative digital solutions and creative excellence.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/admedia_x/?hl=en" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/admediax/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../services.html">Web Development</a></li>
+                    <li><a href="../services.html">App Development</a></li>
+                    <li><a href="../services.html">Digital Marketing</a></li>
+                    <li><a href="../services.html">Graphic Design</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../work.html">Our Work</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 9887964016</p>
+                <p><i class="fas fa-map-marker-alt"></i> Naman Plaza, Joshi Marg, Kalwar Rd, Jhotwara, Jaipur, Rajasthan 302012</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+</script>
+<script src="../assets/js/hamburger.js"></script>
+
+</body>
+</html>
