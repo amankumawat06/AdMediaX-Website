@@ -1,4 +1,4 @@
-// Lightbox for Work Examples — vanilla JS, minimal, scoped to .case-study work galleries
+// Lightbox for Work Examples - vanilla JS, minimal, scoped to .case-study work galleries
 // - Targets images inside .case-study .work-grid .work-item .img-wrap img
 // - Opens a centered modal with overlay, responsive scaling, close button, overlay click, and ESC key
 
@@ -66,11 +66,11 @@
       var target = e.target;
       var img = target.closest ? target.closest(selector) : null;
       if (img) {
-        // Clicked a work sample image — open modal with its source
+        // Clicked a work sample image - open modal with its source
         open(img.src, img.alt);
       }
     });
 
-    // Accessibility: close modal when focus leaves? Minimal — keep simple
+    // Accessibility: close modal when focus leaves? Minimal - keep simple
   });
 })();

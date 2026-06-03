@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Purifying AI: How HAP Filtering Protects Businesses from Harmful AI
+      Content in 2026 | AdMediaX
+    </title>
+    <meta
+      name="description"
+      content="AI is transforming digital marketing - but unsafe AI-generated content can destroy your brand overnight. Learn how HAP Filtering protects businesses in 2026."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --green: #65ea2c;
+        --green-dim: rgba(101, 234, 44, 0.08);
+        --green-border: rgba(101, 234, 44, 0.22);
+        --bg: #0a0a0a;
+        --surface: #111111;
+        --text: #e0e0e0;
+        --text-muted: #a0a0a0;
+        --text-faint: #606060;
+        --red: #ff4d4d;
+        --red-dim: rgba(255, 77, 77, 0.07);
+        --red-border: rgba(255, 77, 77, 0.25);
+        --orange: #ffab50;
+        --orange-dim: rgba(255, 140, 30, 0.05);
+        --orange-border: rgba(255, 140, 30, 0.3);
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+
+      /* ── BLOG LAYOUT ── */
+      .blog-post {
+        padding: 120px 0 90px;
+      }
+      .blog-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 22px;
+      }
+
+      /* ── HEADER ── */
+      .blog-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .blog-category {
+        display: inline-block;
+        background: var(--green-dim);
+        color: var(--green);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 4px;
+        border: 1px solid var(--green-border);
+        margin-bottom: 20px;
+      }
+
+      .blog-header h1 {
+        font-size: clamp(1.9rem, 4vw, 2.9rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+        margin-bottom: 22px;
+      }
+      .blog-header h1 span {
+        color: var(--green);
+      }
+
+      .blog-meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+        margin-bottom: 36px;
+      }
+      .blog-meta span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .blog-meta i {
+        color: var(--green);
+        font-size: 0.82rem;
+      }
+
+      /* ── HERO SVG ── */
+      .blog-hero-svg {
+        width: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: #0d0d0d;
+        margin-bottom: 48px;
+      }
+      .blog-hero-svg svg {
+        width: 100%;
+        display: block;
+      }
+
+      /* ── CONTENT ── */
+      .blog-content {
+        font-size: 1.08rem;
+        line-height: 1.85;
+        color: var(--text);
+      }
+
+      .blog-content h2 {
+        color: var(--green);
+        font-size: 1.65rem;
+        font-weight: 700;
+        margin: 48px 0 18px;
+        letter-spacing: -0.3px;
+      }
+
+      .blog-content p {
+        margin-bottom: 22px;
+        color: #d0d0d0;
+      }
+
+      /* opening quote */
+      .opening-quote {
+        border-left: 3px solid var(--green);
+        padding: 18px 26px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0 10px 10px 0;
+        margin-bottom: 32px;
+      }
+      .opening-quote p {
+        font-style: italic;
+        color: #b8b8b8;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+      }
+
+      /* highlight box */
+      .highlight-box {
+        border-left: 4px solid var(--green);
+        background: var(--green-dim);
+        padding: 20px 26px;
+        border-radius: 0 10px 10px 0;
+        margin: 30px 0;
+      }
+      .highlight-box strong {
+        display: block;
+        color: var(--green);
+        font-size: 0.78rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .highlight-box p {
+        margin-bottom: 0;
+        color: #c0c0c0;
+      }
+
+      /* warning box */
+      .warning-box {
+        border: 1px solid var(--orange-border);
+        background: var(--orange-dim);
+        border-radius: 10px;
+        padding: 20px 26px;
+        margin: 28px 0;
+      }
+      .warning-label {
+        display: inline-block;
+        background: rgba(255, 140, 30, 0.14);
+        color: var(--orange);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--orange-border);
+        margin-bottom: 12px;
+      }
+      .warning-box p {
+        margin-bottom: 0;
+        font-size: 0.97rem;
+        color: #c8c8c8;
+      }
+
+      /* issue cards */
+      .issue-card {
+        border: 1px solid var(--green-border);
+        background: rgba(101, 234, 44, 0.03);
+        border-radius: 14px;
+        padding: 30px 32px;
+        margin: 32px 0;
+      }
+      .issue-label {
+        display: inline-block;
+        background: rgba(101, 234, 44, 0.1);
+        color: var(--green);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--green-border);
+        margin-bottom: 14px;
+      }
+      .issue-card h3 {
+        color: #fff;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+        line-height: 1.4;
+      }
+      .issue-card p {
+        color: #c8c8c8;
+        font-size: 1rem;
+        line-height: 1.78;
+        margin-bottom: 14px;
+      }
+      .issue-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* tag pills */
+      .tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.05);
+        color: #909090;
+        font-size: 0.76rem;
+        padding: 3px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin: 3px 4px 0 0;
+      }
+
+      /* stats grid */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 32px 0;
+      }
+      .stat-card {
+        background: var(--green-dim);
+        border: 1px solid var(--green-border);
+        border-radius: 12px;
+        padding: 24px 18px;
+        text-align: center;
+      }
+      .stat-card .num {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--green);
+        line-height: 1.1;
+        margin-bottom: 6px;
+      }
+      .stat-card .lbl {
+        font-size: 0.88rem;
+        color: #c0c0c0;
+        margin-bottom: 4px;
+      }
+      .stat-card .sub {
+        font-size: 0.76rem;
+        color: var(--text-faint);
+      }
+
+      /* industry table */
+      .industry-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 26px 0 32px;
+        font-size: 0.96rem;
+      }
+      .industry-table th {
+        background: rgba(101, 234, 44, 0.1);
+        color: var(--green);
+        font-size: 0.73rem;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--green-border);
+      }
+      .industry-table td {
+        padding: 13px 16px;
+        color: #c8c8c8;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        vertical-align: top;
+      }
+      .industry-table tr:last-child td {
+        border-bottom: none;
+      }
+      .industry-table tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .pill {
+        display: inline-block;
+        background: var(--green-dim);
+        color: var(--green);
+        font-size: 0.74rem;
+        font-weight: 600;
+        padding: 2px 9px;
+        border-radius: 4px;
+        border: 1px solid var(--green-border);
+      }
+
+      /* tip / quote box */
+      .tip-box {
+        border: 1px solid var(--green-border);
+        background: var(--green-dim);
+        border-radius: 12px;
+        padding: 28px 32px;
+        margin: 36px 0;
+      }
+      .tip-label {
+        display: inline-block;
+        background: var(--green);
+        color: #0a0a0a;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 14px;
+      }
+      .tip-box p {
+        margin-bottom: 0;
+        font-style: italic;
+        color: #d0d0d0;
+      }
+
+      /* CTA */
+      .cta-block {
+        text-align: center;
+        background: rgba(101, 234, 44, 0.05);
+        border: 1px solid var(--green-border);
+        border-radius: 14px;
+        padding: 44px 32px;
+        margin-top: 56px;
+      }
+      .cta-block h2 {
+        color: #fff;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        margin-top: 0;
+      }
+      .cta-block p {
+        color: #b0b0b0;
+        margin-bottom: 26px;
+        font-size: 1rem;
+      }
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: var(--green);
+        color: #0a0a0a;
+        font-weight: 700;
+        font-size: 0.97rem;
+        padding: 14px 34px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+      }
+      .cta-btn:hover {
+        opacity: 0.88;
+        transform: translateY(-1px);
+      }
+
+      
+
+      @media (max-width: 768px) {
+        .blog-header h1 {
+          font-size: 1.75rem;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+      @media (max-width: 480px) {
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+        .industry-table {
+          font-size: 0.85rem;
+        }
+        .industry-table th,
+        .industry-table td {
+          padding: 10px 12px;
+        }
+        .issue-card {
+          padding: 22px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+   <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="/index.html">
+                <img src="../public/Logo/AdMediaX-logo.png" alt="AdMediaX logo" style="width: auto; height: 44px;">
+            </a>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="work.html" class="nav-link">Our Work</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item" id="admediax-ai">
+                <a href="ai-portal.html" class="nav-link" target="_blank">AdMediaX|Ai</a>
+            </li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="ham-line ham-top"></span>
+            <span class="ham-line ham-mid"></span>
+            <span class="ham-line ham-bot"></span>
+        </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+            <div class="drawer-header">
+                <span class="drawer-brand">
+                    <img src="../public/Logo/AdMediaX-logo.png" alt="AdMediaX logo" style="width: auto; height: 44px;" />
+                </span>
+                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="drawer-nav">
+                <li><a href="index.html" class="drawer-link">Home</a></li>
+                <li><a href="services.html" class="drawer-link">Services</a></li>
+                <li><a href="work.html" class="drawer-link">Our Work</a></li>
+                <li><a href="about.html" class="drawer-link">About Us</a></li>
+                <li><a href="blog.html" class="drawer-link">Blog</a></li>
+                <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+            </ul>
+            <div class="drawer-cta">
+                <a href="ai-portal.html" class="drawer-ai-btn" target="_blank">AdMediaX | Ai</a>
+                <a href="contact.html" class="drawer-start-btn">Get Started</a>
+            </div>
+            <div class="drawer-footer">
+                <p>© 2026 AdMediaX</p>
+                <div class="drawer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/admedia_x/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/admediax/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+</nav>
+
+    <!-- ARTICLE -->
+    <article class="blog-post">
+      <div class="blog-container">
+        <!-- HEADER -->
+        <header class="blog-header">
+          <div class="blog-category">AI &amp; Automation</div>
+          <h1>
+            Purifying AI: How <span>HAP Filtering</span> Protects Businesses
+            from Harmful AI Content in 2026
+          </h1>
+          <div class="blog-meta">
+            <span><i class="far fa-calendar"></i> June 2026</span>
+            <span><i class="far fa-clock"></i> 8 min read</span>
+            <span><i class="far fa-user"></i> By AdMediaX</span>
+            <span
+              ><i class="far fa-folder"></i> AI Safety · Digital Marketing ·
+              Brand Protection</span
+            >
+          </div>
+
+          <!-- HERO SVG -->
+          <div class="blog-hero-svg">
+            <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color: #0a0d0a" />
+                  <stop offset="100%" style="stop-color: #0d110a" />
+                </linearGradient>
+                <linearGradient
+                  id="shieldG"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" style="stop-color: #7fff3a" />
+                  <stop offset="100%" style="stop-color: #3ea814" />
+                </linearGradient>
+                <linearGradient id="dangerG" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color: #ff4d4d" />
+                  <stop offset="100%" style="stop-color: #b02020" />
+                </linearGradient>
+                <filter id="glow2">
+                  <feGaussianBlur stdDeviation="4" result="b" />
+                  <feMerge>
+                    <feMergeNode in="b" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <filter id="softglow2">
+                  <feGaussianBlur stdDeviation="10" result="b" />
+                  <feMerge>
+                    <feMergeNode in="b" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- BG -->
+              <rect width="900" height="400" fill="url(#bgG)" />
+
+              <!-- grid -->
+              <g stroke="rgba(101,234,44,0.045)" stroke-width="1">
+                <line x1="0" y1="80" x2="900" y2="80" />
+                <line x1="0" y1="160" x2="900" y2="160" />
+                <line x1="0" y1="240" x2="900" y2="240" />
+                <line x1="0" y1="320" x2="900" y2="320" />
+                <line x1="180" y1="0" x2="180" y2="400" />
+                <line x1="360" y1="0" x2="360" y2="400" />
+                <line x1="540" y1="0" x2="540" y2="400" />
+                <line x1="720" y1="0" x2="720" y2="400" />
+              </g>
+
+              <!-- LEFT: Harmful content bubbles flowing in -->
+              <g opacity="0.85">
+                <!-- incoming harmful bubbles -->
+                <rect
+                  x="22"
+                  y="55"
+                  width="118"
+                  height="32"
+                  rx="16"
+                  fill="rgba(255,77,77,0.18)"
+                  stroke="rgba(255,77,77,0.45)"
+                  stroke-width="1"
+                />
+                <text
+                  x="81"
+                  y="76"
+                  text-anchor="middle"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Hate Speech
+                </text>
+
+                <rect
+                  x="22"
+                  y="110"
+                  width="118"
+                  height="32"
+                  rx="16"
+                  fill="rgba(255,77,77,0.14)"
+                  stroke="rgba(255,77,77,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="81"
+                  y="131"
+                  text-anchor="middle"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Misinformation
+                </text>
+
+                <rect
+                  x="22"
+                  y="165"
+                  width="118"
+                  height="32"
+                  rx="16"
+                  fill="rgba(255,77,77,0.18)"
+                  stroke="rgba(255,77,77,0.45)"
+                  stroke-width="1"
+                />
+                <text
+                  x="81"
+                  y="186"
+                  text-anchor="middle"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Toxic Language
+                </text>
+
+                <rect
+                  x="22"
+                  y="220"
+                  width="118"
+                  height="32"
+                  rx="16"
+                  fill="rgba(255,77,77,0.14)"
+                  stroke="rgba(255,77,77,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="81"
+                  y="241"
+                  text-anchor="middle"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Fake Claims
+                </text>
+
+                <rect
+                  x="22"
+                  y="275"
+                  width="118"
+                  height="32"
+                  rx="16"
+                  fill="rgba(255,77,77,0.18)"
+                  stroke="rgba(255,77,77,0.45)"
+                  stroke-width="1"
+                />
+                <text
+                  x="81"
+                  y="296"
+                  text-anchor="middle"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Biased Output
+                </text>
+
+                <rect
+                  x="22"
+                  y="330"
+                  width="118"
+                  height="32"
+                  rx="16"
+                  fill="rgba(255,77,77,0.14)"
+                  stroke="rgba(255,77,77,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="81"
+                  y="351"
+                  text-anchor="middle"
+                  fill="#ff6b6b"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Spam Content
+                </text>
+
+                <!-- arrows pointing right -->
+                <g stroke="rgba(255,77,77,0.35)" stroke-width="1.5" fill="none">
+                  <line x1="140" y1="71" x2="192" y2="200" />
+                  <line x1="140" y1="126" x2="192" y2="200" />
+                  <line x1="140" y1="181" x2="192" y2="200" />
+                  <line x1="140" y1="236" x2="192" y2="200" />
+                  <line x1="140" y1="291" x2="192" y2="200" />
+                  <line x1="140" y1="346" x2="192" y2="200" />
+                </g>
+
+                <!-- label -->
+                <text
+                  x="81"
+                  y="30"
+                  text-anchor="middle"
+                  fill="rgba(255,77,77,0.7)"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                  letter-spacing="2"
+                >
+                  HARMFUL INPUT
+                </text>
+              </g>
+
+              <!-- CENTER: HAP Filter Shield -->
+              <g transform="translate(450,200)">
+                <!-- glow ring -->
+                <circle
+                  cx="0"
+                  cy="0"
+                  r="95"
+                  fill="rgba(101,234,44,0.06)"
+                  stroke="rgba(101,234,44,0.18)"
+                  stroke-width="1.5"
+                  filter="url(#softglow2)"
+                />
+                <circle
+                  cx="0"
+                  cy="0"
+                  r="74"
+                  fill="rgba(101,234,44,0.09)"
+                  stroke="rgba(101,234,44,0.28)"
+                  stroke-width="1"
+                />
+
+                <!-- shield shape -->
+                <path
+                  d="M0,-58 L46,-30 L46,14 Q46,52 0,68 Q-46,52 -46,14 L-46,-30 Z"
+                  fill="url(#shieldG)"
+                  opacity="0.95"
+                  filter="url(#glow2)"
+                />
+                <!-- shield inner -->
+                <path
+                  d="M0,-44 L34,-24 L34,12 Q34,42 0,55 Q-34,42 -34,12 L-34,-24 Z"
+                  fill="rgba(0,0,0,0.2)"
+                />
+                <!-- checkmark -->
+                <polyline
+                  points="-16,2 -4,16 20,-14"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="4.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <!-- label -->
+                <text
+                  x="0"
+                  y="90"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="12"
+                  font-weight="800"
+                  letter-spacing="3"
+                >
+                  HAP FILTER
+                </text>
+                <text
+                  x="0"
+                  y="106"
+                  text-anchor="middle"
+                  fill="rgba(101,234,44,0.55)"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  letter-spacing="1.5"
+                >
+                  AI CONTENT MODERATION
+                </text>
+              </g>
+
+              <!-- BLOCKED indicator -->
+              <g transform="translate(300,310)">
+                <rect
+                  x="-55"
+                  y="-14"
+                  width="110"
+                  height="28"
+                  rx="14"
+                  fill="rgba(255,77,77,0.12)"
+                  stroke="rgba(255,77,77,0.4)"
+                  stroke-width="1"
+                />
+                <text
+                  x="0"
+                  y="5"
+                  text-anchor="middle"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                  letter-spacing="2"
+                >
+                  ✕ BLOCKED
+                </text>
+              </g>
+
+              <!-- RIGHT: Safe output bubbles -->
+              <g opacity="0.9">
+                <text
+                  x="760"
+                  y="30"
+                  text-anchor="middle"
+                  fill="rgba(101,234,44,0.7)"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                  letter-spacing="2"
+                >
+                  SAFE OUTPUT
+                </text>
+
+                <!-- arrows from filter to right -->
+                <g stroke="rgba(101,234,44,0.3)" stroke-width="1.5" fill="none">
+                  <line x1="510" y1="200" x2="625" y2="80" />
+                  <line x1="510" y1="200" x2="625" y2="145" />
+                  <line x1="510" y1="200" x2="625" y2="210" />
+                  <line x1="510" y1="200" x2="625" y2="275" />
+                  <line x1="510" y1="200" x2="625" y2="340" />
+                </g>
+
+                <rect
+                  x="625"
+                  y="64"
+                  width="132"
+                  height="32"
+                  rx="16"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="691"
+                  y="85"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Brand-Safe Ads
+                </text>
+
+                <rect
+                  x="625"
+                  y="129"
+                  width="132"
+                  height="32"
+                  rx="16"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="691"
+                  y="150"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Clean Blog Posts
+                </text>
+
+                <rect
+                  x="625"
+                  y="194"
+                  width="132"
+                  height="32"
+                  rx="16"
+                  fill="rgba(101,234,44,0.14)"
+                  stroke="rgba(101,234,44,0.45)"
+                  stroke-width="1"
+                  filter="url(#glow2)"
+                />
+                <text
+                  x="691"
+                  y="215"
+                  text-anchor="middle"
+                  fill="#a0ff60"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="700"
+                >
+                  Safe Chatbots
+                </text>
+
+                <rect
+                  x="625"
+                  y="259"
+                  width="132"
+                  height="32"
+                  rx="16"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="691"
+                  y="280"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Ethical Email Copy
+                </text>
+
+                <rect
+                  x="625"
+                  y="324"
+                  width="132"
+                  height="32"
+                  rx="16"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="691"
+                  y="345"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Policy-Compliant
+                </text>
+              </g>
+
+              <!-- bottom strip -->
+              <rect
+                x="0"
+                y="372"
+                width="900"
+                height="28"
+                fill="rgba(101,234,44,0.055)"
+              />
+              <text
+                x="450"
+                y="391"
+                text-anchor="middle"
+                fill="rgba(101,234,44,0.55)"
+                font-family="Inter,sans-serif"
+                font-size="10"
+                letter-spacing="3"
+                font-weight="600"
+              >
+                DIGITAL MARKETING · AI SAFETY · 2026 EDITION
+              </text>
+            </svg>
+          </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="blog-content">
+          <div class="opening-quote">
+            <p>
+              Artificial Intelligence is transforming digital marketing, content
+              creation, customer support, and business automation. But with this
+              growth comes a major challenge: harmful AI-generated content that
+              can destroy a brand overnight - and most businesses have no
+              protection in place.
+            </p>
+          </div>
+
+          <p>
+            From AI-generated ads and chatbot replies to automated blogs and
+            social media captions, businesses are rapidly adopting AI tools to
+            save time and increase productivity. But AI systems can sometimes
+            generate offensive responses, misleading information, spam content,
+            fake claims, toxic language, biased outputs, or unsafe brand
+            messaging.
+          </p>
+
+          <p>
+            This is where
+            <strong style="color: #fff">HAP Filtering</strong> becomes
+            essential. In 2026, businesses are not only looking for AI-powered
+            marketing - they are looking for <em>safe</em> AI systems that
+            protect their brand reputation, customer trust, and online
+            credibility.
+          </p>
+
+          <h2>What Is HAP Filtering in AI?</h2>
+
+          <p>
+            HAP Filtering stands for
+            <strong style="color: #fff">Harmful Content Filtering</strong>. It
+            is an AI safety process used to detect, block, and remove harmful or
+            unsafe content generated by artificial intelligence systems before
+            it reaches your customers.
+          </p>
+
+          <div class="highlight-box">
+            <strong>What HAP Filtering Catches</strong>
+            <p>
+              Hate speech, misinformation, NSFW content, fake medical or
+              financial advice, abusive language, spam, phishing content,
+              violent material, and brand-damaging outputs - all intercepted
+              before publishing.
+            </p>
+          </div>
+
+          <p>
+            HAP filtering helps businesses ensure that their AI tools produce
+            clean, safe, and professional content. It acts as an intelligent
+            gatekeeper sitting between your AI tools and your audience.
+          </p>
+
+          <h2>Why Harmful AI Content Is a Big Problem for Businesses</h2>
+
+          <p>
+            Many businesses are now using AI for social media captions, blog
+            writing, customer support, email marketing, ad copy, chatbot
+            automation, and content generation. Without proper filtering, AI can
+            accidentally create content that harms a business reputation.
+          </p>
+
+          <div class="warning-box">
+            <span class="warning-label">Real Risk Examples</span>
+            <p>
+              An AI chatbot may give offensive responses. AI-generated ads may
+              contain misleading claims. Automated captions may use
+              inappropriate language. AI content may violate Meta or Google ad
+              policies. Even one harmful output can damage customer trust,
+              reduce brand credibility, create legal issues, or get ad accounts
+              suspended.
+            </p>
+          </div>
+
+          <p>
+            That is why AI safety is becoming a major digital marketing priority
+            in 2026. The cost of a single harmful AI output can far exceed the
+            cost of implementing a proper filtering system from the start.
+          </p>
+
+          <h2>How HAP Filtering Works</h2>
+
+          <!-- Issue Card 01 -->
+          <div class="issue-card">
+            <span class="issue-label">Step 01</span>
+            <h3>Content Analysis - Scanning Before Publishing</h3>
+            <p>
+              HAP filtering systems use machine learning and moderation models
+              to analyze AI-generated content <em>before</em> it is published
+              anywhere. The system checks for toxic words, harmful intent,
+              policy violations, misinformation patterns, suspicious claims, and
+              unsafe language patterns.
+            </p>
+            <p>
+              This happens in milliseconds - fast enough to work inside live
+              chatbots, automated posting workflows, and real-time ad generation
+              pipelines. The business sees only the clean, approved output.
+            </p>
+            <span class="tag">ML Moderation Models</span>
+            <span class="tag">Real-Time Analysis</span>
+            <span class="tag">Pre-Publish Scanning</span>
+          </div>
+
+          <!-- Issue Card 02 -->
+          <div class="issue-card">
+            <span class="issue-label">Step 02</span>
+            <h3>Detection &amp; Action - Block, Flag, or Review</h3>
+            <p>
+              If harmful content is detected, the system responds based on
+              severity. Minor issues get automatically edited or rewritten.
+              Moderate violations get flagged for human review before anything
+              goes live. Severe violations are blocked entirely - the content
+              never reaches your audience.
+            </p>
+            <p>
+              This creates a layered safety net: full automation for clear-cut
+              cases, human judgment for edge cases. Businesses get both speed
+              and safety without compromising either.
+            </p>
+            <span class="tag">Auto-Block</span>
+            <span class="tag">Human Review Queue</span>
+            <span class="tag">Smart Rewriting</span>
+          </div>
+
+          <h2>Industries That Need AI Content Filtering the Most</h2>
+
+          <p>
+            Many industries are already adopting HAP filtering systems,
+            especially businesses that rely heavily on online communication and
+            automated content workflows.
+          </p>
+
+          <table class="industry-table">
+            <thead>
+              <tr>
+                <th>Industry</th>
+                <th>Primary Risk Without Filtering</th>
+                <th>Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pill">E-commerce</span></td>
+                <td>Misleading product descriptions and fake claims</td>
+                <td style="color: #65ea2c; font-weight: 600">Critical</td>
+              </tr>
+              <tr>
+                <td><span class="pill">Healthcare</span></td>
+                <td>Dangerous medical misinformation</td>
+                <td style="color: #65ea2c; font-weight: 600">Critical</td>
+              </tr>
+              <tr>
+                <td><span class="pill">Financial Services</span></td>
+                <td>Risky financial advice and scam-like messaging</td>
+                <td style="color: #65ea2c; font-weight: 600">Critical</td>
+              </tr>
+              <tr>
+                <td><span class="pill">Digital Marketing</span></td>
+                <td>Ad compliance violations and brand safety failures</td>
+                <td style="color: #65ea2c; font-weight: 600">Critical</td>
+              </tr>
+              <tr>
+                <td><span class="pill">Social Media Mgmt</span></td>
+                <td>Automated content going off-brand or offensive</td>
+                <td style="color: #a0a0a0">High</td>
+              </tr>
+              <tr>
+                <td><span class="pill">AI Chatbot Businesses</span></td>
+                <td>Customer interactions containing harmful outputs</td>
+                <td style="color: #65ea2c; font-weight: 600">Critical</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>The Growing Demand for AI-Safe Marketing Solutions</h2>
+
+          <p>
+            As AI tools become mainstream, businesses are searching for safe AI
+            content generation, AI moderation tools, ethical AI automation, AI
+            content monitoring, and brand-safe marketing systems. The demand is
+            growing faster than the supply of agencies that actually understand
+            how to deliver it.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="num">2026</div>
+              <div class="lbl">The year AI safety became non-negotiable</div>
+              <div class="sub">For businesses running automated content</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">1 Post</div>
+              <div class="lbl">Is all it takes to damage brand reputation</div>
+              <div class="sub">From a single unfiltered AI output</div>
+            </div>
+            <div class="stat-card">
+              <div class="num">100%</div>
+              <div class="lbl">Of AI workflows need content safety layers</div>
+              <div class="sub">Regardless of industry or platform</div>
+            </div>
+          </div>
+
+          <h2>SEO Benefits of AI-Safe Content</h2>
+
+          <p>
+            Search engines and AI platforms are prioritizing trustworthy
+            content, accurate information, expert authority, and user safety.
+            Safe and high-quality AI content helps businesses improve SEO
+            rankings, reduce spam signals, increase user trust, and perform
+            better in AI-powered search engines.
+          </p>
+
+          <div class="highlight-box">
+            <strong>Why This Matters for Search in 2026</strong>
+            <p>
+              AI-generated search results now power a significant portion of
+              Google's results page. Businesses with clean, moderated AI content
+              get cited by AI Overviews. Businesses with flagged or low-trust
+              content get filtered out entirely - regardless of how much they
+              spend on ads.
+            </p>
+          </div>
+
+          <h2>How Digital Marketing Agencies Can Use This Trend</h2>
+
+          <p>
+            A smart digital marketing agency can turn this AI safety trend into
+            a high-value service offering. Businesses are increasingly worried
+            about AI-generated mistakes. Agencies that solve this problem will
+            gain trust faster than any competitor relying on AI alone.
+          </p>
+
+          <!-- Issue Card 03 -->
+          <div class="issue-card">
+            <span class="issue-label">Opportunity for Agencies</span>
+            <h3>AI Safety as a Premium Service - Not Just a Feature</h3>
+            <p>
+              Agencies can offer AI content review systems, safe AI social media
+              management, AI moderation consulting, AI chatbot optimization,
+              AI-powered website automation, and ethical AI branding. These are
+              not technical commodities - they are trust services that
+              businesses will pay a premium for.
+            </p>
+            <p>
+              Businesses no longer want "just AI." They want
+              <strong style="color: #fff">trusted AI systems</strong> that
+              protect their brand reputation. The agency that positions itself
+              as the safe choice in an AI-saturated market will win the decade.
+            </p>
+            <span class="tag">AI Moderation Consulting</span>
+            <span class="tag">Brand-Safe Automation</span>
+            <span class="tag">Ethical AI Strategy</span>
+          </div>
+
+          <div class="tip-box">
+            <span class="tip-label">The Bottom Line</span>
+            <p>
+              "In 2026, the businesses that succeed with AI will not be the ones
+              using the most automation - they will be the ones using the safest
+              and smartest automation. The future of marketing is not just
+              AI-powered. It is AI-powered and trust-driven."
+            </p>
+          </div>
+
+          <div class="cta-block">
+            <h2>Is Your AI Content Protected?</h2>
+            <p>
+              AdMediaX helps businesses in Jaipur and across India set up
+              AI-safe content systems, ethical automation workflows, and
+              brand-protected marketing pipelines. Let's make sure your AI works
+              for you - not against you.
+            </p>
+            <a href="../contact.html" class="cta-btn">
+              <i class="fas fa-shield-alt"></i> Get a Free AI Safety Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AdMediaX</h3>
+                <p>Transforming businesses through innovative digital solutions and creative excellence.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61574145674026" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/admedia_x/?hl=en" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.pinterest.com/admediax/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../services.html">Web Development</a></li>
+                    <li><a href="../services.html">App Development</a></li>
+                    <li><a href="../services.html">Digital Marketing</a></li>
+                    <li><a href="../services.html">Graphic Design</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../work.html">Our Work</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 9887964016</p>
+                <p><i class="fas fa-map-marker-alt"></i> DSF-06 2th Floor Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur, Rajasthan 302034</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("navbar")
+          .classList.toggle("scrolled", window.scrollY > 50);
+      });
+    </script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>

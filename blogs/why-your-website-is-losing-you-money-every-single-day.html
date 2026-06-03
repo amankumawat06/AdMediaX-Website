@@ -1,0 +1,1688 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Website Is Losing You Money Every Single Day | AdMediaX</title>
+    <meta
+      name="description"
+      content="Most business websites in Jaipur look functional but are structurally engineered to repel buyers. AdMediaX breaks down the exact technical reasons your site is leaking revenue."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --green: #65ea2c;
+        --green-dim: rgba(101, 234, 44, 0.07);
+        --green-border: rgba(101, 234, 44, 0.22);
+        --bg: #0a0a0a;
+        --text: #e0e0e0;
+        --text-muted: #a0a0a0;
+        --text-faint: #606060;
+        --red: #ff4d4d;
+        --red-dim: rgba(255, 77, 77, 0.07);
+        --red-border: rgba(255, 77, 77, 0.28);
+        --orange: #ffab50;
+        --orange-dim: rgba(255, 140, 30, 0.05);
+        --orange-border: rgba(255, 140, 30, 0.3);
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* LAYOUT */
+      .blog-post {
+        padding: 120px 0 96px;
+      }
+      .blog-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 22px;
+      }
+
+      /* HEADER */
+      .blog-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .blog-category {
+        display: inline-block;
+        background: var(--green-dim);
+        color: var(--green);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 4px;
+        border: 1px solid var(--green-border);
+        margin-bottom: 20px;
+      }
+      .blog-header h1 {
+        font-size: clamp(1.85rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.22;
+        letter-spacing: -0.6px;
+        margin-bottom: 22px;
+      }
+      .blog-header h1 span {
+        color: var(--green);
+      }
+      .blog-meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: var(--text-muted);
+        font-size: 0.87rem;
+        margin-bottom: 36px;
+      }
+      .blog-meta span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .blog-meta i {
+        color: var(--green);
+        font-size: 0.8rem;
+      }
+
+      /* HERO SVG */
+      .blog-hero-svg {
+        width: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: #0d0d0d;
+        margin-bottom: 50px;
+      }
+      .blog-hero-svg svg {
+        width: 100%;
+        display: block;
+      }
+
+      /* CONTENT */
+      .blog-content {
+        font-size: 1.07rem;
+        line-height: 1.86;
+        color: var(--text);
+      }
+      .blog-content h2 {
+        color: var(--green);
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 52px 0 18px;
+        letter-spacing: -0.3px;
+        line-height: 1.3;
+      }
+      .blog-content p {
+        margin-bottom: 22px;
+        color: #d0d0d0;
+      }
+
+      /* opening quote */
+      .opening-quote {
+        border-left: 3px solid var(--green);
+        padding: 18px 26px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 0 10px 10px 0;
+        margin-bottom: 32px;
+      }
+      .opening-quote p {
+        font-style: italic;
+        color: #b8b8b8;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+      }
+
+      /* highlight box – green */
+      .highlight-box {
+        border-left: 4px solid var(--green);
+        background: var(--green-dim);
+        padding: 20px 26px;
+        border-radius: 0 10px 10px 0;
+        margin: 30px 0;
+      }
+      .highlight-box strong {
+        display: block;
+        color: var(--green);
+        font-size: 0.76rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .highlight-box p {
+        margin-bottom: 0;
+        color: #c0c0c0;
+      }
+
+      /* danger / loss box – red */
+      .danger-box {
+        border: 1px solid var(--red-border);
+        background: var(--red-dim);
+        border-radius: 12px;
+        padding: 22px 28px;
+        margin: 28px 0;
+      }
+      .danger-label {
+        display: inline-block;
+        background: rgba(255, 77, 77, 0.14);
+        color: var(--red);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--red-border);
+        margin-bottom: 12px;
+      }
+      .danger-box p {
+        margin-bottom: 0;
+        color: #c8c8c8;
+        font-size: 0.97rem;
+      }
+
+      /* warning / orange */
+      .warning-box {
+        border: 1px solid var(--orange-border);
+        background: var(--orange-dim);
+        border-radius: 12px;
+        padding: 20px 26px;
+        margin: 28px 0;
+      }
+      .warning-label {
+        display: inline-block;
+        background: rgba(255, 140, 30, 0.13);
+        color: var(--orange);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--orange-border);
+        margin-bottom: 12px;
+      }
+      .warning-box p {
+        margin-bottom: 0;
+        color: #c8c8c8;
+        font-size: 0.97rem;
+      }
+
+      /* problem / section card */
+      .problem-card {
+        border: 1px solid var(--red-border);
+        background: rgba(255, 40, 40, 0.03);
+        border-radius: 14px;
+        padding: 30px 32px;
+        margin: 32px 0;
+      }
+      .problem-card.solution {
+        border-color: var(--green-border);
+        background: rgba(101, 234, 44, 0.03);
+      }
+      .card-label {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 14px;
+      }
+      .card-label.red {
+        background: rgba(255, 77, 77, 0.1);
+        color: var(--red);
+        border: 1px solid var(--red-border);
+      }
+      .card-label.green {
+        background: rgba(101, 234, 44, 0.1);
+        color: var(--green);
+        border: 1px solid var(--green-border);
+      }
+      .problem-card h3 {
+        color: #fff;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+        line-height: 1.4;
+      }
+      .problem-card p {
+        color: #c8c8c8;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 14px;
+      }
+      .problem-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* tags */
+      .tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.05);
+        color: #909090;
+        font-size: 0.75rem;
+        padding: 3px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin: 3px 4px 0 0;
+      }
+      .tag.green {
+        background: var(--green-dim);
+        color: var(--green);
+        border-color: var(--green-border);
+      }
+
+      /* stats grid */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 32px 0;
+      }
+      .stat-card {
+        border-radius: 12px;
+        padding: 24px 18px;
+        text-align: center;
+        border: 1px solid;
+      }
+      .stat-card.bad {
+        background: var(--red-dim);
+        border-color: var(--red-border);
+      }
+      .stat-card.good {
+        background: var(--green-dim);
+        border-color: var(--green-border);
+      }
+      .stat-card .num {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 6px;
+      }
+      .stat-card.bad .num {
+        color: var(--red);
+      }
+      .stat-card.good .num {
+        color: var(--green);
+      }
+      .stat-card .lbl {
+        font-size: 0.87rem;
+        color: #c0c0c0;
+        margin-bottom: 4px;
+      }
+      .stat-card .sub {
+        font-size: 0.76rem;
+        color: var(--text-faint);
+      }
+
+      /* comparison table */
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 26px 0 32px;
+        font-size: 0.95rem;
+      }
+      .compare-table th {
+        font-size: 0.72rem;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .compare-table th:first-child {
+        color: var(--text-muted);
+        background: rgba(255, 255, 255, 0.03);
+      }
+      .compare-table th.bad {
+        background: rgba(255, 77, 77, 0.08);
+        color: var(--red);
+        border-bottom-color: var(--red-border);
+      }
+      .compare-table th.good {
+        background: rgba(101, 234, 44, 0.08);
+        color: var(--green);
+        border-bottom-color: var(--green-border);
+      }
+      .compare-table td {
+        padding: 13px 16px;
+        color: #c0c0c0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        vertical-align: top;
+        font-size: 0.93rem;
+      }
+      .compare-table td:first-child {
+        color: #888;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .compare-table tr:last-child td {
+        border-bottom: none;
+      }
+      .compare-table tr:hover td {
+        background: rgba(255, 255, 255, 0.015);
+      }
+      .bad-val {
+        color: #ff6060;
+        font-weight: 600;
+      }
+      .good-val {
+        color: var(--green);
+        font-weight: 600;
+      }
+
+      /* tip quote */
+      .tip-box {
+        border: 1px solid var(--green-border);
+        background: var(--green-dim);
+        border-radius: 12px;
+        padding: 28px 32px;
+        margin: 36px 0;
+      }
+      .tip-label {
+        display: inline-block;
+        background: var(--green);
+        color: #0a0a0a;
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 14px;
+      }
+      .tip-box p {
+        margin-bottom: 0;
+        font-style: italic;
+        color: #d0d0d0;
+      }
+
+      /* audit section */
+      .audit-strip {
+        background: rgba(101, 234, 44, 0.04);
+        border: 1px solid var(--green-border);
+        border-radius: 14px;
+        padding: 32px 36px;
+        margin: 36px 0;
+      }
+      .audit-strip h3 {
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .audit-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .audit-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
+        padding: 11px 14px;
+        font-size: 0.88rem;
+        color: #c0c0c0;
+      }
+      .audit-item i {
+        color: var(--green);
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+
+      /* CTA */
+      .cta-block {
+        text-align: center;
+        background: rgba(101, 234, 44, 0.05);
+        border: 1px solid var(--green-border);
+        border-radius: 14px;
+        padding: 46px 32px;
+        margin-top: 58px;
+      }
+      .cta-block h2 {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .cta-block p {
+        color: #b0b0b0;
+        margin-bottom: 26px;
+        font-size: 1rem;
+      }
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: var(--green);
+        color: #0a0a0a;
+        font-weight: 700;
+        font-size: 0.97rem;
+        padding: 14px 34px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+      }
+      .cta-btn:hover {
+        opacity: 0.88;
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 768px) {
+        .blog-header h1 {
+          font-size: 1.7rem;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .audit-items {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+      @media (max-width: 480px) {
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+        .compare-table {
+          font-size: 0.84rem;
+        }
+        .compare-table th,
+        .compare-table td {
+          padding: 10px 11px;
+        }
+        .problem-card {
+          padding: 22px 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="../public/Logo/AdMediaX-logo.png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link active">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
+        </button>
+      </div>
+
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="../public/Logo/AdMediaX-logo.png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul class="drawer-nav">
+            <li><a href="index.html" class="drawer-link">Home</a></li>
+            <li><a href="services.html" class="drawer-link">Services</a></li>
+            <li><a href="work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="about.html" class="drawer-link">About Us</a></li>
+            <li><a href="blog.html" class="drawer-link">Blog</a></li>
+            <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+          <div class="drawer-cta">
+            <a href="ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <article class="blog-post">
+      <div class="blog-container">
+        <!-- HEADER -->
+        <header class="blog-header">
+          <div class="blog-category">Web Development</div>
+          <h1>
+            Your Website Is <span>Losing You Money</span> Every Single Day -
+            Here's the Technical Reason Why
+          </h1>
+          <div class="blog-meta">
+            <span><i class="far fa-calendar"></i> June 2026</span>
+            <span><i class="far fa-clock"></i> 9 min read</span>
+            <span><i class="far fa-user"></i> By AdMediaX</span>
+            <span
+              ><i class="far fa-folder"></i> Web Development · Conversion ·
+              Revenue</span
+            >
+          </div>
+
+          <!-- HERO SVG -->
+          <div class="blog-hero-svg">
+            <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color: #0a0a0a" />
+                  <stop offset="100%" style="stop-color: #0d0d0a" />
+                </linearGradient>
+                <linearGradient id="barRed" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color: #ff4d4d" />
+                  <stop offset="100%" style="stop-color: #aa1111" />
+                </linearGradient>
+                <linearGradient id="barGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color: #65ea2c" />
+                  <stop offset="100%" style="stop-color: #3ea814" />
+                </linearGradient>
+                <linearGradient
+                  id="moneyDrain"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ff4d4d; stop-opacity: 0.25"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #ff4d4d; stop-opacity: 0"
+                  />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3.5" result="b" />
+                  <feMerge>
+                    <feMergeNode in="b" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <filter id="softglow">
+                  <feGaussianBlur stdDeviation="9" result="b" />
+                  <feMerge>
+                    <feMergeNode in="b" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- BG -->
+              <rect width="900" height="420" fill="url(#bgG)" />
+
+              <!-- grid -->
+              <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+                <line x1="0" y1="84" x2="900" y2="84" />
+                <line x1="0" y1="168" x2="900" y2="168" />
+                <line x1="0" y1="252" x2="900" y2="252" />
+                <line x1="0" y1="336" x2="900" y2="336" />
+                <line x1="180" y1="0" x2="180" y2="420" />
+                <line x1="360" y1="0" x2="360" y2="420" />
+                <line x1="540" y1="0" x2="540" y2="420" />
+                <line x1="720" y1="0" x2="720" y2="420" />
+              </g>
+
+              <!-- LEFT PANEL: Funnel with leak -->
+              <g transform="translate(110,50)">
+                <text
+                  x="0"
+                  y="0"
+                  fill="rgba(255,255,255,0.5)"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                  letter-spacing="2"
+                >
+                  TEMPLATE SITE FUNNEL
+                </text>
+
+                <!-- Funnel shape -->
+                <polygon
+                  points="0,18 140,18 110,78 30,78"
+                  fill="rgba(255,255,255,0.05)"
+                  stroke="rgba(255,255,255,0.12)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="56"
+                  text-anchor="middle"
+                  fill="#888"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                >
+                  1,000 Visitors
+                </text>
+
+                <!-- leak arrows out left side -->
+                <line
+                  x1="30"
+                  y1="60"
+                  x2="-20"
+                  y2="80"
+                  stroke="rgba(255,77,77,0.5)"
+                  stroke-width="1.5"
+                  stroke-dasharray="4,3"
+                />
+                <text
+                  x="-25"
+                  y="90"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                >
+                  Slow load →
+                </text>
+                <text
+                  x="-25"
+                  y="102"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                >
+                  −500 lost
+                </text>
+
+                <polygon
+                  points="30,78 110,78 96,128 44,128"
+                  fill="rgba(255,255,255,0.04)"
+                  stroke="rgba(255,255,255,0.1)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="112"
+                  text-anchor="middle"
+                  fill="#888"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                >
+                  500 Stay
+                </text>
+
+                <!-- leak right -->
+                <line
+                  x1="96"
+                  y1="108"
+                  x2="145"
+                  y2="128"
+                  stroke="rgba(255,77,77,0.5)"
+                  stroke-width="1.5"
+                  stroke-dasharray="4,3"
+                />
+                <text
+                  x="148"
+                  y="122"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                >
+                  No trust →
+                </text>
+                <text
+                  x="148"
+                  y="134"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                >
+                  −300 leave
+                </text>
+
+                <polygon
+                  points="44,128 96,128 86,168 54,168"
+                  fill="rgba(255,255,255,0.04)"
+                  stroke="rgba(255,255,255,0.09)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="156"
+                  text-anchor="middle"
+                  fill="#888"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                >
+                  200 Left
+                </text>
+
+                <!-- leak left -->
+                <line
+                  x1="54"
+                  y1="155"
+                  x2="5"
+                  y2="178"
+                  stroke="rgba(255,77,77,0.5)"
+                  stroke-width="1.5"
+                  stroke-dasharray="4,3"
+                />
+                <text
+                  x="-30"
+                  y="172"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                >
+                  No CTA →
+                </text>
+                <text
+                  x="-30"
+                  y="184"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                >
+                  −192 gone
+                </text>
+
+                <polygon
+                  points="54,168 86,168 80,198 60,198"
+                  fill="rgba(255,77,77,0.15)"
+                  stroke="rgba(255,77,77,0.35)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="188"
+                  text-anchor="middle"
+                  fill="#ff6060"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                >
+                  8 Buy
+                </text>
+
+                <!-- drain pool -->
+                <ellipse
+                  cx="70"
+                  cy="218"
+                  rx="38"
+                  ry="10"
+                  fill="rgba(255,77,77,0.1)"
+                  stroke="rgba(255,77,77,0.3)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="222"
+                  text-anchor="middle"
+                  fill="#ff4d4d"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  font-weight="700"
+                >
+                  0.8% CVR
+                </text>
+
+                <!-- drip lines -->
+                <line
+                  x1="65"
+                  y1="198"
+                  x2="60"
+                  y2="240"
+                  stroke="rgba(255,77,77,0.25)"
+                  stroke-width="1"
+                />
+                <line
+                  x1="75"
+                  y1="198"
+                  x2="78"
+                  y2="240"
+                  stroke="rgba(255,77,77,0.25)"
+                  stroke-width="1"
+                />
+
+                <!-- lost money labels -->
+                <text
+                  x="70"
+                  y="265"
+                  text-anchor="middle"
+                  fill="rgba(255,77,77,0.6)"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  letter-spacing="1"
+                >
+                  REVENUE LOST
+                </text>
+                <text
+                  x="70"
+                  y="280"
+                  text-anchor="middle"
+                  fill="#ff4d4d"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="800"
+                >
+                  ₹3.4L/mo
+                </text>
+              </g>
+
+              <!-- CENTER DIVIDER -->
+              <g transform="translate(330,60)">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="340"
+                  stroke="rgba(255,255,255,0.07)"
+                  stroke-width="1"
+                  stroke-dasharray="6,5"
+                />
+                <rect
+                  x="-36"
+                  y="148"
+                  width="72"
+                  height="28"
+                  rx="14"
+                  fill="rgba(255,255,255,0.05)"
+                  stroke="rgba(255,255,255,0.1)"
+                  stroke-width="1"
+                />
+                <text
+                  x="0"
+                  y="167"
+                  text-anchor="middle"
+                  fill="#666"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                >
+                  VS
+                </text>
+              </g>
+
+              <!-- RIGHT PANEL: AdMediaX optimised funnel -->
+              <g transform="translate(520,50)">
+                <text
+                  x="70"
+                  y="0"
+                  text-anchor="middle"
+                  fill="rgba(101,234,44,0.7)"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                  letter-spacing="2"
+                >
+                  ADMEDIAX PERFORMANCE SITE
+                </text>
+
+                <!-- Funnel shape – wide conversion -->
+                <polygon
+                  points="0,18 140,18 120,78 20,78"
+                  fill="rgba(101,234,44,0.06)"
+                  stroke="rgba(101,234,44,0.2)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="56"
+                  text-anchor="middle"
+                  fill="#aaa"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                >
+                  1,000 Visitors
+                </text>
+
+                <!-- sub-2s load badge -->
+                <rect
+                  x="148"
+                  y="28"
+                  width="95"
+                  height="22"
+                  rx="11"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.3)"
+                  stroke-width="1"
+                />
+                <text
+                  x="196"
+                  y="43"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  font-weight="600"
+                >
+                  ⚡ Loads in &lt;2s
+                </text>
+
+                <polygon
+                  points="20,78 120,78 106,128 34,128"
+                  fill="rgba(101,234,44,0.05)"
+                  stroke="rgba(101,234,44,0.17)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="112"
+                  text-anchor="middle"
+                  fill="#aaa"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                >
+                  890 Stay
+                </text>
+
+                <!-- trust badge -->
+                <rect
+                  x="148"
+                  y="93"
+                  width="95"
+                  height="22"
+                  rx="11"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.3)"
+                  stroke-width="1"
+                />
+                <text
+                  x="196"
+                  y="108"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  font-weight="600"
+                >
+                  ✓ Trust-first UX
+                </text>
+
+                <polygon
+                  points="34,128 106,128 92,178 48,178"
+                  fill="rgba(101,234,44,0.06)"
+                  stroke="rgba(101,234,44,0.18)"
+                  stroke-width="1"
+                />
+                <text
+                  x="70"
+                  y="162"
+                  text-anchor="middle"
+                  fill="#aaa"
+                  font-family="Inter,sans-serif"
+                  font-size="10"
+                >
+                  600 Engage
+                </text>
+
+                <!-- CTA badge -->
+                <rect
+                  x="148"
+                  y="155"
+                  width="95"
+                  height="22"
+                  rx="11"
+                  fill="rgba(101,234,44,0.1)"
+                  stroke="rgba(101,234,44,0.3)"
+                  stroke-width="1"
+                />
+                <text
+                  x="196"
+                  y="170"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  font-weight="600"
+                >
+                  → Smart CTAs
+                </text>
+
+                <polygon
+                  points="48,178 92,178 82,218 58,218"
+                  fill="rgba(101,234,44,0.14)"
+                  stroke="rgba(101,234,44,0.4)"
+                  stroke-width="1"
+                  filter="url(#glow)"
+                />
+                <text
+                  x="70"
+                  y="204"
+                  text-anchor="middle"
+                  fill="#a0ff60"
+                  font-family="Inter,sans-serif"
+                  font-size="11"
+                  font-weight="800"
+                >
+                  36+ Buy
+                </text>
+
+                <!-- result pool -->
+                <ellipse
+                  cx="70"
+                  cy="238"
+                  rx="42"
+                  ry="12"
+                  fill="rgba(101,234,44,0.12)"
+                  stroke="rgba(101,234,44,0.35)"
+                  stroke-width="1"
+                  filter="url(#glow)"
+                />
+                <text
+                  x="70"
+                  y="242"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  font-weight="700"
+                >
+                  3.6%+ CVR
+                </text>
+
+                <!-- revenue -->
+                <text
+                  x="70"
+                  y="275"
+                  text-anchor="middle"
+                  fill="rgba(101,234,44,0.6)"
+                  font-family="Inter,sans-serif"
+                  font-size="9"
+                  letter-spacing="1"
+                >
+                  REVENUE GENERATED
+                </text>
+                <text
+                  x="70"
+                  y="292"
+                  text-anchor="middle"
+                  fill="#65ea2c"
+                  font-family="Inter,sans-serif"
+                  font-size="16"
+                  font-weight="800"
+                  filter="url(#glow)"
+                >
+                  ₹12.6L/mo
+                </text>
+              </g>
+
+              <!-- bottom strip -->
+              <rect
+                x="0"
+                y="390"
+                width="900"
+                height="30"
+                fill="rgba(101,234,44,0.05)"
+              />
+              <text
+                x="450"
+                y="410"
+                text-anchor="middle"
+                fill="rgba(101,234,44,0.5)"
+                font-family="Inter,sans-serif"
+                font-size="10"
+                letter-spacing="3"
+                font-weight="600"
+              >
+                WEB DEVELOPMENT · CONVERSION ENGINEERING · JAIPUR 2026
+              </text>
+            </svg>
+          </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="blog-content">
+          <div class="opening-quote">
+            <p>
+              Most business websites in Jaipur look functional on the surface
+              but are structurally engineered to repel buyers - slow, generic,
+              and built with zero understanding of how digital sales actually
+              work. The result is a business quietly bleeding revenue every
+              single day the site remains live.
+            </p>
+          </div>
+
+          <p>
+            The core failure is structural. Template-based websites are not
+            built around your buyer's psychology, your product's value
+            hierarchy, or your market's specific trust signals. They are built
+            to look complete at the point of handover and serve as portfolio
+            pieces for the designer who made them.
+          </p>
+
+          <h2>
+            The Cheap Website Trap: Why Template Sites Cost More Than You Paid
+            for Them
+          </h2>
+
+          <p>
+            The most expensive website a business owner can own is the one that
+            cost the least to build. This is not a paradox - it is the
+            commercial reality that thousands of local business owners, D2C
+            brands, and corporate offices across Jaipur discover six months
+            after launching a ₹8,000 WordPress template site: traffic arrives,
+            nothing converts, and the business quietly bleeds opportunity.
+          </p>
+
+          <!-- Problem Card 01 -->
+          <div class="problem-card">
+            <span class="card-label red">Problem 01</span>
+            <h3>Loading Speed - The First and Most Brutal Conversion Killer</h3>
+            <p>
+              A website that takes more than three seconds to load on mobile
+              loses more than half of its visitors before a single word of your
+              copy is ever read. This is not a debatable opinion - it is
+              documented user behavior data that Google's Core Web Vitals
+              framework is built around.
+            </p>
+            <p>
+              Template sites built on bloated page builders like Elementor or
+              Divi, stacked with unoptimized images, undeferred JavaScript, and
+              shared hosting infrastructure, routinely score in the 30–50 range
+              on Google PageSpeed Insights. For a business owner investing in
+              Google Ads or social media traffic, this means a substantial
+              portion of every advertising rupee is being paid to bring visitors
+              to a door that slams shut in their face before they ever step
+              inside.
+            </p>
+            <span class="tag">Elementor / Divi Bloat</span>
+            <span class="tag">Unoptimized Images</span>
+            <span class="tag">Shared Hosting</span>
+            <span class="tag">PageSpeed 30–50</span>
+          </div>
+
+          <div class="danger-box">
+            <span class="danger-label">Revenue Impact</span>
+            <p>
+              AdMediaX has quantified this loss across client audits - the
+              number is consistently alarming. A business spending ₹50,000/month
+              on ads to a site scoring below 50 on PageSpeed is effectively
+              paying to have half those visitors sent straight to a competitor's
+              faster site.
+            </p>
+          </div>
+
+          <!-- Problem Card 02 -->
+          <div class="problem-card">
+            <span class="card-label red">Problem 02</span>
+            <h3>
+              Bad Design Destroys Trust - Before Your Prospect Forms a Single
+              Opinion
+            </h3>
+            <p>
+              Trust in a digital context is not built through logos and colors
+              alone - it is built through layout hierarchy, typography
+              consistency, whitespace discipline, and the implicit signal that
+              someone who knows what they are doing built this product.
+            </p>
+            <p>
+              When a prospective client lands on a cluttered homepage with four
+              different font families, auto-playing stock video, and a contact
+              button buried in the footer, their subconscious registers
+              incompetence before their conscious mind has formed a single
+              opinion. They leave - not because your product is wrong, but
+              because your digital presence communicated the wrong thing about
+              the quality of your business.
+            </p>
+            <span class="tag">Layout Hierarchy</span>
+            <span class="tag">Typography Inconsistency</span>
+            <span class="tag">Subconscious Trust Signals</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card bad">
+              <div class="num">&gt;3s</div>
+              <div class="lbl">Load time kills conversions</div>
+              <div class="sub">50%+ visitors leave before page loads</div>
+            </div>
+            <div class="stat-card bad">
+              <div class="num">97%</div>
+              <div class="lbl">Of visitors aren't ready to buy</div>
+              <div class="sub">
+                Without capture systems, they vanish forever
+              </div>
+            </div>
+            <div class="stat-card bad">
+              <div class="num">0.8%</div>
+              <div class="lbl">Avg. CVR on template sites</div>
+              <div class="sub">Vs 3–5%+ on performance-built sites</div>
+            </div>
+          </div>
+
+          <h2>A Beautiful Website With No Funnel Is Just Expensive Wall Art</h2>
+
+          <p>
+            The second - and arguably more common - category of website failure
+            is the aesthetically polished site that does absolutely nothing
+            commercially. It looks credible. It loads reasonably well. The
+            branding is clean. And yet, month after month, it generates no
+            enquiries, no leads, no calls, and no sales.
+          </p>
+
+          <p>
+            The reason is not the design. The reason is the complete absence of
+            a <strong style="color: #fff">conversion architecture</strong> - a
+            deliberate, psychologically engineered pathway that takes a
+            first-time visitor from awareness to action.
+          </p>
+
+          <!-- Problem Card 03 -->
+          <div class="problem-card">
+            <span class="card-label red">Problem 03</span>
+            <h3>
+              No Conversion Copywriting - Your Words Are Decoration, Not Sales
+            </h3>
+            <p>
+              Smart copywriting is the single most undervalued technical element
+              in web development, and it is almost never included in a standard
+              agency brief. Every headline on every section of your site should
+              be answering a specific question your buyer is carrying in their
+              mind at that moment in their scroll journey.
+            </p>
+            <p>
+              Your hero section should not announce your company name - it
+              should articulate the precise outcome your buyer wants. Your
+              service descriptions should not list features - they should
+              translate technical capabilities into tangible business results.
+              Your CTA should not say "Contact Us" - it should lower the
+              psychological barrier to clicking.
+            </p>
+            <span class="tag">Hero Messaging</span>
+            <span class="tag">Outcome-First Copy</span>
+            <span class="tag">CTA Psychology</span>
+          </div>
+
+          <!-- Problem Card 04 -->
+          <div class="problem-card">
+            <span class="card-label red">Problem 04</span>
+            <h3>
+              No Data Capture Architecture - 97% of Your Traffic Disappears
+              Without a Trace
+            </h3>
+            <p>
+              Most websites in Jaipur have exactly one mechanism for capturing a
+              visitor's intent: a contact form that nobody fills out. Fewer than
+              3% of first-time website visitors are ready to buy immediately -
+              which means 97% of your traffic is leaving without a trace unless
+              you have infrastructure designed to capture and nurture that
+              intent.
+            </p>
+            <p>
+              A high-performance digital asset deploys multiple capture
+              mechanisms: a lead magnet for early-stage researchers, a callback
+              widget for mid-funnel evaluators, a live chat or WhatsApp
+              integration for decision-stage buyers, and exit-intent triggers
+              for visitors about to leave. These are not gimmicks - they are
+              systematic responses to how buyers actually behave online.
+            </p>
+            <span class="tag">Lead Magnets</span>
+            <span class="tag">WhatsApp Integration</span>
+            <span class="tag">Exit-Intent Triggers</span>
+            <span class="tag">Multi-Stage Capture</span>
+          </div>
+
+          <div class="warning-box">
+            <span class="warning-label">The Real Cost</span>
+            <p>
+              Web design and marketing strategy are not two separate engagements
+              - they are one integrated system. Building them apart from each
+              other is the single most common reason high-converting websites
+              that Rajasthan businesses deserve never actually get built.
+            </p>
+          </div>
+
+          <h2>Turning Pixels into Profit with AdMediaX Engineering</h2>
+
+          <p>
+            What separates a website that generates revenue from one that simply
+            occupies a domain is the presence of what AdMediaX calls The
+            <strong style="color: #fff">Performance Stack Architecture</strong>
+            - a layered build methodology integrating technical performance
+            engineering, conversion-focused UX, brand narrative strategy, and
+            marketing funnel architecture into a single, cohesive digital asset.
+          </p>
+
+          <!-- Comparison Table -->
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>What We Measure</th>
+                <th class="bad">Template / Generic Build</th>
+                <th class="good">AdMediaX Performance Build</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PageSpeed Score</td>
+                <td><span class="bad-val">30–50</span></td>
+                <td><span class="good-val">90+</span></td>
+              </tr>
+              <tr>
+                <td>Mobile Load Time</td>
+                <td><span class="bad-val">5–9 seconds</span></td>
+                <td><span class="good-val">Under 2 seconds</span></td>
+              </tr>
+              <tr>
+                <td>Conversion Rate (CVR)</td>
+                <td><span class="bad-val">0.5–1%</span></td>
+                <td><span class="good-val">3–5%+</span></td>
+              </tr>
+              <tr>
+                <td>Code Architecture</td>
+                <td><span class="bad-val">Bloated page builder</span></td>
+                <td><span class="good-val">Custom, no dependencies</span></td>
+              </tr>
+              <tr>
+                <td>Structured Data / Schema</td>
+                <td><span class="bad-val">None</span></td>
+                <td><span class="good-val">Full markup, AI-ready</span></td>
+              </tr>
+              <tr>
+                <td>Lead Capture Mechanisms</td>
+                <td><span class="bad-val">1 contact form</span></td>
+                <td><span class="good-val">Multi-stage funnel</span></td>
+              </tr>
+              <tr>
+                <td>Copywriting Integration</td>
+                <td><span class="bad-val">Afterthought / generic</span></td>
+                <td>
+                  <span class="good-val">Conversion-first, in-wireframe</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Solution Card -->
+          <div class="problem-card solution">
+            <span class="card-label green">The AdMediaX Advantage</span>
+            <h3>One Roof. Full Stack. Real Integration.</h3>
+            <p>
+              Most agencies can build a fast site, or write decent copy, or run
+              paid media - but very few operate all three capabilities under one
+              roof with enough depth in each to make them genuinely interact
+              with each other.
+            </p>
+            <p>
+              At AdMediaX, the copywriter is in the room when the UX wireframe
+              is being drawn. The media buyer's audience insights inform the
+              homepage messaging hierarchy. The SEO architect structures the
+              content before the developer writes a single line of code. This
+              integration is what produces high-converting websites that
+              Rajasthan's most ambitious brands are beginning to recognize as
+              the new competitive standard.
+            </p>
+            <span class="tag green">UX + Copy Integration</span>
+            <span class="tag green">SEO-First Architecture</span>
+            <span class="tag green">Media-Informed Messaging</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card good">
+              <div class="num">90+</div>
+              <div class="lbl">Core Web Vitals score on every build</div>
+              <div class="sub">Minimum viable standard, not a premium</div>
+            </div>
+            <div class="stat-card good">
+              <div class="num">2×</div>
+              <div class="lbl">Organic enquiry volume</div>
+              <div class="sub">Within 90 days, before any paid campaigns</div>
+            </div>
+            <div class="stat-card good">
+              <div class="num">&lt;2s</div>
+              <div class="lbl">Mobile load time on every site</div>
+              <div class="sub">Custom code, zero bloated frameworks</div>
+            </div>
+          </div>
+
+          <h2>The Immediate Digital Audit for Your Brand</h2>
+
+          <p>
+            The fastest way to understand exactly how much revenue your current
+            website is costing you is to measure it with precision, not estimate
+            it with frustration. AdMediaX begins every client engagement with a
+            full-spectrum
+            <strong style="color: #fff">Digital Performance Audit</strong> -
+            delivered as a prioritized, actionable roadmap within the first
+            week.
+          </p>
+
+          <div class="audit-strip">
+            <h3>What the AdMediaX Audit Covers</h3>
+            <div class="audit-items">
+              <div class="audit-item">
+                <i class="fas fa-tachometer-alt"></i> Page load speed across
+                device types
+              </div>
+              <div class="audit-item">
+                <i class="fas fa-chart-bar"></i> Core Web Vitals score analysis
+              </div>
+              <div class="audit-item">
+                <i class="fas fa-route"></i> Conversion architecture review
+              </div>
+              <div class="audit-item">
+                <i class="fas fa-pen-nib"></i> Copy hierarchy assessment
+              </div>
+              <div class="audit-item">
+                <i class="fas fa-funnel-dollar"></i> Lead capture mechanism
+                evaluation
+              </div>
+              <div class="audit-item">
+                <i class="fas fa-map-marker-alt"></i> Local search visibility
+                benchmarking
+              </div>
+            </div>
+          </div>
+
+          <p>
+            This audit does not produce a generic report filled with traffic
+            charts. It produces a specific, ranked list of the exact points in
+            your website's user journey where qualified visitors are deciding to
+            leave - and a concrete plan for eliminating each one.
+          </p>
+
+          <div class="tip-box">
+            <span class="tip-label">The Bottom Line</span>
+            <p>
+              "The commercial difference between a website that costs money to
+              maintain and a website that makes money continuously is not design
+              - it is structural. The businesses that stop accepting digital
+              mediocrity as the default are the ones that win."
+            </p>
+          </div>
+
+          <div class="cta-block">
+            <h2>Find Out Exactly How Much Your Site Is Costing You</h2>
+            <p>
+              AdMediaX delivers a full Digital Performance Audit for businesses
+              in Jaipur and across Rajasthan - covering speed, Core Web Vitals,
+              conversion architecture, copy hierarchy, and local SEO. You'll get
+              a concrete, prioritized action plan within the first week.
+            </p>
+            <a href="../contact.html" class="cta-btn">
+              <i class="fas fa-search-dollar"></i> Get Your Free Website Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="../services.html">Web Development</a></li>
+              <li><a href="../services.html">App Development</a></li>
+              <li><a href="../services.html">Digital Marketing</a></li>
+              <li><a href="../services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../work.html">Our Work</a></li>
+              <li><a href="../blog.html">Blog</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9887964016</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> DSF-06 2th Floor Capital Galleria,
+              Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur, Rajasthan 302034
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("navbar")
+          .classList.toggle("scrolled", window.scrollY > 50);
+      });
+    </script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>

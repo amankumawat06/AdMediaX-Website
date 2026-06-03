@@ -1,9 +1,6 @@
 /* ===== CONTACT HERO ===== */
 .page-hero {
   padding: 120px 8%;
-  background:
-    radial-gradient(circle at top, rgba(57, 255, 20, 0.08), transparent 60%),
-    #050505;
   position: relative;
 }
 

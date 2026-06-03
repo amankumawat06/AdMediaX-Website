@@ -239,6 +239,8 @@ body{
 .wh-title-outline {
   -webkit-text-stroke: 2px #65ea2c;
   color: transparent;
+  letter-spacing: 0.1rem;
+  font-family: "Inter", sans-serif;
 }
 .wh-title-dot {
   color: #65ea2c;
@@ -331,7 +333,7 @@ body{
   background: rgba(101, 234, 44, 0.07);
 }
 
-/* ── RIGHT — STAT CARDS ── */
+/* ── RIGHT - STAT CARDS ── */
 .wh-right {
   display: flex;
   flex-direction: column;
@@ -447,7 +449,7 @@ body{
   padding: 18px 18px 16px;
 }
 .featured-sm {
-  background: rgba(101, 234, 44, 0.04);
+  /* background: rgba(101, 234, 44, 0.04); */
   border-color: rgba(101, 234, 44, 0.15);
 }
 .sm-icon {
@@ -600,7 +602,7 @@ body{
 }
 
 /* =============================================
-   PORTFOLIO SECTION — AdMediaX
+   PORTFOLIO SECTION - AdMediaX
    Theme: Editorial Dark / Sharp Modern
    ============================================= */
 
@@ -642,21 +644,7 @@ body {
   overflow: hidden;
 }
 
-.portfolio::before {
-  content: "";
-  position: absolute;
-  top: -180px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(
-    circle,
-    rgba(57, 231, 95, 0.06) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
+
 
 /* ── Container ── */
 .container {
@@ -916,17 +904,6 @@ body {
 }
 
 /* glow */
-.cta-glow {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(62, 102, 54, 0.15), transparent);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(120px);
-  z-index: 0;
-}
 
 /* content */
 .cta-content {

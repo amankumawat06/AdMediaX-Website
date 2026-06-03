@@ -89,7 +89,7 @@ html, body {
   max-width: 520px;
 }
 
-/* right col — feature cards */
+/* right col - feature cards */
 .svc-hero-right {
   flex: 0 0 auto;
   display: flex;
@@ -943,46 +943,3 @@ html, body {
   }
 }
 
-
-
-/* Back Shadows */
-
-@media (min-width:1000px) {
-  .svc-main-section::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(57, 255, 20, 0.08), transparent);
-  opacity: 0.4;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(80px);
-  pointer-events: none;
-}
-.svc-workflow-section::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(72, 211, 48, 0.08), transparent);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(100px);
-  pointer-events: none;
-}
-.svc-dm-section::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(57, 255, 20, 0.08), transparent);
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  filter: blur(100px);
-  pointer-events: none;
-}
-}
