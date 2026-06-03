@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://admediax.in","http://127.0.0.1:5501"
+      "https://admediax.in","https://amankumawat06.github.io"
     ],
     methods: ["GET", "POST"],
     credentials: true,
