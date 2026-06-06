@@ -10,9 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: [
-      "https://admediax.in","https://amankumawat06.github.io"
-    ],
+    // origin: [
+    //   "https://admediax.in","https://amankumawat06.github.io"
+    // ],
+    origin: "https://admediax.in",
     methods: ["GET", "POST"],
     credentials: true,
   }),

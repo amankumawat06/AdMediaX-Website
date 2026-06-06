@@ -318,16 +318,7 @@
     display: inline-block;
 }
 
-.info-header h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 50px;
-    height: 3px;
-    background: var(--primary-color);
-    border-radius: 2px;
-}
+
 
 .contact-method {
     display: flex;
@@ -473,17 +464,6 @@
     transform: translateX(-50%);
 }
 
-.map-section h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 80px;
-    height: 3px;
-    background: var(--primary-color);
-    border-radius: 2px;
-    transform: translateX(-50%);
-}
 
 .map-container {
     border-radius: 12px;

@@ -157,7 +157,7 @@ html, body {
   display: inline-block;
 }
 
-.svc-section-head h2::after {
+/* .svc-section-head h2::after {
   content: "";
   display: block;
   width: 60px;
@@ -165,7 +165,7 @@ html, body {
   background: #39ff14;
   margin: 10px auto 0;
   border-radius: 5px;
-}
+} */
 
 .svc-section-head p {
   color: #aaa;
@@ -246,7 +246,7 @@ html, body {
   filter: blur(15px);
   opacity: 0;
   transition: opacity 0.3s;
-}
+ }
 
 .svc-card:hover .svc-icon-wrap::after {
   opacity: 1;
@@ -713,9 +713,6 @@ html, body {
   transition:
     transform 0.25s,
     box-shadow 0.25s;
-  box-shadow:
-    0 0 28px rgba(101, 234, 44, 0.28),
-    0 4px 20px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
 }
