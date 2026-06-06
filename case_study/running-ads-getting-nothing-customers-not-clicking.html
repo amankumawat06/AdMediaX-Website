@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running Ads. Getting Nothing. | AdMediaX</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --surface: #111111;
+        --surface2: #161616;
+        --border: #1e1e1e;
+        --green: #7fff00;
+        --text: #ffffff;
+        --text-muted: #888888;
+        --text-dim: #444444;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+      }
+
+      /* BACK */
+      .back-bar {
+        padding: 20px 60px;
+        border-bottom: 1px solid var(--border);
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .back-link:hover {
+        color: var(--text);
+      }
+      .back-link .arr {
+        font-size: 15px;
+      }
+
+      /* PAGE LAYOUT */
+      .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 96px 60px 100px;
+      }
+
+      /* TOP SECTION: left text + right gallery */
+      .top-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+        gap: 60px;
+        align-items: flex-start;
+        margin-bottom: 64px;
+      }
+
+      /* Left */
+      .top-left {
+      }
+      .tag-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--green);
+        text-transform: uppercase;
+        background: rgba(127, 255, 0, 0.08);
+        border: 1px solid rgba(127, 255, 0, 0.2);
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin-bottom: 22px;
+      }
+      .cs-title {
+        font-size: 42px;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+      .cs-intro {
+        font-size: 15.5px;
+        line-height: 1.72;
+        color: var(--text-muted);
+        /* border-left: 3px solid var(--green); */
+        /* padding-left: 16px; */
+        margin-bottom: 28px;
+      }
+      .author-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+      .av {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--green);
+        color: #000;
+        font-weight: 800;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .av-name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      /* Metrics */
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .m-box {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 18px 16px;
+        transition: border-color 0.2s;
+      }
+      .m-box:hover {
+        transform: rotateX(15deg);
+      }
+      .m-val {
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--green);
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .m-lbl {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+
+      /* Right: Gallery */
+      .gallery-wrap {
+        position: sticky;
+        top: 90px;
+      }
+
+      .main-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #1a1a1a;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 72px;
+        color: #2a2a2a;
+        margin-bottom: 10px;
+        position: relative;
+        transition: background 0.3s;
+      }
+      .main-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      */ .main-img .emoji-placeholder {
+        position: absolute;
+        font-size: 72px;
+      }
+
+      .thumbs-row {
+        display: flex;
+        gap: 8px;
+      }
+      .thumb {
+        flex: 1;
+        aspect-ratio: 1;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid transparent;
+        cursor: pointer;
+        object-fit: cover;
+        min-width: 0;
+      }
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+      .thumb:hover {
+        border-color: #444;
+      }
+      .thumb.active {
+        border-color: var(--green);
+      }
+
+      /* DIVIDER */
+      .divider {
+        height: 1px;
+        background: var(--border);
+        margin: 56px 0;
+      }
+
+      /* BODY SECTIONS */
+      .body-section {
+        margin-bottom: 52px;
+      }
+      .bs-title {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.6px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .bs-body {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #aaa;
+      }
+      .bs-body p + p {
+        margin-top: 16px;
+      }
+
+      /* Solution list */
+      .sol-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 6px;
+      }
+      .sol-list li {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #aaa;
+        padding: 14px 18px 14px 44px;
+        position: relative;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        transition: border-color 0.2s;
+      }
+      .sol-list li:hover {
+        border-color: #2e2e2e;
+      }
+      .sol-list li::before {
+        content: "→";
+        position: absolute;
+        left: 16px;
+        top: 15px;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      /* Results box */
+      .results-box {
+        background: rgba(127, 255, 0, 0.04);
+        border: 1px solid rgba(127, 255, 0, 0.15);
+        border-radius: 12px;
+        padding: 28px 30px;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #aaa;
+      }
+      .results-box p + p {
+        margin-top: 16px;
+      }
+
+      /* CTA */
+      .cta-strip {
+        margin-top: 72px;
+        padding: 48px 40px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        text-align: center;
+      }
+      .cta-strip h3 {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: -0.8px;
+        margin-bottom: 10px;
+      }
+      .cta-strip p {
+        font-size: 15px;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+      }
+      .cta-btn {
+        display: inline-block;
+        background: var(--green);
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .cta-btn:hover {
+        opacity: 0.88;
+      }
+
+      @media (max-width: 1024px) {
+        .page {
+          padding: 40px 20px 80px;
+        }
+
+        .top-section {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+
+        .gallery-wrap {
+          position: static;
+          width: 100%;
+        }
+
+        .main-img {
+          width: 100%;
+        }
+
+        .cs-title {
+          font-size: 32px;
+        }
+
+        .metrics-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        * {
+          min-width: 0;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .page {
+          padding: 20px 12px 60px;
+        }
+
+        .top-section {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .gallery-wrap {
+          position: static;
+        }
+
+        .cs-title {
+          font-size: 24px;
+          line-height: 1.2;
+        }
+
+        .cs-intro {
+          font-size: 14px;
+        }
+
+        .metrics-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .sol-list li {
+          padding: 12px 12px 12px 40px;
+          font-size: 14px;
+        }
+
+        .thumbs-row {
+          gap: 4px;
+        }
+
+        .thumb {
+          height: 55px;
+        }
+
+        .cta-strip {
+          padding: 20px;
+        }
+
+        .cta-strip h3 {
+          font-size: 22px;
+        }
+
+        .bs-title {
+          font-size: 22px;
+        }
+      }
+      @media (max-width: 1024px) {
+        body {
+          overflow-x: hidden;
+        }
+
+        .page {
+          padding: 20px 12px 50px;
+          width: 100%;
+        }
+
+        .top-left{
+          padding-top: 70px;
+        }
+
+        .cs-title {
+          font-size: 22px;
+          line-height: 1.25;
+          word-break: break-word;
+        }
+
+        .cs-intro,
+        .bs-body,
+        .results-box,
+        .sol-list li {
+          word-break: break-word;
+        }
+
+        .metrics-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .thumbs-row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 6px;
+        }
+
+        .thumb {
+          width: 90%;
+          height: 100px;
+        }
+
+        .main-img {
+          width: 100%;
+          aspect-ratio: 4/3;
+        }
+
+        .main-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .cta-btn {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="../public/Logo/AdMediaX-logo.png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop menu  -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="../work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="../about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="../blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="../case-studies.html" class="nav-link active">Case Study</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="../ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger button -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
+        </button>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="../public/Logo/AdMediaX-logo.png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Nav links -->
+          <ul class="drawer-nav">
+            <li><a href="../index.html" class="drawer-link">Home</a></li>
+            <li><a href="../services.html" class="drawer-link">Services</a></li>
+            <li><a href="../work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="../about.html" class="drawer-link">About Us</a></li>
+            <li><a href="../blog.html" class="drawer-link">Blog</a></li>
+            <li>
+              <a href="../case-studies.html" class="drawer-link">Case Study</a>
+            </li>
+            <li>
+              <a href="../case-studies.html" class="drawer-link">Case Study</a>
+            </li>
+            <li><a href="../contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+
+          <!-- CTA inside drawer -->
+          <div class="drawer-cta">
+            <a href="../ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="../contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+
+          <!-- Footer strip -->
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backdrop -->
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <div class="page">
+      <!-- TOP: left info + right gallery -->
+      <div class="top-section">
+        <!-- LEFT -->
+        <div class="top-left">
+          <div class="tag-pill">Social Media Marketing</div>
+          <h1 class="cs-title">
+            Running Ads. Getting Nothing. Customers Not Clicking.
+          </h1>
+          <p class="cs-intro">
+            A jewellery shop owner was wasting ad budget month after month with
+            poor-quality photos and no video content. We rebuilt their entire
+            creative strategy - and sales went up 62% within the first month.
+          </p>
+          <div class="author-row">
+            <div class="av">M</div>
+            <span class="av-name">Mushir</span>
+          </div>
+          <div class="metrics-grid">
+            <div class="m-box">
+              <div class="m-val">↑62%</div>
+              <div class="m-lbl">Sales Increase</div>
+            </div>
+            <div class="m-box">
+              <div class="m-val">4x</div>
+              <div class="m-lbl">More Engagement</div>
+            </div>
+            <div class="m-box">
+              <div class="m-val">↑40%</div>
+              <div class="m-lbl">New Customers</div>
+            </div>
+            <div class="m-box">
+              <div class="m-val">3.8x</div>
+              <div class="m-lbl">Return on Ad Spend</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: gallery -->
+        <div class="gallery-wrap">
+          <div class="main-img">
+            <img
+              id="mainImage"
+              src="../public/case_study_imgs/first.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="thumbs-row">
+            <img
+              src="../public/case_study_imgs/first.jpg"
+              class="thumb active"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/sec.jpg"
+              class="thumb"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/third.jpg"
+              class="thumb"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/forth.jpg"
+              class="thumb"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/fifth.jpg"
+              class="thumb"
+              onclick="selectThumb(this)"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- /top-section -->
+
+      <div class="divider"></div>
+
+      <!-- THE PROBLEM -->
+      <div class="body-section">
+        <h2 class="bs-title">The Problem</h2>
+        <div class="bs-body">
+          <p>
+            This jewellery shop owner had beautiful products - rings, necklaces,
+            earrings, and sets that genuinely deserved attention. They had tried
+            running ads on Facebook and Instagram multiple times, spending their
+            budget month after month. But the ROI was poor. Very few clicks,
+            almost no new customers, and barely any engagement on posts.
+          </p>
+          <p>
+            They had the products. They had the budget. But what they didn't
+            have was the one thing that makes jewellery sell online - visuals
+            that make people stop and stare. Their ads were using dull, flat,
+            poorly-lit photos that made even the most gorgeous pieces look
+            ordinary. On a social feed full of professionally shot content,
+            their ads were completely invisible.
+          </p>
+        </div>
+      </div>
+
+      <!-- OUR SOLUTION -->
+      <div class="body-section">
+        <h2 class="bs-title">Our Solution</h2>
+        <ul class="sol-list">
+          <li>
+            Before running a single rupee on ads, we fixed the creatives. We
+            planned and produced a full social media shoot - product close-ups,
+            jewellery on model, lifestyle settings, and aspirational imagery
+            designed specifically for Instagram and Facebook.
+          </li>
+          <li>
+            We created multiple short-form video formats - slow-motion detail
+            shots, styling reels, and festive collection showcases.
+          </li>
+          <li>
+            We completely restructured the Meta ad campaigns - new audiences,
+            new creatives, new ad formats matched to the right placements
+            (Stories, Reels, Feed).
+          </li>
+          <li>
+            We built custom audiences based on jewellery interest, gifting
+            occasions, income segments, and lookalike audiences from existing
+            customers.
+          </li>
+          <li>
+            We continuously A/B tested different videos and images, paused
+            underperformers, and scaled the creatives that were generating the
+            most engagement and purchases.
+          </li>
+        </ul>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="body-section">
+        <h2 class="bs-title">Results</h2>
+        <div class="results-box">
+          <p>
+            The moment the new videos went live in the ads, the difference was
+            immediate. People were stopping to watch. Saves and shares went up.
+            DMs started coming in. And most importantly - sales increased
+            significantly within the first month itself.
+          </p>
+          <p>
+            The shop owner, who had been frustrated with ads for months, now had
+            a campaign that was actually working. Customers who came in-store
+            were saying they found the shop on Instagram. New buyers who had
+            never heard of the brand before were now walking in - because the
+            videos had made the jewellery look exactly as beautiful as it truly
+            was.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-strip">
+        <h3>Want results like these?</h3>
+        <p>
+          Let's talk about your brand - and build a creative strategy that
+          actually works.
+        </p>
+        <a href="/contact.html" class="cta-btn">Start a Project →</a>
+      </div>
+    </div>
+    <!-- /page -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="../services.html">Web Development</a></li>
+              <li><a href="../services.html">App Development</a></li>
+              <li><a href="../services.html">Digital Marketing</a></li>
+              <li><a href="../services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../work.html">Our Work</a></li>
+              <li><a href="../blog.html">Blog</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9887964016</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> DSF-06 2th Floor Capital
+              Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur,
+              Rajasthan 302034
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/919887964016?text=Hello%20AdMediaX,%20I%20want%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      function selectThumb(el) {
+        document.querySelectorAll(".thumb").forEach((t) => {
+          t.classList.remove("active");
+        });
+
+        el.classList.add("active");
+
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = el.src;
+      }
+    </script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>

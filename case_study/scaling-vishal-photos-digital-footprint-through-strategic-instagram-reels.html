@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scaling Vishal Photos | AdMediaX</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --surface: #111111;
+        --surface2: #161616;
+        --border: #1e1e1e;
+        --green: #7fff00;
+        --text: #ffffff;
+        --text-muted: #888888;
+        --text-dim: #444444;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+      }
+
+      .back-bar {
+        padding: 20px 60px;
+        border-bottom: 1px solid var(--border);
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .back-link:hover {
+        color: var(--text);
+      }
+
+      .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 96px 60px 100px;
+      }
+
+      .top-section {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 60px;
+        align-items: flex-start;
+        margin-bottom: 64px;
+      }
+
+      .tag-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--green);
+        text-transform: uppercase;
+        background: rgba(127, 255, 0, 0.08);
+        border: 1px solid rgba(127, 255, 0, 0.2);
+        padding: 5px 12px;
+        border-radius: 20px;
+        margin-bottom: 22px;
+      }
+      .cs-title {
+        font-size: 38px;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+      .cs-intro {
+        font-size: 15.5px;
+        line-height: 1.72;
+        color: var(--text-muted);
+        /* border-left: 3px solid var(--green); */
+        /* padding-left: 16px; */
+        margin-bottom: 28px;
+      }
+      .author-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+      .av {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--green);
+        color: #000;
+        font-weight: 800;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .av-name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .m-box {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 18px 16px;
+        transition: border-color 0.2s;
+      }
+      .m-box:hover {
+        transform: rotateX(15deg);
+      }
+      .m-val {
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--green);
+        letter-spacing: -1px;
+        line-height: 1.1;
+        margin-bottom: 5px;
+      }
+      .m-lbl {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+
+      .gallery-wrap {
+        position: sticky;
+        top: 90px;
+      }
+      .main-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #1a1a1a;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 72px;
+        margin-bottom: 10px;
+        position: relative;
+        transition:
+          opacity 0.18s,
+          transform 0.18s;
+      }
+      .main-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .main-img .ep {
+        position: absolute;
+        font-size: 72px;
+      }
+      .thumbs-row {
+        display: flex;
+        gap: 8px;
+      }
+      .thumb {
+        flex: 1;
+        aspect-ratio: 1;
+        border-radius: 8px;
+        background: var(--surface2);
+        border: 2px solid transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: border-color 0.2s;
+        height: 65px;
+      }
+      .thumb:hover {
+        border-color: #444;
+      }
+      .thumb.active {
+        border-color: var(--green);
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--border);
+        margin: 56px 0;
+      }
+
+      .body-section {
+        margin-bottom: 52px;
+      }
+      .bs-title {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.6px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .bs-body {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #aaa;
+      }
+      .bs-body p + p {
+        margin-top: 16px;
+      }
+
+      /* Pillar cards for solution */
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 6px;
+      }
+      .pillar {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px 20px 20px 20px;
+        transition: border-color 0.2s;
+      }
+      .pillar:hover {
+        /* border-color: rgba(127, 255, 0, 0.2); */
+      }
+      .pillar-num {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--green);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .pillar-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+      .pillar-body {
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: #777;
+      }
+
+      .results-box {
+        background: rgba(127, 255, 0, 0.04);
+        border: 1px solid rgba(127, 255, 0, 0.15);
+        border-radius: 12px;
+        padding: 28px 30px;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #aaa;
+      }
+      .results-box p + p {
+        margin-top: 16px;
+      }
+
+      .cta-strip {
+        margin-top: 72px;
+        padding: 48px 40px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        text-align: center;
+      }
+      .cta-strip h3 {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: -0.8px;
+        margin-bottom: 10px;
+      }
+      .cta-strip p {
+        font-size: 15px;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+      }
+      .cta-btn {
+        display: inline-block;
+        background: var(--green);
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .cta-btn:hover {
+        opacity: 0.88;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          overflow-x: hidden;
+        }
+
+        .nav-menu {
+          display: none;
+        }
+
+        .page {
+          width: 100%;
+          max-width: 100%;
+          padding: 40px 20px 80px;
+          overflow-x: hidden;
+        }
+
+        .top-section {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .top-left,
+        .gallery-wrap {
+          width: 100%;
+          padding-top: 60px;
+        }
+
+        .gallery-wrap {
+          position: static;
+        }
+
+        .cs-title {
+          font-size: clamp(24px, 5vw, 32px);
+          line-height: 1.2;
+        }
+
+        .cs-intro {
+          font-size: 15px;
+        }
+
+        .metrics-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .pillars {
+          grid-template-columns: 1fr;
+        }
+
+        .main-img {
+          width: 100%;
+          aspect-ratio: 16/10;
+        }
+
+        .main-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .thumbs-row {
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+
+        .thumb {
+          width: 60px;
+          height: 100px;
+          /* flex: unset; */
+        }
+
+        .bs-title {
+          font-size: 22px;
+        }
+
+        .cta-strip {
+          padding: 32px 20px;
+        }
+
+        .cta-strip h3 {
+          font-size: 24px;
+        }
+
+        img {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 480px) {
+        .page {
+          padding: 20px 12px 50px;
+        }
+
+        .top-left{
+          padding-top: 70px;
+        }
+        .top-section {
+          gap: 24px;
+        }
+
+        .cs-title {
+          font-size: 22px;
+          line-height: 1.25;
+        }
+
+        .cs-intro {
+          font-size: 14px;
+          line-height: 1.7;
+        }
+
+        .tag-pill {
+          font-size: 9px;
+          padding: 4px 10px;
+        }
+
+        .author-row {
+          margin-bottom: 24px;
+        }
+
+        .av {
+          width: 32px;
+          height: 32px;
+          font-size: 13px;
+        }
+
+        .av-name {
+          font-size: 13px;
+        }
+
+        .metrics-grid {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .m-box {
+          padding: 16px 14px;
+        }
+
+        .m-val {
+          font-size: 22px;
+        }
+
+        .bs-title {
+          font-size: 20px;
+        }
+
+        .bs-body {
+          font-size: 14px;
+          line-height: 1.75;
+        }
+
+        .pillars {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .pillar {
+          padding: 16px;
+        }
+
+        .pillar-title {
+          font-size: 14px;
+        }
+
+        .pillar-body {
+          font-size: 13px;
+        }
+
+        .results-box {
+          padding: 20px 16px;
+          font-size: 14px;
+        }
+
+        .main-img {
+          border-radius: 10px;
+        }
+
+        .thumbs-row {
+          gap: 4px;
+          justify-content: center;
+        }
+
+        .thumb {
+          width: 48px;
+          height: 48px;
+        }
+
+        .cta-strip {
+          padding: 24px 16px;
+        }
+
+        .cta-strip h3 {
+          font-size: 22px;
+        }
+
+        .cta-strip p {
+          font-size: 14px;
+        }
+
+        .cta-btn {
+          width: 100%;
+          text-align: center;
+          padding: 12px;
+        }
+      }
+      @media (min-width: 900px) {
+        .thumb {
+          height: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="../public/Logo/AdMediaX-logo.png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop menu  -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="../work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="../about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="../blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="../case-studies.html" class="nav-link active">Case Study</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="../ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger button -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
+        </button>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="../public/Logo/AdMediaX-logo.png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Nav links -->
+          <ul class="drawer-nav">
+            <li><a href="../index.html" class="drawer-link">Home</a></li>
+            <li><a href="../services.html" class="drawer-link">Services</a></li>
+            <li><a href="../work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="../about.html" class="drawer-link">About Us</a></li>
+            <li><a href="../blog.html" class="drawer-link">Blog</a></li>
+            <li>
+              <a href="../case-studies.html" class="drawer-link">Case Study</a>
+            </li>
+            <li><a href="../contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+
+          <!-- CTA inside drawer -->
+          <div class="drawer-cta">
+            <a href="../ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="../contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+
+          <!-- Footer strip -->
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backdrop -->
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <div class="page">
+      <div class="top-section">
+        <div class="top-left">
+          <div class="tag-pill">Social Media Marketing</div>
+          <h1 class="cs-title">
+            Scaling Vishal Photos' Digital Footprint Through Strategic Instagram
+            Reels
+          </h1>
+          <p class="cs-intro">
+            How AdMediaX helped premium photography brand Vishal Photos break
+            through the Instagram algorithm, driving massive organic reach and
+            premium inbound inquiries through high-retention scripting,
+            strategic hooks, and trend-mapping.
+          </p>
+          <div class="author-row">
+            <div class="av">V</div>
+            <span class="av-name">Vishal Photos</span>
+          </div>
+          <div class="metrics-grid">
+            <div class="m-box">
+              <div class="m-val">80,000+</div>
+              <div class="m-lbl">Organic Followers Growth</div>
+            </div>
+            <div class="m-box">
+              <div class="m-val">Millions</div>
+              <div class="m-lbl">Reel Views</div>
+            </div>
+            <div class="m-box">
+              <div class="m-val">Consistent</div>
+              <div class="m-lbl">Premium Inbound DMs</div>
+            </div>
+            <div class="m-box">
+              <div class="m-val">Zero</div>
+              <div class="m-lbl">Paid Promotion Used</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-wrap">
+          <div class="main-img" id="mainImg">
+            <img
+              src="../public/case_study_imgs/vishal-photos/vishalphotos.png"
+              class="ep"
+              id="mainEmoji"
+            />
+          </div>
+          <div class="thumbs-row">
+            <img
+              src="../public/case_study_imgs/vishal-photos/vishalphotos.png"
+              class="thumb active"
+              data-img="../public/case_study_imgs/vishal-photos/vishalphotos.png"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/vishal-photos/img2.jpg"
+              class="thumb"
+              data-img="../public/case_study_imgs/vishal-photos/img2.jpg"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/vishal-photos/img3.jpg"
+              class="thumb"
+              data-img="../public/case_study_imgs/vishal-photos/img3.jpg"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/vishal-photos/img4.jpg"
+              class="thumb"
+              data-img="../public/case_study_imgs/vishal-photos/img4.jpg"
+              onclick="selectThumb(this)"
+            />
+            <img
+              src="../public/case_study_imgs/vishal-photos/img5.jpg"
+              class="thumb"
+              data-img="../public/case_study_imgs/vishal-photos/img5.jpg"
+              onclick="selectThumb(this)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="body-section">
+        <h2 class="bs-title">The Problem</h2>
+        <div class="bs-body">
+          <p>
+            Vishal Photos was producing world-class wedding and event
+            photography, but their Instagram growth had completely stalled. The
+            core issue wasn't the quality of the visuals - it was the first two
+            seconds. Viewers were scrolling past before the content had a chance
+            to land.
+          </p>
+          <p>
+            Without a structured storytelling framework or a clear content
+            strategy, even the best footage was getting buried by the algorithm.
+            High-quality work was sitting on a profile that wasn't growing,
+            wasn't converting, and wasn't generating the kind of inbound
+            inquiries the brand deserved.
+          </p>
+        </div>
+      </div>
+
+      <div class="body-section">
+        <h2 class="bs-title">Our Solution</h2>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-num">Pillar 01</div>
+            <div class="pillar-title">Hook Engineering</div>
+            <div class="pillar-body">
+              Slow intros were eliminated entirely. Every reel now opens with an
+              immediate visual or textual hook designed to stop the scroll and
+              hold attention past the critical first three seconds.
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">Pillar 02</div>
+            <div class="pillar-title">Narrative BTS Scripting</div>
+            <div class="pillar-body">
+              Behind-the-scenes content was restructured around a story arc
+              rather than a highlight reel - showing the creative process,
+              on-location decisions, and the human side of the work to build
+              genuine emotional connection.
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">Pillar 03</div>
+            <div class="pillar-title">Beat Matching & Audio Strategy</div>
+            <div class="pillar-body">
+              Trending audio was tracked daily and visual transitions were
+              synced precisely to the beat. This signals strong positive
+              feedback to the Instagram algorithm and significantly improves
+              distribution.
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">Pillar 04</div>
+            <div class="pillar-title">Content Bucket System</div>
+            <div class="pillar-body">
+              The content grid was divided into Hero (cinematic/viral-first),
+              Hub (tips & value-driven), and Help (community Q&A). This mix
+              ensured consistent reach across different audience segments.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="body-section">
+        <h2 class="bs-title">Results</h2>
+        <div class="results-box">
+          <p>
+            Once the strategy was in place, the results came quickly. Multiple
+            reels broke through organically - reaching hundreds of thousands of
+            viewers without any paid promotion. Profile visits surged, follower
+            growth became consistent, and premium inbound DMs started coming in
+            regularly from clients looking to book commercial and wedding
+            shoots.
+          </p>
+          <p>
+            The account crossed 80,000+ followers entirely through organic
+            content. Instagram went from a passive portfolio to an active client
+            acquisition channel.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <h3>Want results like these?</h3>
+        <p>
+          Let's build a content strategy that actually grows your brand -
+          without spending on ads.
+        </p>
+        <a href="/contact.html" class="cta-btn">Start a Project →</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="../services.html">Web Development</a></li>
+              <li><a href="../services.html">App Development</a></li>
+              <li><a href="../services.html">Digital Marketing</a></li>
+              <li><a href="../services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../work.html">Our Work</a></li>
+              <li><a href="../blog.html">Blog</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9887964016</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> DSF-06 2th Floor Capital
+              Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur,
+              Rajasthan 302034
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/919887964016?text=Hello%20AdMediaX,%20I%20want%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      function selectThumb(el) {
+        document
+          .querySelectorAll(".thumb")
+          .forEach((t) => t.classList.remove("active"));
+
+        el.classList.add("active");
+
+        const main = document.getElementById("mainImg");
+        const mainImage = document.getElementById("mainEmoji");
+
+        main.style.opacity = "0";
+        main.style.transform = "scale(0.97)";
+
+        setTimeout(() => {
+          mainImage.src = el.dataset.img;
+          main.style.opacity = "1";
+          main.style.transform = "scale(1)";
+        }, 180);
+      }
+    </script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>

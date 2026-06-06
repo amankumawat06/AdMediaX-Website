@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+    <title>AdMediaX | Case Studies</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/hamburger.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --surface: #111111;
+        --surface2: #161616;
+        --border: #1e1e1e;
+        --green: #7fff00;
+        --text: #ffffff;
+        --text-muted: #888888;
+        --text-dim: #444444;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        font-family: "Inter", sans-serif;
+      }
+
+      .hero {
+        padding: 110px 60px 80px;
+        /* max-width: 1300px; */
+        /* margin: 0 auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* background-color: #000 !important; */
+      }
+      .hero-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        color: var(--green);
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .hero-title {
+        font-size: 72px;
+        font-weight: 900;
+        letter-spacing: -3px;
+        line-height: 1;
+        margin-bottom: 24px;
+      }
+      .hero-title .hl {
+        color: var(--green);
+      }
+      .hero-sub {
+        font-size: 17px;
+        line-height: 1.7;
+        color: var(--text-muted);
+        max-width: 520px;
+        margin-bottom: 48px;
+      }
+      .hero-divider {
+        width: 100%;
+        height: 1px;
+        background: var(--border);
+        margin-bottom: 20px;
+      }
+      .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-dim);
+        font-size: 13px;
+      }
+      .hero-meta strong {
+        color: var(--text);
+        font-size: 15px;
+      }
+
+      /* GRID */
+      .grid-section {
+        padding: 0 60px 100px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .case-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition:
+          border-color 0.25s,
+          transform 0.25s,
+          box-shadow 0.25s;
+        text-decoration: none;
+        color: inherit;
+      }
+      .case-card.clickable {
+        cursor: pointer;
+      }
+      .case-card.clickable:hover {
+        border-color: #2e2e2e;
+        transform: translateY(-5px);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      }
+      .case-card.locked {
+        cursor: default;
+        opacity: 0.5;
+      }
+
+      .card-img {
+        width: 100%;
+        aspect-ratio: 16/10;
+        background: linear-gradient(135deg, #181818 0%, #1e1e1e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 52px;
+        color: #2a2a2a;
+        overflow: hidden;
+        position: relative;
+      }
+      .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 55%,
+          rgba(0, 0, 0, 0.45)
+        );
+      }
+
+      .card-body {
+        padding: 24px 26px 28px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--green);
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+      .card-tag::before {
+        content: "•";
+        font-size: 14px;
+      }
+
+      .card-title {
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.35;
+        letter-spacing: -0.3px;
+        margin-bottom: 12px;
+      }
+      .card-desc {
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: var(--text-muted);
+        flex: 1;
+        margin-bottom: 22px;
+      }
+
+      .card-metrics {
+        display: flex;
+        gap: 20px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+      }
+      .metric-val {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--green);
+        letter-spacing: -0.5px;
+        display: block;
+      }
+      .metric-lbl {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+
+      .coming-badge {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 3px 8px;
+      }
+
+      /* arrow on card hover */
+      .card-arrow {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--green);
+        margin-top: 16px;
+        transition: opacity 0.2s;
+      }
+      .case-card.clickable:hover .card-arrow {
+        opacity: 1;
+      }
+
+      @media (max-width: 900px) {
+        nav {
+          padding: 16px 20px;
+        }
+        nav ul {
+          display: none;
+        }
+        .hero {
+          padding: 70px 24px 50px;
+        }
+        .hero-title {
+          font-size: 42px;
+        }
+        .grid-section {
+          padding: 0 20px 80px;
+        }
+        .case-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="public/Logo/AdMediaX-logo.png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="case-studies.html" class="nav-link active">Case Study</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
+        </button>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="public/Logo/AdMediaX-logo.png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul class="drawer-nav">
+            <li><a href="index.html" class="drawer-link">Home</a></li>
+            <li><a href="services.html" class="drawer-link">Services</a></li>
+            <li><a href="work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="about.html" class="drawer-link">About Us</a></li>
+            <li><a href="blog.html" class="drawer-link">Blog</a></li>
+            <li>
+              <a href="case-studies.html" class="drawer-link">Case Study</a>
+            </li>
+            <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+          </ul>
+          <div class="drawer-cta">
+            <a href="ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | AI</a
+            >
+            <a href="contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-label">Work</div>
+      <h1 class="hero-title">All <span class="hl">Case Studies</span></h1>
+      <p class="hero-sub">
+        Real results for real businesses. Every project starts with a problem -
+        and ends with measurable growth.
+      </p>
+      <div class="hero-divider"></div>
+      <div class="hero-meta">
+        <strong>3</strong>&nbsp;projects &nbsp;·&nbsp; Social Media Marketing
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid-section">
+      <div class="case-grid">
+        <!-- Card 1 -->
+        <a
+          class="case-card clickable"
+          href="case_study/running-ads-getting-nothing-customers-not-clicking.html"
+        >
+          <div class="card-img">
+            <img src="public/case_study_imgs/forth.jpg" alt="img" />
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Social Media Marketing</div>
+            <h2 class="card-title">
+              Running Ads. Getting Nothing. Customers Not Clicking.
+            </h2>
+            <p class="card-desc">
+              A jewellery shop owner was wasting ad budget month after month
+              with poor-quality photos and no video content. We rebuilt their
+              entire creative strategy - and sales went up 62% within the first
+              month.
+            </p>
+            <div class="card-metrics">
+              <div>
+                <span class="metric-val">↑62%</span
+                ><span class="metric-lbl">Sales Increase</span>
+              </div>
+              <div>
+                <span class="metric-val">4x</span
+                ><span class="metric-lbl">Engagement</span>
+              </div>
+            </div>
+            <div class="card-arrow">Read Case Study →</div>
+          </div>
+        </a>
+
+        <!-- card 2 -->
+        <a
+          class="case-card clickable"
+          href="case_study/scaling-vishal-photos-digital-footprint-through-strategic-instagram-reels.html"
+        >
+          <div class="card-img">
+            <img
+              src="public/case_study_imgs/vishal-photos/vishalphotos.png"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Social Media Marketing</div>
+            <h2 class="card-title">
+              Scaling Vishal Photos' Digital Footprint Through Strategic
+              Instagram Reels
+            </h2>
+            <p class="card-desc">
+              How AdMediaX helped premium photography brand Vishal Photos break
+              through the Instagram algorithm, driving massive organic reach and
+              premium inbound inquiries.
+            </p>
+            <div class="card-metrics">
+              <div>
+                <span class="metric-val">80k+</span
+                ><span class="metric-lbl">Followers</span>
+              </div>
+              <div>
+                <span class="metric-val">Zero</span
+                ><span class="metric-lbl">Paid Promo</span>
+              </div>
+            </div>
+            <div class="card-arrow">Read Case Study →</div>
+          </div>
+        </a>
+
+        <!-- card 2 -->
+        <a
+          class="case-card clickable"
+          href="case_study/great-properties-zero-visibility-no-leads.html"
+        >
+          <div class="card-img">
+            <img src="public/case_study_imgs/No-Leads/noresult.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Social Media Marketing</div>
+            <h2 class="card-title">
+              Great Properties. Zero Visibility. No Leads.
+            </h2>
+            <p class="card-desc">
+              A residential real estate developer was spending on Facebook and
+              Instagram ads every month but getting zero leads - because their
+              visuals were terrible. We fixed the creatives and transformed
+              their results completely
+            </p>
+            <div class="card-metrics">
+              <div>
+                <span class="metric-val">5x</span
+                ><span class="metric-lbl">More Leads</span>
+              </div>
+              <div>
+                <span class="metric-val">↓52%</span
+                ><span class="metric-lbl">Cost Per Lead</span>
+              </div>
+            </div>
+            <div class="card-arrow">Read Case Study →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+     <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">App Development</a></li>
+              <li><a href="services.html">Digital Marketing</a></li>
+              <li><a href="services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="work.html">Our Work</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="ai-portal.html">AdMediaX AI</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fa fa-envelope"></i> &nbsp; admediax18@gmail.com</p>
+            <p><i class="fa fa-phone"></i> &nbsp; +91 9887964016</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> &nbsp; DSF-06 2th Floor Capital Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur, Rajasthan 302034
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+        <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919887964016?text=Hello%20AdMediaX,%20I%20want%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <script src="./assets/js/hamburger.js"></script>
+  </body>
+</html>

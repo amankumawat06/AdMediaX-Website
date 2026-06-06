@@ -302,7 +302,7 @@ body.drawer-open article {
 /* RESPONSIVE */
 /* ───────────────────────────────────────────── */
 
-@media (max-width: 930px) {
+@media (max-width: 1050px) {
   .hamburger {
     display: flex;
   }
@@ -312,7 +312,7 @@ body.drawer-open article {
   }
 }
 
-@media (min-width: 930px) {
+@media (min-width: 1050px) {
   .mobile-drawer,
   .drawer-backdrop {
     display: none !important;

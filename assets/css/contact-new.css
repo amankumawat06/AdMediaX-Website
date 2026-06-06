@@ -1,7 +1,7 @@
 /* Base Styles */
 :root {
-    --primary-color: #00ff88;
-    --primary-dark: #00cc6a;
+    --primary-color: #39ff14;
+    --primary-dark: #39ff20;
     --dark-bg: #121212;
     --darker-bg: #0a0a0a;
     --light-text: #ffffff;
@@ -24,7 +24,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 2px;
     background: linear-gradient(90deg, var(--primary-color), #faedd9);
     animation: gradientShift 8s ease infinite;
     background-size: 200% 200%;
@@ -50,14 +50,14 @@
     background: var(--card-bg);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.1);
+    /* box-shadow: 0 15px 40px rgba(0, 255, 136, 0.1); */
 }
 
 /* Form Elements */
@@ -116,7 +116,7 @@
 /* Hide the placeholder */
 .input-group input::placeholder,
 .input-group textarea::placeholder {
-    opacity: 0;
+    opacity: 0.4;
 }
 
 /* Show label when input is focused or has content */
@@ -135,7 +135,7 @@
 .select-group select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2);
+    /* box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2); */
 }
 
 .input-group input::placeholder,
@@ -308,7 +308,7 @@
 
 .contact-info:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 255, 136, 0.1); */
 }
 
 .info-header h2 {
@@ -336,14 +336,14 @@
     transition: transform 0.3s ease;
     padding: 15px;
     border-radius: 8px;
-    background: rgba(0, 255, 136, 0.03);
+    background: #252525;
     border: 1px solid transparent;
 }
 
 .contact-method:hover {
-    transform: translateX(5px);
-    background: rgba(0, 255, 136, 0.05);
-    border-color: rgba(0, 255, 136, 0.1);
+    /* transform: translateX(5px); */
+    background: #262525;
+    /* border-color: rgba(0, 255, 136, 0.1); */
 }
 
 .contact-icon {
@@ -356,6 +356,8 @@
     justify-content: center;
     margin-right: 15px;
     transition: all 0.3s ease;
+    min-width: 50px;
+    min-height: 50px;
 }
 
 .contact-method:hover .contact-icon {
