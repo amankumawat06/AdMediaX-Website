@@ -10,15 +10,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    // origin: [
-    //   "https://admediax.in","https://amankumawat06.github.io"
-    // ],
-    origin: "https://admediax.in",
-    methods: ["GET", "POST"],
+    origin: [
+      "https://admediaix.in",
+      "https://www.admediaix.in",
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST", "OPTIONS"],
     credentials: true,
   }),
 );
-// app.use(cors("*"))
 
 const aiRoutes = require("./routes/aiRoute");
 
