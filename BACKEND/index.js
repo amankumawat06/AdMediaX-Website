@@ -14,6 +14,7 @@ app.use(
       "https://admediaix.in",
       "https://www.admediaix.in",
       "http://localhost:5173",
+      "http://127.0.0.1:5501"
     ],
     methods: ["GET", "POST", "OPTIONS"],
     credentials: true,
