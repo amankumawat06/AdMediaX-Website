@@ -9,17 +9,19 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: [
-      // "http://127.0.0.1:5501",
-      // "http://localhost:5501",
-      "https://admediaix.in",
-      "https://www.admediaix.in"
-    ],
-    methods: ["GET", "POST", "OPTIONS"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       // "http://127.0.0.1:5501",
+//       // "http://localhost:5501",
+//       "https://admediaix.in",
+//       "https://www.admediaix.in"
+//     ],
+//     methods: ["GET", "POST", "OPTIONS"],
+//   })
+// );
+
+app.use(cors())
 
 const aiRoutes = require("./routes/aiRoute");
 
