@@ -603,19 +603,19 @@
   border-radius: 999px;
   padding: 3px 10px;
   font-size: 10px;
-  font-family: "Space Mono", monospace;
+  /* font-family: "Space Mono", monospace; */
   color: #57ff3c;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 10px;
 }
-.xsvctag::before {
+/* .xsvctag::before {
   content: "";
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #57ff3c;
-}
+} */
 .xsvcname {
   font-size: 16px;
   font-weight: 600;
