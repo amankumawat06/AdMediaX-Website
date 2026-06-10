@@ -67,14 +67,14 @@
   will-change: transform;
 }
 
-@keyframes heroZoom {
+/* @keyframes heroZoom {
   from {
     transform: scale(1.08);
   }
   to {
     transform: scale(1);
   }
-}
+} */
 
 /* ── Dark Gradient Overlay ── */
 /* Heavier at bottom and center so centered text is readable */

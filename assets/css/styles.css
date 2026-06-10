@@ -922,7 +922,7 @@ body {
   position: relative;
 }
 
-.page-title::after {
+/* .page-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -933,7 +933,7 @@ body {
   background: #65ea2c;
   border-radius: 2px;
   animation: glowLine 2s ease-in-out infinite alternate;
-}
+} */
 
 .page-subtitle {
   font-size: 1.2rem;
