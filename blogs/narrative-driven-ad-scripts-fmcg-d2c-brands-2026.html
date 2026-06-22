@@ -1,0 +1,2014 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Emotion Over Analytics: Why FMCG Brands Need Narrative-Driven Ad Scripts |
+      AdMediaX
+    </title>
+    <meta
+      name="description"
+      content="Feature lists don't sell - stories do. Learn how narrative-driven ad scripts help FMCG & D2C brands build cult loyalty and outsell corporate giants."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400;1,14..32,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/AdMediaX - Ai Portal/favicon_io/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../assets/css/hamburger.css" />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg-base: #0a0a0a;
+        --bg-surface: #111111;
+        --bg-card: #161616;
+        --bg-elevated: #1c1c1c;
+
+        --green-primary: #5fd341;
+        --green-light: #8af26b;
+        --green-dim: rgba(95, 211, 65, 0.15);
+
+        --green-secondary: #3fae6f;
+        --green-sec-dim: rgba(63, 174, 111, 0.12);
+
+        --red-accent: #ff4757;
+        --red-dim: rgba(255, 71, 87, 0.13);
+        --amber: #f59e0b;
+        --amber-dim: rgba(245, 158, 11, 0.13);
+
+        --text-primary: #f3f5f1;
+        --text-secondary: #aab0a4;
+        --text-muted: #6a6f65;
+        --text-link: #8af26b;
+
+        --border-subtle: rgba(255, 255, 255, 0.06);
+        --border-mid: rgba(255, 255, 255, 0.1);
+        --border-accent: rgba(95, 211, 65, 0.35);
+
+        --radius-sm: 6px;
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --radius-xl: 24px;
+
+        --font: "Inter", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font);
+        background: var(--bg-base);
+        color: var(--text-primary);
+        line-height: 1.75;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ─── HERO ─── */
+      .hero {
+        padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 80px)
+          clamp(40px, 6vw, 80px);
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        display: block !important;
+        background: transparent !important;
+      }
+
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--green-primary);
+        background: var(--green-dim);
+        border: 1px solid rgba(95, 211, 65, 0.22);
+        padding: 6px 14px;
+        border-radius: 100px;
+        margin-bottom: 28px;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: var(--green-primary);
+        border-radius: 50%;
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+      @keyframes pulse-dot {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.4;
+          transform: scale(0.7);
+        }
+      }
+      .hero h1 {
+        font-size: clamp(30px, 5vw, 56px);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -1.5px;
+        color: var(--text-primary);
+        margin-bottom: 24px;
+      }
+      .hero h1 em {
+        font-style: normal;
+        font-family: "Inter", sans-serif;
+        letter-spacing: 0.14rem;    
+    }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .hero-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 12.5px;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+      .hero-meta-author {
+        font-weight: 600;
+        color: var(--text-secondary);
+      }
+      .hero-desc {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: var(--text-secondary);
+      }
+
+      /* ─── KEYWORD PILLS ─── */
+      .keyword-strip {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 clamp(20px, 5vw, 80px) 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .kpill {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 5px 12px;
+        border-radius: 100px;
+        border: 1px solid var(--border-mid);
+        color: var(--text-muted);
+        background: var(--bg-surface);
+      }
+
+      /* ─── LAYOUT ─── */
+      .layout {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 clamp(20px, 5vw, 80px) 100px;
+      }
+
+      /* ─── META PANEL ─── */
+      .meta-panel {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 20px 24px;
+        margin-bottom: 48px;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 10px 16px;
+        align-items: start;
+      }
+      .meta-key {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        padding-top: 2px;
+      }
+      .meta-val {
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+      .meta-val code {
+        background: var(--bg-elevated);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 12px;
+        color: var(--green-primary);
+      }
+
+      /* ─── BODY TEXT ─── */
+      .body-text {
+        font-size: 17px;
+        line-height: 1.85;
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+      .body-text + .body-text {
+        margin-top: 22px;
+      }
+
+      /* ─── SECTION DIVIDER ─── */
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--border-mid),
+          transparent
+        );
+        margin: 56px 0;
+      }
+
+      /* ─── HEADINGS ─── */
+      .section-heading {
+        font-size: clamp(22px, 3vw, 32px);
+        font-weight: 800;
+        letter-spacing: -0.6px;
+        line-height: 1.2;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+      }
+      .section-heading .accent-purple {
+        color: var(--green-light);
+      }
+      .section-heading .accent-teal {
+        color: var(--green-primary);
+      }
+      .section-heading .accent-red {
+        color: var(--red-accent);
+      }
+      .section-heading .accent-amber {
+        color: var(--amber);
+      }
+      .sub-heading {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        color: var(--text-primary);
+        margin-bottom: 14px;
+        margin-top: 40px;
+      }
+
+      /* ─── INLINE MARK ─── */
+      mark {
+        background: var(--red-dim);
+        color: #ff8a96;
+        padding: 1px 5px;
+        border-radius: 3px;
+      }
+      mark.purple {
+        background: var(--green-dim);
+        color: var(--green-light);
+      }
+      mark.amber {
+        background: var(--amber-dim);
+        color: var(--amber);
+      }
+
+      /* ─── CALLOUTS ─── */
+      .callout {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-left: 3px solid var(--red-accent);
+        border-radius: var(--radius-md);
+        padding: 24px 28px;
+        margin: 36px 0;
+      }
+      .callout.purple {
+        border-left-color: var(--green-primary);
+      }
+      .callout.teal {
+        border-left-color: var(--green-secondary);
+      }
+      .callout.amber {
+        border-left-color: var(--amber);
+      }
+      .callout-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--red-accent);
+        margin-bottom: 10px;
+      }
+      .callout.purple .callout-label {
+        color: var(--green-light);
+      }
+      .callout.teal .callout-label {
+        color: var(--green-secondary);
+      }
+      .callout.amber .callout-label {
+        color: var(--amber);
+      }
+      .callout p {
+        font-size: 15.5px;
+        line-height: 1.75;
+        color: var(--text-secondary);
+      }
+      .callout strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      /* ─── STAT GRID ─── */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        gap: 16px;
+        margin: 36px 0;
+      }
+      .stat-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 24px 20px;
+        text-align: center;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .stat-card:hover {
+        border-color: rgba(95, 211, 65, 0.3);
+        transform: translateY(-2px);
+      }
+      .stat-number {
+        font-size: 36px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-bottom: 8px;
+        background: linear-gradient(135deg, var(--green-primary), var(--amber));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .stat-label {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text-muted);
+        letter-spacing: 0.3px;
+      }
+
+      /* ─── ANATOMY CARDS ─── */
+      .anatomy-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin: 36px 0;
+      }
+      .anatomy-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 24px 20px;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
+      .anatomy-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+      }
+      .anatomy-card.c1::after {
+        background: var(--red-accent);
+      }
+      .anatomy-card.c2::after {
+        background: var(--amber);
+      }
+      .anatomy-card.c3::after {
+        background: var(--green-primary);
+      }
+      .anatomy-card.c4::after {
+        background: var(--green-secondary);
+      }
+      .anatomy-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--border-mid);
+      }
+      .anatomy-num {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .anatomy-card.c1 .anatomy-num {
+        color: var(--red-accent);
+      }
+      .anatomy-card.c2 .anatomy-num {
+        color: var(--amber);
+      }
+      .anatomy-card.c3 .anatomy-num {
+        color: var(--green-light);
+      }
+      .anatomy-card.c4 .anatomy-num {
+        color: var(--green-primary);
+      }
+      .anatomy-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+      }
+      .anatomy-desc {
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: var(--text-secondary);
+      }
+
+      /* ─── BEFORE / AFTER ─── */
+      .ba-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 36px 0;
+      }
+      .ba-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 22px 20px;
+      }
+      .ba-label {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .ba-label.bad {
+        color: var(--red-accent);
+      }
+      .ba-label.good {
+        color: var(--green-primary);
+      }
+      .ba-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .ba-label.bad .ba-dot {
+        background: var(--red-accent);
+      }
+      .ba-label.good .ba-dot {
+        background: var(--green-primary);
+      }
+      .ba-text {
+        font-size: 14.5px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+      .ba-text strong {
+        color: var(--text-primary);
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      /* ─── VOICE STACK ─── */
+      .voice-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 28px 0;
+      }
+      .voice-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 18px 20px;
+        transition: border-color 0.2s;
+      }
+      .voice-item:hover {
+        border-color: var(--border-mid);
+      }
+      .voice-icon {
+        flex-shrink: 0;
+        width: 38px;
+        height: 38px;
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      .voice-icon.p {
+        background: var(--green-dim);
+      }
+      .voice-icon.t {
+        background: var(--green-sec-dim);
+      }
+      .voice-icon.r {
+        background: var(--red-dim);
+      }
+      .voice-icon.a {
+        background: var(--amber-dim);
+      }
+      .voice-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+      .voice-desc {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--text-secondary);
+      }
+
+      /* ─── FRAMEWORK STEPS ─── */
+      .framework {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 36px 0;
+        position: relative;
+      }
+      .framework::before {
+        content: "";
+        position: absolute;
+        left: 19px;
+        top: 44px;
+        bottom: 44px;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--red-accent),
+          var(--amber),
+          var(--green-primary),
+          var(--green-secondary)
+        );
+        opacity: 0.3;
+      }
+      .fw-step {
+        display: flex;
+        gap: 20px;
+        padding: 22px 0;
+        align-items: flex-start;
+      }
+      .fw-num {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 800;
+        position: relative;
+        z-index: 1;
+      }
+      .fw-step:nth-child(1) .fw-num {
+        background: linear-gradient(135deg, var(--red-accent), #ff8a96);
+        color: #fff;
+      }
+      .fw-step:nth-child(2) .fw-num {
+        background: linear-gradient(135deg, var(--amber), #fcd34d);
+        color: #0a0a0a;
+      }
+      .fw-step:nth-child(3) .fw-num {
+        background: linear-gradient(
+          135deg,
+          var(--green-primary),
+          var(--green-light)
+        );
+        color: #0a0a0a;
+      }
+      .fw-step:nth-child(4) .fw-num {
+        background: linear-gradient(135deg, var(--green-secondary), #2e8b57);
+        color: #0a0a0a;
+      }
+      .fw-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+      }
+      .fw-desc {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+      }
+
+      /* ─── SCENARIO BOX ─── */
+      .scenario-box {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 71, 87, 0.06) 0%,
+          rgba(245, 158, 11, 0.05) 50%,
+          rgba(95, 211, 65, 0.07) 100%
+        );
+        border: 1px solid rgba(95, 211, 65, 0.25);
+        border-radius: var(--radius-xl);
+        padding: 36px 32px;
+        margin: 40px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .scenario-box::after {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(245, 158, 11, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .scenario-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--amber);
+        margin-bottom: 12px;
+      }
+      .scenario-brand {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+        letter-spacing: -0.5px;
+      }
+      .scenario-sub {
+        font-size: 13px;
+        color: var(--text-muted);
+        font-weight: 500;
+        margin-bottom: 24px;
+      }
+      .scenario-body {
+        font-size: 15px;
+        line-height: 1.75;
+        color: var(--text-secondary);
+      }
+      .scenario-body strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      /* ─── SCRIPT DEMO ─── */
+      .script-demo {
+        background: #0d0d0d;
+        border: 1px solid var(--border-mid);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        margin: 28px 0;
+      }
+      .script-header {
+        background: var(--bg-elevated);
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .script-dots {
+        display: flex;
+        gap: 6px;
+      }
+      .script-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      .script-dot.r {
+        background: #ff5f56;
+      }
+      .script-dot.y {
+        background: #ffbd2e;
+      }
+      .script-dot.g {
+        background: #27c93f;
+      }
+      .script-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      .script-body {
+        padding: 28px 24px;
+      }
+      .script-beat {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 22px;
+        align-items: flex-start;
+      }
+      .script-beat:last-child {
+        margin-bottom: 0;
+      }
+      .script-beat-tag {
+        flex-shrink: 0;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 100px;
+        white-space: nowrap;
+        margin-top: 3px;
+      }
+      .script-beat-tag.hook {
+        background: var(--red-dim);
+        color: var(--red-accent);
+        border: 1px solid rgba(255, 71, 87, 0.25);
+      }
+      .script-beat-tag.prob {
+        background: var(--amber-dim);
+        color: var(--amber);
+        border: 1px solid rgba(245, 158, 11, 0.25);
+      }
+      .script-beat-tag.narr {
+        background: var(--green-dim);
+        color: var(--green-light);
+        border: 1px solid rgba(95, 211, 65, 0.25);
+      }
+      .script-beat-tag.cta {
+        background: var(--green-sec-dim);
+        color: var(--green-secondary);
+        border: 1px solid rgba(63, 174, 111, 0.25);
+      }
+      .script-beat-text {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+      .script-beat-text strong {
+        color: var(--text-primary);
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      /* ─── COMPARISON TABLE ─── */
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 36px 0;
+        font-size: 14px;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+      .compare-table th {
+        background: var(--bg-elevated);
+        padding: 14px 18px;
+        text-align: left;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-mid);
+      }
+      .compare-table td {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        background: var(--bg-card);
+        vertical-align: top;
+      }
+      .compare-table tr:last-child td {
+        border-bottom: none;
+      }
+      .tag-bad {
+        color: var(--red-accent);
+        font-weight: 600;
+      }
+      .tag-good {
+        color: var(--green-primary);
+        font-weight: 600;
+      }
+
+      /* ─── CTA BLOCK ─── */
+      .cta-block {
+        background: var(--bg-card);
+        border: 1px solid var(--border-accent);
+        border-radius: var(--radius-xl);
+        padding: clamp(36px, 5vw, 56px) clamp(28px, 5vw, 52px);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 72px;
+      }
+  
+      .cta-eyebrow {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--red-accent);
+        margin-bottom: 16px;
+      }
+      .cta-heading {
+        font-size: clamp(24px, 3.5vw, 38px);
+        font-weight: 900;
+        letter-spacing: -0.8px;
+        line-height: 1.15;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+      .cta-sub {
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        max-width: 520px;
+        margin: 0 auto 32px;
+      }
+      .cta-btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+      .btn-primary {
+        padding: 14px 32px;
+        background: linear-gradient(135deg, var(--green-primary), #2e8b57);
+        color: #0a0a0a;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        border: none;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+      }
+      .btn-primary:hover {
+        opacity: 0.88;
+        transform: translateY(-1px);
+      }
+      .btn-secondary {
+        padding: 14px 32px;
+        background: transparent;
+        color: var(--text-secondary);
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid var(--border-mid);
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-secondary:hover {
+        border-color: var(--text-muted);
+        color: var(--text-primary);
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 640px) {
+        .meta-panel {
+          grid-template-columns: 1fr;
+        }
+        .meta-key {
+          padding-top: 12px;
+        }
+        .ba-grid {
+          grid-template-columns: 1fr;
+        }
+        .framework::before {
+          display: none;
+        }
+        .compare-table {
+          font-size: 12px;
+        }
+        .compare-table th,
+        .compare-table td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <-- TOPBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img
+              src="../public/Logo/AdMediaX-logo.png"
+              alt="AdMediaX logo"
+              style="width: auto; height: 44px"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="../work.html" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="../about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="../blog.html" class="nav-link active">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="../case-studies.html" class="nav-link">Case Study</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item" id="admediax-ai">
+            <a href="../ai-portal.html" class="nav-link" target="_blank"
+              >AdMediaX|Ai</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger button -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="ham-line ham-top"></span>
+          <span class="ham-line ham-mid"></span>
+          <span class="ham-line ham-bot"></span>
+        </button>
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <!-- Top row: logo + close -->
+          <div class="drawer-header">
+            <span class="drawer-brand">
+              <img
+                src="../public/Logo/AdMediaX-logo.png"
+                alt="AdMediaX logo"
+                style="width: auto; height: 44px"
+              />
+            </span>
+            <button
+              class="drawer-close"
+              id="drawer-close"
+              aria-label="Close menu"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4 4L16 16M16 4L4 16"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Nav links -->
+          <ul class="drawer-nav">
+            <li><a href="../index.html" class="drawer-link">Home</a></li>
+            <li><a href="../services.html" class="drawer-link">Services</a></li>
+            <li><a href="../work.html" class="drawer-link">Our Work</a></li>
+            <li><a href="../about.html" class="drawer-link">About Us</a></li>
+            <li><a href="../blog.html" class="drawer-link">Blog</a></li>
+            <li>
+              <a href="../case-studies.html" class="drawer-link">Case Study</a>
+            </li>
+            <li>
+              <a href="../contact.html" class="drawer-link">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- CTA inside drawer -->
+          <div class="drawer-cta">
+            <a href="../ai-portal.html" class="drawer-ai-btn" target="_blank"
+              >AdMediaX | Ai</a
+            >
+            <a href="../contact.html" class="drawer-start-btn">Get Started</a>
+          </div>
+
+          <!-- Footer strip -->
+          <div class="drawer-footer">
+            <p>© 2026 AdMediaX</p>
+            <div class="drawer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                target="_blank"
+                aria-label="Pinterest"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backdrop -->
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </nav>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-eyebrow">FMCG &amp; D2C Brand Playbook - 2026</div>
+      <h1>
+        Emotion Over Analytics:<br /><em
+          >Why FMCG Brands Need Narrative-Driven Ad Scripts to Survive
+          Online</em
+        >
+      </h1>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg
+            width="14"
+            height="14"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+          <span class="hero-meta-author">AdMediaX Creative Strategy Team</span>
+        </span>
+        <span class="hero-meta-item">
+          <svg
+            width="14"
+            height="14"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <path d="M16 2v4M8 2v4M3 10h18" />
+          </svg>
+          June 2026
+        </span>
+        <span class="hero-meta-item">
+          <svg
+            width="14"
+            height="14"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          13 min read
+        </span>
+        <span class="hero-meta-item">
+          <svg
+            width="14"
+            height="14"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M17.5 12H12l-3 4m9-8a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Jaipur, Rajasthan
+        </span>
+      </div>
+      <p class="hero-desc">
+        Your customer decided whether to keep watching your ad within the first
+        three seconds. Your brand's entire story - the product, the price, the
+        promise - means nothing if the first three seconds didn't earn the next
+        thirty. Here's how to fix that, permanently.
+      </p>
+    </header>
+
+    <!-- KEYWORD STRIP -->
+    <div class="keyword-strip">
+      <span class="kpill">best digital marketing agency in Jaipur</span>
+      <span class="kpill">creative ad agency in Rajasthan</span>
+      <span class="kpill">ad script writing services</span>
+      <span class="kpill">copywriting for FMCG brands</span>
+      <span class="kpill">how to write high converting ad scripts</span>
+      <span class="kpill">brand storytelling strategy</span>
+      <span class="kpill">narrative-driven ad scripts</span>
+      <span class="kpill">D2C brand advertising India</span>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="layout">
+      <!-- META PANEL -->
+      <div class="meta-panel">
+        <span class="meta-key">Slug</span>
+        <span class="meta-val"
+          ><code
+            >/blog/narrative-driven-ad-scripts-fmcg-d2c-brands-2026</code
+          ></span
+        >
+        <span class="meta-key">Meta</span>
+        <span class="meta-val"
+          >Feature lists don't sell - stories do. Learn how narrative-driven ad
+          scripts help FMCG &amp; D2C brands build cult loyalty and outsell
+          corporate giants.</span
+        >
+        <span class="meta-key">Intent</span>
+        <span class="meta-val"
+          >Commercial + Informational - FMCG &amp; D2C founders in Jaipur and
+          Rajasthan searching for creative ad strategy and copywriting
+          services</span
+        >
+      </div>
+
+      <!-- ─── INTRO ─── -->
+      <p class="body-text">
+        There is a moment - it lasts exactly three seconds - where your customer
+        decides whether your brand deserves any more of their attention. Not
+        three minutes. Not thirty seconds. Three seconds. And in those three
+        seconds, they are not evaluating your product's quality, your
+        certifications, or your decade of manufacturing experience. They are
+        feeling something. Or they are not. And if they are not, they have
+        already scrolled past you to a competitor whose ad made their thumb stop
+        without consciously deciding to do so.
+      </p>
+
+      <p class="body-text">
+        This is the Attention Economy - and it has rewritten every rule that
+        FMCG and D2C brands once relied on to grow. The brands that win today
+        are not the ones with the largest production budgets or the most
+        accurate demographic targeting. They are the brands that have learned to
+        weaponise <mark>emotional narrative</mark> - the ones who stopped
+        advertising at people and started telling stories to them. The
+        distinction sounds subtle. The sales difference is not.
+      </p>
+
+      <p class="body-text">
+        Walk into any D2C brand founder's office in Jaipur right now, and you
+        will almost certainly find the same problem staring back at you:
+        beautiful packaging, a genuinely differentiated product, and an ad
+        campaign that reads like a product specification sheet. "Made with 100%
+        natural ingredients." "Third-party lab tested." "Free from parabens and
+        sulphates." Every claim is true. Every claim is completely forgettable.
+        Because the consumer was never looking for data. They were looking for a
+        reason to care - and data does not give people a reason to care. Stories
+        do.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-number">3s</div>
+          <div class="stat-label">
+            average time before a consumer skips or scrolls past a video ad
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">22×</div>
+          <div class="stat-label">
+            more memorable - stories vs. standalone facts (Stanford research)
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">55%</div>
+          <div class="stat-label">
+            of consumers buy from brands whose story they connect with
+            emotionally
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7×</div>
+          <div class="stat-label">
+            higher brand recall when ads use narrative structure vs. feature
+            listing
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ─── SECTION 1: ANATOMY ─── -->
+      <h2 class="section-heading">
+        The Anatomy of a
+        <span class="accent-red">High-Converting Ad Script</span>
+      </h2>
+
+      <p class="body-text">
+        There is a reason why certain ads become cultural moments while others
+        vanish into the digital ether without leaving a trace. It is not budget.
+        It is not celebrity endorsement. It is structure - a precise,
+        psychologically-engineered architecture that moves a stranger from
+        indifference to desire in under sixty seconds. The best copywriting for
+        FMCG brands follows this exact four-beat framework, and once you see it,
+        you will never unsee it in every ad that has ever made you feel
+        something.
+      </p>
+
+      <div class="anatomy-grid">
+        <div class="anatomy-card c1">
+          <div class="anatomy-num">Beat 01</div>
+          <div class="anatomy-title">The 3-Second Hook</div>
+          <div class="anatomy-desc">
+            A single, pattern-interrupting moment that makes the thumb
+            physically stop. Not a logo. Not a product shot. A question, a
+            controversy, a human emotion, or a visual surprise that the brain
+            cannot categorize and dismiss in one instant.
+          </div>
+        </div>
+        <div class="anatomy-card c2">
+          <div class="anatomy-num">Beat 02</div>
+          <div class="anatomy-title">The Problem / Agitation</div>
+          <div class="anatomy-desc">
+            Name the enemy. Not your competitor - the real enemy: the bad hair
+            day, the 3pm energy crash, the guilt of feeding your child something
+            processed. Agitate it just enough that the consumer feels seen, not
+            lectured.
+          </div>
+        </div>
+        <div class="anatomy-card c3">
+          <div class="anatomy-num">Beat 03</div>
+          <div class="anatomy-title">The Narrative / Emotional Core</div>
+          <div class="anatomy-desc">
+            This is where most FMCG brands completely fail. Instead of showing
+            the transformation through a human story, they list ingredients. The
+            emotional core must show a real person's world changing in a way the
+            audience recognizes as their own desire.
+          </div>
+        </div>
+        <div class="anatomy-card c4">
+          <div class="anatomy-num">Beat 04</div>
+          <div class="anatomy-title">The Frictionless CTA</div>
+          <div class="anatomy-desc">
+            The worst CTAs shatter the emotional spell you just built. "Buy Now"
+            after a heartfelt story is a slap. The CTA must feel like the next
+            natural step in the character's journey - "Try it for yourself" or
+            "Your story starts here."
+          </div>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <div class="callout-label">⚡ The Hook Is Not Optional</div>
+        <p>
+          Platform algorithms - Instagram Reels, YouTube, Facebook -
+          <strong
+            >punish ads that lose viewer attention in the first three
+            seconds</strong
+          >
+          by showing them to fewer people and charging more per impression. Your
+          hook is not just a creative choice. It is a media efficiency decision.
+          A weak hook doubles your CPM. A great hook cuts it in half.
+        </p>
+      </div>
+
+      <p class="body-text">
+        The brands that understand how to write high-converting ad scripts know
+        that the hook is not designed to introduce the product - it is designed
+        to create a micro-commitment. Once a viewer watches three seconds, they
+        are 60% more likely to watch fifteen. Once they watch fifteen, the
+        likelihood of watching the full ad triples. The hook is the gateway drug
+        to your narrative, and like any gateway, it needs to be impossible to
+        walk past without looking.
+      </p>
+
+      <div class="sub-heading">
+        Hook vs. Feature Opening - A Direct Comparison
+      </div>
+
+      <div class="ba-grid">
+        <div class="ba-card">
+          <div class="ba-label bad">
+            <div class="ba-dot"></div>
+            Feature Opening (Kills Reach)
+          </div>
+          <div class="ba-text">
+            "Introducing <strong>NaturePure Hair Oil</strong> - made with 12
+            Ayurvedic herbs, cold-pressed and clinically tested for 98% less
+            breakage."
+          </div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-label good">
+            <div class="ba-dot"></div>
+            Narrative Hook (Earns Attention)
+          </div>
+          <div class="ba-text">
+            "<strong>My mother cried the day she saw my hair.</strong> Not
+            because it looked bad - but because it looked exactly like hers did
+            before she gave up."
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text">
+        Both ads are selling the same hair oil. The first one reaches the people
+        who already decided to buy hair oil today. The second one reaches
+        everyone who has ever had a complicated relationship with their hair -
+        which is essentially every woman on the platform. That is the difference
+        between a campaign that recovers its media spend and one that builds a
+        brand.
+      </p>
+
+      <div class="section-divider"></div>
+
+      <!-- ─── SECTION 2: VOICE & TONE ─── -->
+      <h2 class="section-heading">
+        Why Voice &amp; Tone Are the
+        <span class="accent-amber">Real Product</span> for FMCG Brands
+      </h2>
+
+      <p class="body-text">
+        Here is a thought experiment. Take any successful FMCG brand you
+        genuinely love - a snack, a skincare range, a beverage - and try to
+        describe its personality without mentioning the product. You will find
+        you can. That brand has a voice: it sounds like a particular kind of
+        person, holds particular kinds of opinions, and speaks to you in a
+        register that feels specific and earned. Now try the same exercise with
+        the third-best-selling product in that same category. Most people draw a
+        blank. Not because the product is worse - often it is identical - but
+        because the brand never developed a consistent voice, and without a
+        voice, there is no emotional relationship, and without an emotional
+        relationship, you are competing entirely on price.
+      </p>
+
+      <p class="body-text">
+        Consistency in copy is what transforms a daily-use product into a
+        lifestyle choice. When a D2C skincare brand in Rajasthan writes one
+        social post in a warm, maternal tone and the next in a clinical,
+        science-forward voice, it signals to the consumer's subconscious that
+        there is no one home - no actual personality behind the packaging.
+        Consumers do not consciously notice brand voice inconsistency, but they
+        feel it as a vague distrust that makes them hesitant to commit their
+        money or their loyalty.
+      </p>
+
+      <div class="voice-stack">
+        <div class="voice-item">
+          <div class="voice-icon p">🎯</div>
+          <div>
+            <div class="voice-title">
+              Distinctiveness - Sounds Like Nobody Else
+            </div>
+            <div class="voice-desc">
+              Your brand's voice should be identifiable even if the logo is
+              removed from the ad. If your copy could have been written for any
+              brand in your category, it is not your voice - it is a
+              placeholder. Distinctiveness is built through a specific point of
+              view, not just a specific tone.
+            </div>
+          </div>
+        </div>
+        <div class="voice-item">
+          <div class="voice-icon t">🔁</div>
+          <div>
+            <div class="voice-title">Consistency Across Every Touchpoint</div>
+            <div class="voice-desc">
+              The same personality that drives your video ad should live in your
+              packaging copy, your website microcopy, your WhatsApp broadcast
+              messages, and your customer service responses. The consumer's
+              brain builds trust from pattern recognition - every inconsistency
+              erodes that pattern.
+            </div>
+          </div>
+        </div>
+        <div class="voice-item">
+          <div class="voice-icon r">❤️</div>
+          <div>
+            <div class="voice-title">
+              Emotional Vocabulary - Own Your Feeling
+            </div>
+            <div class="voice-desc">
+              Every great FMCG brand owns a primary emotion. Cadbury owns warmth
+              and generosity. Maggi owns nostalgia and comfort. Mamaearth owns
+              maternal pride and safety. What emotion does your brand own? If
+              the answer is "quality" or "trust" - those are not emotions, those
+              are table stakes. Go deeper.
+            </div>
+          </div>
+        </div>
+        <div class="voice-item">
+          <div class="voice-icon a">🌍</div>
+          <div>
+            <div class="voice-title">
+              Cultural Specificity - Especially for Regional Brands
+            </div>
+            <div class="voice-desc">
+              A brand from Jaipur can speak to a Rajasthani sensibility - the
+              warmth of a joint family, the pride of a heritage trade, the
+              ambition of a first-generation entrepreneur - in a way that a
+              Mumbai-headquartered FMCG giant structurally cannot. This cultural
+              specificity is not a limitation. It is an unfair advantage that
+              most regional brands are leaving completely unused.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ─── SECTION 3: ADMEDIAX FRAMEWORK ─── -->
+      <h2 class="section-heading">
+        The AdMediaX Copywriting Framework:<br /><span class="accent-purple"
+          >Where Data Meets Raw Human Storytelling</span
+        >
+      </h2>
+
+      <p class="body-text">
+        Most creative agencies in India operate in one of two failure modes.
+        Either they are so data-driven that their creative output is technically
+        optimized and emotionally sterile - or they are so creatively focused
+        that their beautiful campaigns move no one because they were built on
+        intuition rather than audience intelligence. At AdMediaX, we built our
+        copywriting methodology specifically to eliminate both failure modes,
+        because we are deeply convinced that the most powerful ad scripts in the
+        world are born at the intersection of granular consumer data and genuine
+        human empathy.
+      </p>
+
+      <p class="body-text">
+        As the best digital marketing agency in Jaipur for FMCG and D2C brands,
+        we do not start a single ad script by asking "what should we say about
+        this product?" We start by asking "what does this customer's life feel
+        like before they find this product, and what does it feel like the day
+        after they do?" That question - answered with rigour and honesty - is
+        the foundation of every high-converting campaign we have ever built.
+      </p>
+
+      <div class="framework">
+        <div class="fw-step">
+          <div class="fw-num">1</div>
+          <div>
+            <div class="fw-title">Consumer Empathy Mapping</div>
+            <div class="fw-desc">
+              Before a word of copy is written, we build a full emotional
+              landscape of the target consumer - their daily friction points,
+              their unspoken desires, the specific language they use when they
+              talk about the problem your product solves. We source this from
+              social listening, review mining, and direct interviews. The
+              insight that drives a great campaign is almost never in the brand
+              brief. It is in a one-star review someone left at midnight.
+            </div>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">2</div>
+          <div>
+            <div class="fw-title">Enemy Identification</div>
+            <div class="fw-desc">
+              Every compelling brand story needs an enemy - not a competitor,
+              but a condition. The enemy might be fatigue, compromise, the
+              pressure to look perfect, or the feeling of being overlooked. We
+              identify the specific enemy that your product defeats, then we
+              write the conflict before we write the solution. No conflict, no
+              story. No story, no sale.
+            </div>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">3</div>
+          <div>
+            <div class="fw-title">The Transformation Scene</div>
+            <div class="fw-desc">
+              The most powerful moment in any FMCG ad script is not the product
+              reveal - it is the transformation scene. The moment where the
+              protagonist's world visibly changes as a result of the product's
+              presence. We write this scene first and build the rest of the
+              script around it. What does the character feel, look like, and do
+              differently after your product enters their life? That scene is
+              your brand's core emotional promise.
+            </div>
+          </div>
+        </div>
+        <div class="fw-step">
+          <div class="fw-num">4</div>
+          <div>
+            <div class="fw-title">Platform-Native Script Architecture</div>
+            <div class="fw-desc">
+              A script written for a 30-second YouTube pre-roll is structurally
+              different from one written for a 15-second Instagram Reel or a
+              60-second Facebook story ad. Our ad script writing services
+              include platform-specific reformatting as standard - because the
+              same story told in the wrong format on the wrong platform is money
+              wasted, regardless of how good the creative is.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout purple">
+        <div class="callout-label">
+          💡 The AdMediaX Brand Storytelling Standard
+        </div>
+        <p>
+          Every script that leaves our studio must pass one test:
+          <strong
+            >if you removed the brand name and product name from this ad, could
+            the viewer still describe what kind of person buys this
+            brand?</strong
+          >
+          If yes, the brand storytelling strategy is working. If no, it is a
+          product advertisement - functional, forgettable, and fighting purely
+          on price.
+        </p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ─── SECTION 4: CASE STUDY ─── -->
+      <h2 class="section-heading">
+        Regional vs. Corporate Giants:<br /><span class="accent-teal"
+          >How a Jaipur Brand Wins With Story</span
+        >
+      </h2>
+
+      <p class="body-text">
+        Let us be direct about something that most creative agencies will not
+        say out loud: a regional FMCG or D2C brand in Rajasthan cannot out-spend
+        HUL, ITC, or Marico on media. The media budget fight is unwinnable. But
+        the story fight? That is a completely different contest - and it is one
+        where a small, authentic brand from Jaipur has structural advantages
+        that a multinational conglomerate can never replicate, regardless of
+        their marketing budget.
+      </p>
+
+      <p class="body-text">
+        A Jaipur-based brand has a real story, a real founder, a real cultural
+        context, and a real reason to exist beyond a quarterly revenue target.
+        Its products often come from a tradition of craft or care that stretches
+        back generations. Its founders can speak on camera with an authenticity
+        that no agency in Mumbai can script for a corporate brand manager. These
+        are not soft, feel-good advantages - they are hard commercial assets in
+        a market where consumers are actively hungry for brands they can trust
+        as human entities rather than faceless corporations.
+      </p>
+
+      <div class="scenario-box">
+        <div class="scenario-label">
+          📦 Case Study Scenario - Rajasthan D2C Brand
+        </div>
+        <div class="scenario-brand">
+          Sarson & Co. - Cold-Pressed Mustard Oil
+        </div>
+        <div class="scenario-sub">
+          Hypothetical regional D2C brand · Jaipur, Rajasthan · Target: Urban
+          millennial households
+        </div>
+        <div class="scenario-body">
+          <strong>The Old Messaging:</strong> "100% pure cold-pressed mustard
+          oil. No chemicals. No additives. Sourced directly from Rajasthan
+          farms." Accurate. Earnest. Completely invisible against Patanjali,
+          Emami, and Fortune's media weight.<br /><br />
+          <strong>The New Narrative:</strong> The campaign opens on a
+          grandmother's hands pouring oil into an iron kadhai. A voice-over from
+          the founder:
+          <em
+            >"My nani never read a label in her life. She knew her oil by its
+            smell, its colour, its weight in the ladle. She called it 'sachcha
+            tel.' We just call it what it is."</em
+          >
+          Product shot. One line:
+          <strong>Sarson &amp; Co. - The oil your kitchen remembers.</strong
+          ><br /><br />
+          Same product. Completely different emotional territory. The first
+          campaign competes on claims. The second one owns a memory - and
+          memories are the most durable form of brand loyalty ever discovered.
+        </div>
+      </div>
+
+      <p class="body-text">
+        This is the shift that AdMediaX engineers for regional FMCG and D2C
+        brands. It is not about being louder than the corporate giants - it is
+        about being more specific, more human, and more honest in a way they
+        structurally cannot afford to be. As a creative ad agency in Rajasthan,
+        we have seen firsthand how a Jaipur-based brand with the right narrative
+        infrastructure can command a premium price point, generate organic
+        word-of-mouth, and build a customer loyalty rate that no amount of
+        discount-driven advertising from a corporate brand can touch.
+      </p>
+
+      <div class="sub-heading">
+        Messaging Shift: Before &amp; After for a Regional Skincare Brand
+      </div>
+
+      <div class="ba-grid">
+        <div class="ba-card">
+          <div class="ba-label bad">
+            <div class="ba-dot"></div>
+            Corporate-Mimic Messaging
+          </div>
+          <div class="ba-text">
+            "Infused with Kumkumadi and Bakuchiol. Dermatologist tested. See
+            visible results in 14 days. <strong>Shop Now.</strong>"
+          </div>
+        </div>
+        <div class="ba-card">
+          <div class="ba-label good">
+            <div class="ba-dot"></div>
+            Narrative-Led Brand Voice
+          </div>
+          <div class="ba-text">
+            "<strong
+              >She stopped wearing foundation the day she started trusting her
+              skin again.</strong
+            >
+            It took 14 days, one jar, and the same recipe her grandmother kept
+            in a brass dabba."
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ─── SCRIPT DEMO ─── -->
+      <h2 class="section-heading">
+        A <span class="accent-amber">Live Script Demo</span> - 30-Second FMCG
+        Narrative Ad
+      </h2>
+
+      <p class="body-text">
+        To make the four-beat framework viscerally concrete, here is how it
+        looks when applied to an actual 30-second ad script for a regional
+        healthy snack brand targeting urban working professionals. Notice how
+        each beat flows into the next without a single product claim until the
+        emotional work is already done.
+      </p>
+
+      <div class="script-demo">
+        <div class="script-header">
+          <div class="script-dots">
+            <div class="script-dot r"></div>
+            <div class="script-dot y"></div>
+            <div class="script-dot g"></div>
+          </div>
+          <span class="script-label"
+            >AdMediaX Script - 30 Sec · Instagram Reel / YouTube Pre-Roll</span
+          >
+        </div>
+        <div class="script-body">
+          <div class="script-beat">
+            <span class="script-beat-tag hook">Hook - 0–3s</span>
+            <div class="script-beat-text">
+              <strong>VISUAL:</strong> Close-up of a hand slowly pushing a
+              packet of office biscuits to the edge of a desk until it falls
+              into the bin. Dead silence. <strong>Cut to black.</strong>
+            </div>
+          </div>
+          <div class="script-beat">
+            <span class="script-beat-tag prob">Agitation - 3–10s</span>
+            <div class="script-beat-text">
+              VO (wry, self-aware):
+              <em
+                >"You told yourself it was just a snack. 240 calories, 14 grams
+                of sugar, and the vague guilt of someone who knows better but
+                hasn't found better yet."</em
+              >
+            </div>
+          </div>
+          <div class="script-beat">
+            <span class="script-beat-tag narr">Narrative - 10–25s</span>
+            <div class="script-beat-text">
+              <strong>VISUAL:</strong> A woman at her desk at 3pm, reaching into
+              her bag. She pulls out a small pouch. She smells it - genuine
+              smile, not performed. Her screen shows a deadline. She eats
+              slowly. She types faster. No magic, no transformation montage.
+              Just a real person fuelled by something that didn't ask her to
+              compromise. VO:
+              <em
+                >"Dhani Snacks. Made in Jaipur. Made for people who stopped
+                settling at lunch."</em
+              >
+            </div>
+          </div>
+          <div class="script-beat">
+            <span class="script-beat-tag cta">CTA - 25–30s</span>
+            <div class="script-beat-text">
+              <strong>VISUAL:</strong> Product on clean surface. Tagline:
+              <em
+                >"Try your first box. See what 3pm feels like when you stop
+                compromising."</em
+              >
+              - Link in bio / swipe up.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text">
+        No ingredient list. No certification badge. No "clinically proven"
+        claim. Yet every frame of that script communicates quality,
+        authenticity, and a specific lifestyle aspiration more powerfully than
+        any feature enumeration could. This is the standard that our ad script
+        writing services hold every piece of creative to - and it is the
+        standard that separates the brands people buy once from the brands
+        people evangelise to their friends.
+      </p>
+
+      <div class="section-divider"></div>
+
+      <!-- ─── COMPARISON TABLE ─── -->
+      <h2 class="section-heading">
+        Feature Advertising vs.
+        <span class="accent-purple">Narrative Advertising</span>
+      </h2>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Feature-Led Advertising</th>
+            <th>Narrative-Led Advertising</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary Trigger</td>
+            <td class="tag-bad">Logic / Rational comparison</td>
+            <td class="tag-good">Emotion / Identity recognition</td>
+          </tr>
+          <tr>
+            <td>Scroll-Stop Rate</td>
+            <td class="tag-bad">Low - easily dismissed in 1s</td>
+            <td class="tag-good">
+              High - pattern interruption forces attention
+            </td>
+          </tr>
+          <tr>
+            <td>Brand Recall (48hr)</td>
+            <td class="tag-bad">~12% average</td>
+            <td class="tag-good">~68% when emotional peak is hit</td>
+          </tr>
+          <tr>
+            <td>Price Sensitivity</td>
+            <td class="tag-bad">High - consumer compares on price</td>
+            <td class="tag-good">Low - consumer buys the story, not the SKU</td>
+          </tr>
+          <tr>
+            <td>Word-of-Mouth</td>
+            <td class="tag-bad">Rare - nobody shares a product spec</td>
+            <td class="tag-good">
+              Common - people share stories that reflect their identity
+            </td>
+          </tr>
+          <tr>
+            <td>Competitive Moat</td>
+            <td class="tag-bad">Thin - any brand can copy your claims</td>
+            <td class="tag-good">
+              Deep - nobody can copy your authentic story
+            </td>
+          </tr>
+          <tr>
+            <td>Regional Brand Fit</td>
+            <td class="tag-bad">Disadvantaged vs. corporate budgets</td>
+            <td class="tag-good">
+              Advantaged - authenticity cannot be manufactured
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout amber">
+        <div class="callout-label">📍 The Jaipur Advantage</div>
+        <p>
+          Brands built in Jaipur and Rajasthan carry an enormous, largely
+          untapped narrative asset:
+          <strong
+            >a heritage of craft, trade, and community that Bengaluru-born D2C
+            startups are actively paying storytellers to fabricate.</strong
+          >
+          The origin story your brand is sitting on - the family recipe, the
+          artisan supplier, the neighbourhood that shaped your product - is
+          worth more in the current consumer sentiment than any influencer
+          campaign. You just need to learn how to tell it.
+        </p>
+      </div>
+
+      <!-- ─── CTA ─── -->
+      <div class="cta-block">
+        <div class="cta-eyebrow">
+          AdMediaX - Creative Ad Agency, Jaipur &amp; Rajasthan
+        </div>
+        <h2 class="cta-heading">
+          Your Brand Has a Story.<br />Let's Make It Impossible to Skip.
+        </h2>
+        <p class="cta-sub">
+          We write ad scripts, build brand voice systems, and craft
+          narrative-driven campaigns for FMCG and D2C brands that are ready to
+          stop competing on price and start owning a feeling.
+        </p>
+        <div class="cta-btn-group">
+          <a href="/contact.html" class="btn-primary">Get a Free Script Audit →</a>
+          <a href="/contact.html" class="btn-secondary">See Our Creative Work</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AdMediaX</h3>
+            <p>
+              Transforming businesses through innovative digital solutions and
+              creative excellence.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61574145674026"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/admedia_x/?hl=en"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://in.pinterest.com/admediax/"
+                class="social-icon"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="../services.html">Web Development</a></li>
+              <li><a href="../services.html">App Development</a></li>
+              <li><a href="../services.html">Digital Marketing</a></li>
+              <li><a href="../services.html">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../work.html">Our Work</a></li>
+              <li><a href="../blog.html">Blog</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> admediax18@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9887964016</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> DSF-06 2th Floor Capital
+              Galleria, Mall, Sirsi Rd, Vaishali Nagar, Kanakpura, Jaipur,
+              Rajasthan 302034
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 AdMediaX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/919887964016?text=Hello%20AdMediaX,%20I%20want%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Reading progress bar
+      const progressBar = document.getElementById("progressBar");
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = pct + "%";
+      });
+
+      // Mobile menu toggle
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a nav link
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>
